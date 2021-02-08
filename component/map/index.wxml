@@ -3,11 +3,12 @@
 		<view class="page-section page-section-gap">
 			<map
 				id="myMap"
-				style="width: 100%; height: 100vh"
+				style="width: 100%; height: calc(100vh - {{height}}rpx)"
 				latitude="{{latitude}}"
 				longitude="{{longitude}}"
 				markers="{{markers}}"
 				show-location
 			></map>
+			<slot name="location"></slot>
 		</view>
 	</view>

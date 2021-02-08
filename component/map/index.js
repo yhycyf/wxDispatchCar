@@ -4,20 +4,24 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-02-08 16:23:19
+ * @LastEditTime: 2021-02-08 18:28:11
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
 const app = getApp();
 Component({
-
-  behaviors: [],
+  options: {
+    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+  },
+  observers: {
+    
+  },
 
   // 属性定义（详情参见下文）
   properties: {
-    getOn: {
-      type: Boolean,
-      value: true
+    height: {
+      type: Number,
+      value: 0
     },
   },
 
@@ -36,33 +40,17 @@ Component({
   lifetimes: {
     // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
     attached: function() {
-     
-      
+      // console.log('attached');
+      this.mapCtx = wx.createMapContext('myMap');
+      this.getLocation();
     },
     moved: function() { },
-    detached: function() { },
+    created: function() {
+      // console.log('created')
+    },
+    detached: function() {},
     ready: function() {
       console.log('ready');
-      this.mapCtx = wx.createMapContext('myMap');
-      this.mapCtx.moveToLocation();
-      const lat= "markers[0].latitude";
-      const log= "markers[0].longitude";
-      var that = this;
-      setTimeout(function() {
-        wx.getLocation({
-          type: "wgs84",
-          success: function(res){
-            console.log('res', res)
-            that.setData({
-              latitude: res.latitude,
-              longitude: res.longitude,
-              // [lat]:res.latitude,
-              // [log]:res.longitude
-            })
-          }
-        })
-        
-      },2000)
     }
   },
 
@@ -78,8 +66,21 @@ Component({
   },
 
   methods: {
-
-  
+    getLocation() {
+      var that = this;
+      const lat= "markers[0].latitude";
+      const log= "markers[0].longitude";
+      wx.getLocation({
+        type: "wgs84",
+        success: function(res){
+          // console.log('res', res)
+          that.setData({
+            latitude: res.latitude,
+            longitude: res.longitude,
+          })
+        }
+      })
+    }
   }
 
 });
