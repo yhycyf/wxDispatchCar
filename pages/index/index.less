@@ -1,17 +1,17 @@
 /**index.wxss**/
 .heard{
-    width: 95%;
-    margin: 0 auto;
+    width: 100%;
     position: relative;
     .leftBox {
         position: absolute;
         z-index: 101;
         left: 0rpx;
         top: 0;
-        width: 113rpx;
         height: 88rpx;
         background: #fff;
         justify-content: flex-start;
+        padding-left: 2.5%;
+        box-sizing: border-box;
         .userAvatarBox{
             border-radius: 50%;
             width: 60rpx;
@@ -41,6 +41,10 @@
         font-size: 28px;
     }
     .vantTabs {
+        box-sizing: border-box;
+        scroll-view {
+            padding-right: 2.5%;
+        }
         .van-tab {
             font-size: 28rpx;
             color:#999999;

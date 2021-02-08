@@ -10,3 +10,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.paddingLF {
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  box-sizing: border-box;
+}
