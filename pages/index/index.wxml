@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="index">
+  <view class="flexRow heard">
+    <view class="flexRow leftBox">
+      <view class="flexRow userAvatarBox">
+        <view class="avatarBox">
+          <open-data class="userAvatar" mode='aspectFit' type="userAvatarUrl"></open-data>
+          <!-- <view class='user_face'></view> -->
+        </view>
+      </view>
+      <view class="line"></view>
+    </view>
+    <van-tabs title-style="titleStyle" custom-class="vantTabs" tab-active-class="activeStyle"
+      title-inactive-color="#777777" title-active-color="#151515"
+      z-index="100" ellipsis="{{false}}" active="{{ active }}">
+      <van-tab disabled title="头像">
+      </van-tab>
+      <van-tab title="代步车">代步车</van-tab>
+      <van-tab title="接送车">接送车e</van-tab>
+      <van-tab title="道路救援" disabled>道路救援</van-tab>
+      <van-tab title="代驾" disabled>代驾</van-tab>
+      <van-tab title="汽车租赁" disabled>汽车租赁</van-tab>
+    </van-tabs>
+  </view>
+</view>
+
