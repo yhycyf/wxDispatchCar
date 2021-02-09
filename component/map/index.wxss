@@ -13,3 +13,8 @@
 .map {
   position: relative;
 }
+.map .page-body-button {
+  position: fixed;
+  top: 80px;
+  left: 40px;
+}

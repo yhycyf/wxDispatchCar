@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-02-08 18:28:11
+ * @LastEditTime: 2021-02-09 11:12:39
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
@@ -41,8 +41,7 @@ Component({
     // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
     attached: function() {
       // console.log('attached');
-      this.mapCtx = wx.createMapContext('myMap');
-      this.getLocation();
+      // this.getLocation();
     },
     moved: function() { },
     created: function() {
@@ -51,35 +50,42 @@ Component({
     detached: function() {},
     ready: function() {
       console.log('ready');
+      let _this = this;
+      this.mapCtx = wx.createMapContext('myMap',this);
+      this.moveToLocation();
     }
   },
 
-  // 生命周期函数，可以为函数，或一个在methods段中定义的方法名
-  attached: function() { }, // 此处attached的声明会被lifetimes字段中的声明覆盖
-  ready: function() { },
-
   pageLifetimes: {
     // 组件所在页面的生命周期函数
-    show: function() { },
+    show: function() { 
+      
+    },
     hide: function() { },
     resize: function() { }
   },
 
   methods: {
-    getLocation() {
+    getLocation () {
       var that = this;
       const lat= "markers[0].latitude";
       const log= "markers[0].longitude";
-      wx.getLocation({
-        type: "wgs84",
-        success: function(res){
-          // console.log('res', res)
-          that.setData({
-            latitude: res.latitude,
-            longitude: res.longitude,
-          })
-        }
-      })
+      
+        wx.getLocation({
+          type: "wgs84",
+          success: function(res){
+            // console.log('res', res)
+            that.setData({
+              latitude: res.latitude,
+              longitude: res.longitude,
+            })
+          }
+        })
+     
+    },
+    moveToLocation () {
+      let that = this;
+      this.mapCtx.moveToLocation();
     }
   }
 

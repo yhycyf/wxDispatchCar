@@ -20,10 +20,20 @@
       <van-tab disabled title="头像">
       </van-tab>
       <van-tab title="代步车">
-        <map-custom height="{{88}}">
-          <view slot="location">
+        <map-custom height="{{88}}" id="map">
+          <view slot="location" bindtap="moveToLocation">
             <cover-view class="flexRow location">
-              <van-icon name="aim" size="24" />
+              <cover-image class="coverImage" src="../../image/tap_location.png" />
+            </cover-view>
+          </view>
+          <view slot="beginOrder" bindtap="beginOrder">
+            <cover-view class="flexRow beginOrder" hover-class="beginOrderActive">
+              <cover-view>开始预约</cover-view>
+            </cover-view>
+          </view>
+          <view slot="service" bindtap="service">
+            <cover-view class="flexRow service">
+              <cover-image class="serviceImage" src="../../image/service.png" />
             </cover-view>
           </view>
         </map-custom>

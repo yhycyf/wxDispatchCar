@@ -10,3 +10,6 @@
   align-items: center;
   justify-content: center;
 }
+.beginOrderActive {
+  opacity: 0.85;
+}
