@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-09 14:00:45
+ * @LastEditTime: 2021-02-09 14:53:07
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -24,9 +24,9 @@ Page({
     this.mapCtx = wx.createMapContext('myMap')
   },
   // 事件处理函数
-  bindViewTap() {
+  beginOrder() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/making/index'
     })
   },
   moveToLocation() {

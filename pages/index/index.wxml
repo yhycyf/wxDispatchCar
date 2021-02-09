@@ -21,18 +21,18 @@
       </van-tab>
       <van-tab title="代步车">
         <map-custom height="{{88}}" id="map">
-          <view slot="location" bindtap="moveToLocation">
-            <cover-view class="flexRow location">
+          <view slot="location">
+            <cover-view class="flexRow location" bindtap="moveToLocation">
               <cover-image class="coverImage" src="../../image/tap_location.png" />
             </cover-view>
           </view>
-          <view slot="beginOrder" bindtap="beginOrder">
-            <cover-view class="flexRow beginOrder" hover-class="beginOrderActive">
+          <view slot="beginOrder">
+            <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
               <cover-view>开始预约</cover-view>
             </cover-view>
           </view>
-          <view slot="service" bindtap="service">
-            <cover-view class="flexRow service">
+          <view slot="service">
+            <cover-view class="flexRow service" bindtap="service">
               <cover-image class="serviceImage" src="../../image/service.png" />
             </cover-view>
           </view>
