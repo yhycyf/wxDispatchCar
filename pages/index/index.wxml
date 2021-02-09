@@ -20,7 +20,13 @@
       <van-tab disabled title="头像">
       </van-tab>
       <van-tab title="代步车">
-        <map-custom></map-custom>
+        <map-custom height="{{88}}">
+          <view slot="location">
+            <cover-view class="flexRow location">
+              <van-icon name="aim" size="24" />
+            </cover-view>
+          </view>
+        </map-custom>
       </van-tab>
       <van-tab title="接送车">接送车e</van-tab>
       <van-tab title="道路救援" disabled>道路救援</van-tab>
