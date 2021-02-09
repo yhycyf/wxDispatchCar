@@ -20,17 +20,17 @@
     "checkInvalidKey": true,
     "checkSiteMap": true,
     "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
     },
-    "useCompilerModule": false,
-    "userConfirmedUseCompilerModuleSwitch": false,
-    "compileHotReLoad": false,
-    "useMultiFrameRuntime": false,
-    "useApiHook": true,
     "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
     "packNpmManually": true,
     "packNpmRelationList": [
       {
@@ -41,7 +41,7 @@
   },
   "compileType": "miniprogram",
   "libVersion": "2.15.0",
-  "appid": "wx707f54de37f2d457",
+  "appid": "wxb7d27fb7d0863a11",
   "projectname": "dimensional",
   "debugOptions": {
     "hidedInDevtools": []

@@ -1,16 +1,36 @@
 <!--index.wxml-->
-<view class="index">
+<view class="making">
   <view class="flexRow heard">
 
 
-<!-- title-style="titleStyle" custom-class="vantTabs" tab-active-class="activeStyle"
+<!-- title-style="titleStyle" tab-active-class="activeStyle"
       title-inactive-color="#777777" title-active-color="#151515"
       z-index="100" ellipsis="{{false}}" active="{{ active }}" -->
     <van-tabs title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
       <van-tab title="代步车资格验证">
-        <view class="">车架号</view>
-        <view class="">报案号</view>
-        <view class="">礼品码</view>
+        <van-cell-group>
+          <van-field
+            value="{{ value }}"
+            placeholder="请输入用户名"
+            label="车架号"
+            border="{{ false }}"
+            bind:change="onChange"
+          />
+          <van-field
+            value="{{ value }}"
+            placeholder="请输入用户名"
+            label="报案号"
+            border="{{ false }}"
+            bind:change="onChange"
+          />
+          <van-field
+            value="{{ value }}"
+            placeholder="请输入用户名"
+            label="礼品码"
+            border="{{ false }}"
+            bind:change="onChange"
+          />
+        </van-cell-group>
       </van-tab>
       <van-tab title="您的车辆">
         <view class="">车架号</view>
