@@ -36,7 +36,7 @@
   </view>
   <view slot="beginOrder">
     <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>验证资格</cover-view>
+      <cover-view>开始预约</cover-view>
     </cover-view>
   </view>
   </view>
