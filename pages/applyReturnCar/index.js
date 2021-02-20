@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-09 15:29:04
+ * @LastEditTime: 2021-02-09 15:31:33
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -12,22 +12,23 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Helelo World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    active: 1,
+    show: true,
+    actions: [
+      { name: '获取用户信息', color: '#07c160', openType: 'getUserInfo' },
+    ],
   },
   onReady: function (e) {
     
   },
-  // 事件处理函数
-  beginOrder() {
-    wx.navigateTo({
-      url: '/pages/making/index'
-    })
+  onClose() {
+    this.setData({ show: false });
+  },
+
+  onSelect(event) {
+    console.log(event.detail);
   },
   moveToLocation() {
+    console.log('执行')
     this.selectComponent('#map').moveToLocation();
   },
   onLoad() {

@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="returnCar">
+  <map-custom height="{{0}}" id="map">
+    <view slot="goGetCar" class="goGetCar">
+      <cover-view >
+        <input class="weui-input" auto-focus placeholder="将会获取焦点"/>
+      </cover-view>
+    </view>
+    
+  </map-custom>
+</view>
+

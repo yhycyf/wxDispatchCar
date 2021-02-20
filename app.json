@@ -2,6 +2,7 @@
   "pages":[
     "pages/index/index",
     "pages/making/index",
+    "pages/applyReturnCar/index",
     "pages/logs/logs"
   ],
   "permission": {
