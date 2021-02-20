@@ -6,21 +6,23 @@
         <van-cell-group>
           <van-field
             value="{{ value }}"
-            placeholder="请输入用户名"
+            placeholder="请输入车架号"
+            required="false"
             label="车架号"
             border="{{ false }}"
             bind:change="onChange"
           />
           <van-field
             value="{{ value }}"
-            placeholder="请输入用户名"
+            required="false"
+            placeholder="请输入报案号"
             label="报案号"
             border="{{ false }}"
             bind:change="onChange"
           />
           <van-field
             value="{{ value }}"
-            placeholder="请输入用户名"
+            placeholder="输入礼品码（非必填）"
             label="礼品码"
             border="{{ false }}"
             bind:change="onChange"
