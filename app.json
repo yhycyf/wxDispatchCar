@@ -3,6 +3,15 @@
     "pages/index/index",
     "pages/making/index",
     "pages/applyReturnCar/index",
+
+    "pages/id_safety/index",//身份安全验证
+    "pages/name_authentication/index",//实名认证
+    "pages/car_authentication/index",//车辆认证
+    "pages/d_fill_information/index",//代步车信息填写
+    "pages/d_order_details/index",//订单详情
+    "pages/d_apply_car/index",//申请还车
+    "pages/d_delayed_car/index",//延时还车
+    "pages/d_payment_details/index",//代步车付款页面
     "pages/logs/logs"
   ],
   "permission": {
