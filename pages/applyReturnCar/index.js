@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-22 11:01:55
+ * @LastEditTime: 2021-02-22 22:55:24
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -15,14 +15,21 @@ Page({
   data: {
     show: true,
     showTipsBox: true,
-    getCarLocation: '取车地点',
-    getCarTime: '取车时间',
+    historyAddress: '北京 TBD云集中心',
+    getCarLocation: '',
+    getCarTime: '',
     actions: [
       { name: '获取用户信息', color: '#07c160', openType: 'getUserInfo' },
     ],
   },
   onReady: function (e) {
     
+  },
+  getTips() {
+    this.setData({
+      getCarLocation: this.data.historyAddress
+    })
+    this.closeTipsBox();
   },
   closeTipsBox(e) {
     this.setData({
@@ -44,7 +51,7 @@ Page({
           //允许打开定位
           console.log("开启了定位",e);
           that.setData({
-            getCarLocation: e.address
+            getCarLocation: e.name
           })
           
         },
@@ -66,7 +73,7 @@ Page({
     console.log(event.detail);
   },
   moveToLocation() {
-    console.log('执行')
+    // console.log('执行')
     this.selectComponent('#map').moveToLocation();
   },
   onLoad() {
