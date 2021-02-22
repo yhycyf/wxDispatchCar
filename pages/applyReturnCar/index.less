@@ -2,15 +2,153 @@
 @import '../../style/rest.less';
 .returnCar{
     width: 100%;
+    position: relative;
     .goGetCar {
         position: fixed;
-        z-index: 9999999;
-        bottom: 0;
+        z-index: @map-view-index;
+        bottom: 60rpx;
         left: 50%;
         transform: translateX(-50%);
-        width: 100%;
-        height: 30vh;
+        width: 690rpx;
         background: #fff;
+        padding: 32rpx 36rpx 42rpx;
+        border-radius: 8rpx;
+        box-sizing: border-box;
+        .titleBox {
+            width: 100%;
+            justify-content: space-between;
+            .titleLeft {
+                font-size: 28rpx;
+                font-family: PingFangSC-Medium, PingFang SC;
+                font-weight: 500;
+                color: #151515;
+                line-height: 40rpx;
+            }
+            .titleRight {
+                .notice {
+                    width: 26rpx;
+                    height: 26rpx;
+                }
+                .text {
+                    font-size: 20rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #FB2020;
+                    margin-left: 2rpx;
+                    line-height: 26rpx;
+                }
+            }
+        }
+        .content {
+            width: 100%;
+            align-items: flex-start;
+            .list {
+                width: 100%;
+                height: 108rpx;
+                justify-content: flex-start;
+                position: relative;
+                .iconBox {
+                    width: 40rpx;
+                    width: 40rpx;
+                    .icon {
+                        width: 40rpx;
+                        height: 40rpx;
+                    }
+                    .iconTime {
+                        width: 28rpx;
+                        height: 28rpx;
+                    }
+                    .iconIphone {
+                        width: 32rpx;
+                        height: 32rpx; 
+                    }
+                    .iconPerson {
+                        width: 28rpx;
+                        height: 28rpx;
+                    }
+                }
+                .text {
+                    font-size: 28rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #AAAAAA;
+                    margin-left: 14rpx;
+                    opacity: 0.7;
+                }
+                .iphoneText {
+                    font-size: 28rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #151515;
+                    margin-left: 14rpx;
+                }
+                .nameText {
+                    font-size: 28rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #151515;
+                    margin-left: 14rpx;
+                }
+                .tipsBox {
+                    margin-left: 34rpx;
+                    width: 282rpx;
+                    justify-content: flex-end;
+                    position: relative;
+                    .locationText {
+                        width: 282rpx;
+                        height: 60rpx;
+                        background: #1A1840;
+                        border-radius: 4rpx;
+                        justify-content: space-around;
+                        .text {
+                            font-size: 24rpx;
+                            font-family: PingFangSC-Regular, PingFang SC;
+                            font-weight: 400;
+                            color: #FFFFFF;
+                            padding: 0 5rpx;
+                        }
+                        .icon {
+                            width: 38rpx;
+                            height: 38rpx;
+                            opacity: 0.9;
+                        }
+                    }
+                    .triangle {
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%) rotate(-90deg);
+                        left: -15rpx;
+                        width: 40rpx;
+                        height: 40rpx;
+                    }
+                }
+            }
+            .childBox {
+                justify-content: space-between;
+                .child {
+                    width: 50%;
+                    justify-content: flex-start;
+                    line-height: 40rpx;
+                }
+            }
+            .line {
+                width: 100%;
+                height: 2rpx;
+                background: #F0F0F0;
+            }
+        }
+        .submit {
+            width: 618rpx;
+            height: 80rpx;
+            background: #457CFB;
+            border-radius: 47rpx;
+            margin-top: 62rpx;
+            .text {
+                font-size: 32rpx;
+                font-family: PingFangSC-Medium, PingFang SC;
+                font-weight: 500;
+                color: #FFFFFF;
+            }
+        }
     }
-    
 }

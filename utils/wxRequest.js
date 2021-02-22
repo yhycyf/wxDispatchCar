@@ -77,7 +77,7 @@ export const wxRequest = (params, url, types) => {
 
 const getSetting = function(setting) {
   return new Promise((resolve, reject) => {
-    tt.getSetting({
+    wx.getSetting({
       success(res) {
         if (!res.authSetting[setting]) {
           wx.authorize({
@@ -125,6 +125,38 @@ const getSetting = function(setting) {
                 wx.showModal({
                   title: '提示',
                   content: '获取您的头像和昵称，以便更好的为您服务~',
+                  showCancel: false,
+                  success(res) {
+                    if (res.confirm) {
+                      wx.openSetting({
+                        success() {
+                          wx.getSetting({
+                            success(res) {
+                              if (!res.authSetting[setting]) {
+                                resolve('');
+                              } else {
+                                resolve('ok');
+                              }
+                            }
+                          });
+                        },
+                        fail(res) {
+                          console.log('showModal调用失败');
+                          resolve('');
+                        }
+                      });
+                    }
+                  },
+                  fail(res) {
+                    resolve('');
+                    // console.log(`showModal调用失败`);
+                  }
+                });
+              }
+              if (setting == 'scope.userLocation') {
+                wx.showModal({
+                  title: '提示',
+                  content: '获取您的地理位置，以便更好的为您服务~',
                   showCancel: false,
                   success(res) {
                     if (res.confirm) {

@@ -10,11 +10,15 @@
   align-items: center;
   justify-content: center;
 }
+.beginOrderActive {
+  opacity: 0.85;
+}
 .map {
   position: relative;
 }
 .map .page-body-button {
   position: fixed;
+  z-index: 100;
   top: 80px;
   left: 40px;
 }

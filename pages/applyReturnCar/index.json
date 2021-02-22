@@ -1,7 +1,6 @@
 {
   "disableScroll": true,
   "usingComponents": {
-    "map-custom": "../../component/map/index",
-    "van-action-sheet": "@vant/weapp/action-sheet/index"
+    "map-custom": "../../component/map/index"
   }
 }

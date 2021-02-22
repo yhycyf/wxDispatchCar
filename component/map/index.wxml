@@ -6,12 +6,13 @@
 				style="width: 100%; height: calc(100vh - {{height}}rpx)"
 				latitude="{{latitude}}"
 				longitude="{{longitude}}"
+				markers="{{markers}}"
 				show-location
+				bindupdated="bindupdated"
+				bindregionchange="regionchange"
 			>
 				<slot name="location"></slot>
 				<slot name="beginOrder"></slot>
-				<slot name="service"></slot>
-				<slot name="goGetCar"></slot>
 			</map>
 		</view>
 	</view>
