@@ -1,12 +1,18 @@
 <!--index.wxml-->
-<view class="making">
+<view class="nameAuthentication">
   <view class="flexRow heard">
 
   </view>
-  <view slot="beginOrder">
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>开始预约</cover-view>
-    </cover-view>
+  <view class="bottom">
+    <view class="flexRow whatIsNot">
+      <image class="icon" src="../../image/e.png" />
+      <view class="text">
+        系统智能加密，实施保障你的信息安全
+      </view>
+    </view>
+    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+      下一步
+    </view>
   </view>
 </view>
 

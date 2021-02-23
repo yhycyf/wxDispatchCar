@@ -5,10 +5,5 @@
     "van-field": "@vant/weapp/field/index",
     "van-icon": "@vant/weapp/icon/index"
   },
-  "window":{
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FFFFFF",
-    "navigationBarTitleText": "安全验证",
-    "navigationBarTextStyle": "black"
-  }
+  "navigationBarTitleText": "安全验证"
 }
