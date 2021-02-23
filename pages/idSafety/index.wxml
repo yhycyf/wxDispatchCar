@@ -1,11 +1,38 @@
 <!--index.wxml-->
 <view class="making">
-  <view class="flexRow heard">
-    <view>身份信息安全认证</view>
-    <view>根据相关政策，需要您验证身份信息</view>
+  <view class="heard">
+    <view class="title">身份信息安全认证</view>
+    <view class="marked">根据相关政策，需要您验证身份信息</view>
   </view>
-  <view slot="beginOrder">
+  <view class="idSafety">
+    <view class="flexRow nameAuthentication">
+      <cover-view class="idIcon">
+        <cover-image class="idImage" src="../../image/idcart.png"  type="default" bindtap="calling"/>
+      </cover-view>
+      <view class="text flexCol">
+        <h5>身份证照片</h5>
+        <text>仅用于核实身份</text>
+      </view>
+      <view class="flexRow goComplete">去完成</view>
+    </view>
+    <view class="flexRow nameAuthentication">
+      <cover-view class="idIcon">
+        <cover-image class="idImage" src="../../image/car.png"  type="default" bindtap="calling"/>
+      </cover-view>
+      <view class="text flexCol">
+        <h5>车辆信息认证</h5>
+        <text>出险信息确认确保保险服务</text>
+      </view>
+      <view class="flexRow noComplete">待完成</view>
+    </view>
+  </view>
+  <view slot="beginOrder" class="whatIsNot">
+    <text class="text">
+      <cover-image class="whatIsNotImage" src="../../image/e.png"  type="default" bindtap="calling"/>
+      系统智能加密，实施保障你的信息安全
+    </text>
     <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+      
       <cover-view>完成</cover-view>
     </cover-view>
   </view>
