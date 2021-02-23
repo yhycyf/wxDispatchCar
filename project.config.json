@@ -63,9 +63,8 @@
     "miniprogram": {
       "list": [
         {
-          "id": -1,
-          "name": "预约",
-          "pathName": "pages/making/making",
+          "name": "预约代步车",
+          "pathName": "pages/making/index",
           "query": "",
           "scene": null
         },

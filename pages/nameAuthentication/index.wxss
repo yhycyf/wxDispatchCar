@@ -52,20 +52,14 @@
   background-color: #DDDEE3;
   border-radius: 40rpx;
 }
+.whatIsNot .icon {
+  width: 22rpx;
+  height: 26rpx;
+}
 .whatIsNot .text {
-  position: fixed;
-  bottom: 170rpx;
-  left: 17%;
   font-size: 22rpx;
   color: #AAAAAA;
   text-align: center;
-}
-.whatIsNot .text .whatIsNotImage {
-  position: fixed;
-  bottom: 170rpx;
-  left: 17%;
-  width: 22rpx;
-  height: 26rpx;
 }
 .whatIsNot .beginOrder {
   position: fixed;

@@ -1,39 +1,41 @@
 <!--index.wxml-->
-<view class="making">
+<view class="idSafety">
   <view class="heard">
     <view class="title">身份信息安全认证</view>
     <view class="marked">根据相关政策，需要您验证身份信息</view>
   </view>
-  <view class="idSafety">
+  <view class="idSafetyCenter">
     <view class="flexRow nameAuthentication">
-      <cover-view class="idIcon">
-        <cover-image class="idImage" src="../../image/idcart.png"  type="default" bindtap="calling"/>
-      </cover-view>
-      <view class="text flexCol">
-        <h5>身份证照片</h5>
-        <text>仅用于核实身份</text>
+      <view class="flexRow leftBox">
+        <image class="idImage" src="../../image/idcart.png" bindtap="calling"/>
+        <view class="text flexCol">
+          <h5>身份证照片</h5>
+          <text>仅用于核实身份</text>
+        </view>
       </view>
       <view class="flexRow goComplete">去完成</view>
     </view>
     <view class="flexRow nameAuthentication">
-      <cover-view class="idIcon">
-        <cover-image class="idImage" src="../../image/car.png"  type="default" bindtap="calling"/>
-      </cover-view>
-      <view class="text flexCol">
-        <h5>车辆信息认证</h5>
-        <text>出险信息确认确保保险服务</text>
+      <view class="flexRow leftBox">
+        <image class="idImage" src="../../image/car.png" bindtap="calling"/>
+        <view class="text flexCol">
+          <h5>车辆信息认证</h5>
+          <text>出险信息确认确保保险服务</text>
+        </view>
       </view>
       <view class="flexRow noComplete">待完成</view>
     </view>
   </view>
-  <view class="whatIsNot">
-    <text class="text">
-      <van-icon name="../../image/e.png" />
-      系统智能加密，实施保障你的信息安全
-    </text>
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>完成</cover-view>
-    </cover-view>
+  <view class="bottom">
+    <view class="flexRow whatIsNot">
+      <image class="icon" src="../../image/e.png" />
+      <view class="text">
+        系统智能加密，实施保障你的信息安全
+      </view>
+    </view>
+    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+      完成
+    </view>
   </view>
   </view>
 
