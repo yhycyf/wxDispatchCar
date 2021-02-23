@@ -4,18 +4,16 @@
     "pages/making/index",
     
     "pages/applyReturnCar/index",
-
+    
     "pages/idSafety/index",
     "pages/nameAuthentication/index",
     "pages/carAuthentication/index",
     "pages/dFillInformation/index",
     "pages/dOrderDetails/index",
-    "pages/dApplyCar/index",
     "pages/dDelayedCar/index",
     "pages/dPaymentDetails/index",
     
     
-
     "pages/logs/logs"
   ],
   "permission": {

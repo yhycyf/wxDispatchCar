@@ -265,6 +265,9 @@ const showTabBarRedDot = () => {
   });
 };
 
+
+
+
 export default {
   cdnUrl,
   countDown,
