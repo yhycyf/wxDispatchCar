@@ -33,7 +33,7 @@
           </view>
           <view slot="service">
             <cover-view class="flexRow service" bindtap="service">
-              <cover-image class="serviceImage" src="../../image/service.png" />
+              <cover-image class="serviceImage" src="../../image/service.png"  type="default" bindtap="calling"/>
             </cover-view>
           </view>
         </map-custom>

@@ -3,5 +3,11 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-field": "@vant/weapp/field/index"
+  },
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "预约代步车",
+    "navigationBarTextStyle": "black"
   }
 }
