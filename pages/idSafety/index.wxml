@@ -26,13 +26,12 @@
       <view class="flexRow noComplete">待完成</view>
     </view>
   </view>
-  <view slot="beginOrder" class="whatIsNot">
+  <view class="whatIsNot">
     <text class="text">
-      <cover-image class="whatIsNotImage" src="../../image/e.png"  type="default" bindtap="calling"/>
+      <van-icon name="../../image/e.png" />
       系统智能加密，实施保障你的信息安全
     </text>
     <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      
       <cover-view>完成</cover-view>
     </cover-view>
   </view>
