@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-08 16:40:22
+ * @LastEditTime: 2021-02-23 10:14:23
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -24,9 +24,9 @@ Page({
     console.log(event.detail);
   },
   // 事件处理函数
-  bindViewTap() {
+  idSafety() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/making/idSafety'
     })
   },
   onLoad() {

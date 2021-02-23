@@ -60,7 +60,7 @@
   </view>
   <view class="caution">请正确填写，以便四维及第三方获取信息后为您提供服务。</view>
   <view slot="beginOrder">
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="idSafety">
       <cover-view>验证资格</cover-view>
     </cover-view>
   </view>
