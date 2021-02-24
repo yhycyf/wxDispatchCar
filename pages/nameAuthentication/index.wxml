@@ -14,7 +14,7 @@
       第二步：请拍摄身份证国徽面
     </view>
     <view class="flexRow flexCol center">
-      <image class="icon" src="../../image/idcart1.png" />
+      <image class="icon" src="../../image/upDriving2.png" />
       <text>请保证身份号码清晰有效大小不超过3M</text>
     </view>
   </view>

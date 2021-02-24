@@ -5,7 +5,7 @@
       第一步：请拍摄驾驶证正面
     </view>
     <view class="flexRow flexCol center">
-      <image class="icon" src="../../image/idcart1.png" />
+      <image class="icon" src="../../image/upDriving1.png" />
       <text>请拍摄驾驶证正面</text>
     </view>
   </view>
@@ -14,7 +14,7 @@
       第二步：请拍摄驾驶证副页
     </view>
     <view class="flexRow flexCol center">
-      <image class="icon" src="../../image/idcart1.png" />
+      <image class="icon" src="../../image/upDriving2.png" />
       <text>请保证驾驶证清晰有效大小不超过3M</text>
     </view>
   </view>
