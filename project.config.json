@@ -91,6 +91,12 @@
           "pathName": "pages/nameAuthentication/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "车辆信息认证",
+          "pathName": "pages/carAuthentication/index",
+          "query": "",
+          "scene": null
         }
       ]
     }

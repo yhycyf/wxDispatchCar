@@ -1,7 +1,22 @@
 <!--index.wxml-->
 <view class="nameAuthentication">
-  <view class="flexRow heard">
-    
+  <view class="upIdentity">
+    <view class="heard">
+      第一步：请拍摄身份证人像面
+    </view>
+    <view class="flexRow flexCol center">
+      <image class="icon" src="../../image/idcart1.png" />
+      <text>注意！首次使用需上传本人证件</text>
+    </view>
+  </view>
+  <view class="upIdentity">
+    <view class="heard">
+      第二步：请拍摄身份证国徽面
+    </view>
+    <view class="flexRow flexCol center">
+      <image class="icon" src="../../image/idcart1.png" />
+      <text>请保证身份号码清晰有效大小不超过3M</text>
+    </view>
   </view>
   <view class="bottom">
     <view class="flexRow whatIsNot">

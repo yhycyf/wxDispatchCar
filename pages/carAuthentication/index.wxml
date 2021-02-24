@@ -1,43 +1,33 @@
 <!--index.wxml-->
-<view class="making">
-  <view class="flexRow heard">
-    <van-tabs title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
-      <van-tab title="代步车资格验证">
-        <van-cell-group>
-          <van-field
-            value="{{ value }}"
-            placeholder="请输入用户名"
-            label="车架号"
-            border="{{ false }}"
-            bind:change="onChange"
-          />
-          <van-field
-            value="{{ value }}"
-            placeholder="请输入用户名"
-            label="报案号"
-            border="{{ false }}"
-            bind:change="onChange"
-          />
-          <van-field
-            value="{{ value }}"
-            placeholder="请输入用户名"
-            label="礼品码"
-            border="{{ false }}"
-            bind:change="onChange"
-          />
-        </van-cell-group>
-      </van-tab>
-      <van-tab title="您的车辆">
-        <view class="">车架号</view>
-        <view class="">报案号</view>
-        <view class="">礼品码</view>
-      </van-tab>
-    </van-tabs>
+<view class="nameAuthentication">
+  <view class="upIdentity">
+    <view class="heard">
+      第一步：请拍摄驾驶证正面
+    </view>
+    <view class="flexRow flexCol center">
+      <image class="icon" src="../../image/idcart1.png" />
+      <text>请拍摄驾驶证正面</text>
+    </view>
   </view>
-  <view slot="beginOrder">
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>开始预约</cover-view>
-    </cover-view>
+  <view class="upIdentity">
+    <view class="heard">
+      第二步：请拍摄驾驶证副页
+    </view>
+    <view class="flexRow flexCol center">
+      <image class="icon" src="../../image/idcart1.png" />
+      <text>请保证驾驶证清晰有效大小不超过3M</text>
+    </view>
   </view>
+  <view class="bottom">
+    <view class="flexRow whatIsNot">
+      <image class="icon" src="../../image/e.png" />
+      <view class="text">
+        系统智能加密，实施保障你的信息安全
+      </view>
+    </view>
+    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+      下一步
+    </view>
   </view>
+</view>
 
