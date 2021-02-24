@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-23 10:14:23
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-02-24 11:59:21
+ * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
@@ -13,11 +13,19 @@ const app = getApp()
 Page({
   data: {
     motto: 'Helelo World',
+    active: 0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    active: 1,
+    active: 0,
     value: '',
+  },
+  onChangeTab(event) {
+    // event.detail 为当前输入的值
+    console.log(event.detail);
+    this.setData({
+      active: event.detail.index
+    })
   },
   onChange(event) {
     // event.detail 为当前输入的值

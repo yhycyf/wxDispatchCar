@@ -13,6 +13,7 @@
 			>
 				<slot name="location"></slot>
 				<slot name="beginOrder"></slot>
+				<slot name="service"></slot>
 			</map>
 		</view>
 	</view>

@@ -1,5 +1,15 @@
 /**index.wxss**/
-.heard .leftBox {
+.making {
+  width: 100%;
+  padding-top: 36rpx;
+  box-sizing: border-box;
+  min-height: 100vh;
+  background-image: linear-gradient(180deg, #DBEAFD 0%, #FFFFFF 40%);
+}
+.making .heard {
+  width: 100%;
+}
+.making .heard .leftBox {
   position: absolute;
   z-index: 101;
   left: 0rpx;
@@ -9,55 +19,107 @@
   background: #fff;
   justify-content: flex-start;
 }
-.heard .leftBox .userAvatarBox {
+.making .heard .leftBox .userAvatarBox {
   border-radius: 50%;
   width: 60rpx;
   height: 60rpx;
   background: #fff;
   box-shadow: 0rpx 2rpx 4rpx 0rpx #DAE4EE;
 }
-.heard .leftBox .userAvatarBox .avatarBox {
+.making .heard .leftBox .userAvatarBox .avatarBox {
   height: 52rpx;
   width: 52rpx;
   border-radius: 50%;
   overflow: hidden;
 }
-.heard .leftBox .userAvatarBox .avatarBox .userAvatar {
+.making .heard .leftBox .userAvatarBox .avatarBox .userAvatar {
   width: 100%;
   height: 100%;
 }
-.heard .leftBox .line {
+.making .heard .leftBox .line {
   width: 2rpx;
   height: 32rpx;
   background: #999;
   margin-left: 24rpx;
 }
-.heard .titleStyle {
+.making .heard .titleStyle {
   font-size: 28px;
 }
-.heard .vantTabs .van-tab {
+.making .heard .vantTabs {
+  width: 690rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0px 8rpx 14rpx 0px rgba(214, 228, 246, 0.42);
+}
+.making .heard .vantTabs .van-tabs__nav {
+  background: #7C8498;
+}
+.making .heard .vantTabs .van-tab {
   font-size: 28rpx;
   color: #999999;
-  background-color: #7C8498;
+  background: #7C8498;
 }
-.heard .vantTabs .van-tab--active {
+.making .heard .vantTabs .van-tab {
+  position: relative;
+  overflow: unset;
+}
+.making .heard .vantTabs .van-tab:nth-of-type(2).van-tab--active:after {
+  content: "";
+  width: 105rpx;
+  height: 65rpx;
+  position: absolute;
+  right: -27px;
+  top: 13px;
+  background: #fff;
+  transform: rotate(60deg);
+  z-index: 1;
+}
+.making .heard .vantTabs .van-tab + .van-tab.van-tab--active:after {
+  content: "";
+  width: 105rpx;
+  height: 65rpx;
+  position: absolute;
+  left: -27px;
+  top: 13px;
+  background: #fff;
+  transform: rotate(-60deg);
+  z-index: 1;
+}
+.making .heard .vantTabs .van-tabs__content {
+  padding: 63rpx 0;
+  box-sizing: border-box;
+}
+.making .heard .vantTabs .van-tab--active {
   color: #151515;
   background-color: #fff;
 }
-.heard .vantTabs .van-tabs__line {
+.making .heard .vantTabs .van-tabs__line {
   background-color: transparent;
 }
-.heard .activeStyle {
+.making .heard .labelClass {
+  position: relative;
+}
+.making .heard .labelClass:after {
+  position: absolute;
+  right: 15rpx;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "*";
+  font-size: 26rpx;
+  color: #FF4D4F;
+}
+.making .heard .activeStyle {
   font-weight: bold;
 }
-.caution {
+.making .caution {
   text-align: center;
   font-size: 24rpx;
   color: #AAAAAA;
   margin-top: 64rpx;
   margin-bottom: 44rpx;
 }
-.beginOrder {
+.making .beginOrder {
   position: fixed;
   left: 17%;
   margin-left: -100rpx;
