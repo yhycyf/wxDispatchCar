@@ -1,14 +1,14 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/making/index",
+    "pages/qualification/index",
     
     "pages/applyReturnCar/index",
     
     "pages/idSafety/index",
     "pages/nameAuthentication/index",
     "pages/carAuthentication/index",
-    "pages/dFillInformation/index",
+    "pages/making/index",
     "pages/dOrderDetails/index",
     "pages/dDelayedCar/index",
     "pages/dPaymentDetails/index",

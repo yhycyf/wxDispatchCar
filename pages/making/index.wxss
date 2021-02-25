@@ -1,15 +1,15 @@
 /**index.wxss**/
-.making {
+.dFillInformation {
   width: 100%;
   padding-top: 36rpx;
   box-sizing: border-box;
   min-height: 100vh;
   background-image: linear-gradient(180deg, #DBEAFD 0%, #FFFFFF 40%);
 }
-.making .heard {
+.dFillInformation .heard {
   width: 100%;
 }
-.making .heard .leftBox {
+.dFillInformation .heard .leftBox {
   position: absolute;
   z-index: 101;
   left: 0rpx;
@@ -19,52 +19,52 @@
   background: #fff;
   justify-content: flex-start;
 }
-.making .heard .leftBox .userAvatarBox {
+.dFillInformation .heard .leftBox .userAvatarBox {
   border-radius: 50%;
   width: 60rpx;
   height: 60rpx;
   background: #fff;
   box-shadow: 0rpx 2rpx 4rpx 0rpx #DAE4EE;
 }
-.making .heard .leftBox .userAvatarBox .avatarBox {
+.dFillInformation .heard .leftBox .userAvatarBox .avatarBox {
   height: 52rpx;
   width: 52rpx;
   border-radius: 50%;
   overflow: hidden;
 }
-.making .heard .leftBox .userAvatarBox .avatarBox .userAvatar {
+.dFillInformation .heard .leftBox .userAvatarBox .avatarBox .userAvatar {
   width: 100%;
   height: 100%;
 }
-.making .heard .leftBox .line {
+.dFillInformation .heard .leftBox .line {
   width: 2rpx;
   height: 32rpx;
   background: #999;
   margin-left: 24rpx;
 }
-.making .heard .titleStyle {
+.dFillInformation .heard .titleStyle {
   font-size: 28px;
 }
-.making .heard .vantTabs {
+.dFillInformation .heard .vantTabs {
   width: 690rpx;
   border-radius: 8rpx;
   overflow: hidden;
   background: #FFFFFF;
   box-shadow: 0px 8rpx 14rpx 0px rgba(214, 228, 246, 0.42);
 }
-.making .heard .vantTabs .van-tabs__nav {
+.dFillInformation .heard .vantTabs .van-tabs__nav {
   background: #7C8498;
 }
-.making .heard .vantTabs .van-tab {
+.dFillInformation .heard .vantTabs .van-tab {
   font-size: 28rpx;
   color: #999999;
   background: #7C8498;
 }
-.making .heard .vantTabs .van-tab {
+.dFillInformation .heard .vantTabs .van-tab {
   position: relative;
   overflow: unset;
 }
-.making .heard .vantTabs .van-tab:nth-of-type(2).van-tab--active:after {
+.dFillInformation .heard .vantTabs .van-tab:nth-of-type(2).van-tab--active:after {
   content: "";
   width: 105rpx;
   height: 65rpx;
@@ -75,7 +75,7 @@
   transform: rotate(60deg);
   z-index: 1;
 }
-.making .heard .vantTabs .van-tab + .van-tab.van-tab--active:after {
+.dFillInformation .heard .vantTabs .van-tab + .van-tab.van-tab--active:after {
   content: "";
   width: 105rpx;
   height: 65rpx;
@@ -86,40 +86,21 @@
   transform: rotate(-60deg);
   z-index: 1;
 }
-.making .heard .vantTabs .van-tabs__content {
+.dFillInformation .heard .vantTabs .van-tabs__content {
   padding: 63rpx 0;
   box-sizing: border-box;
 }
-.making .heard .vantTabs .van-tab--active {
+.dFillInformation .heard .vantTabs .van-tab--active {
   color: #151515;
   background-color: #fff;
 }
-.making .heard .vantTabs .van-tabs__line {
+.dFillInformation .heard .vantTabs .van-tabs__line {
   background-color: transparent;
 }
-.making .heard .vantTabs .radioGroup {
-  justify-content: flex-start;
-  flex-wrap: wrap;
-}
-.making .heard .vantTabs .radioGroup .text {
-  padding: 8rpx 12rpx;
-  box-sizing: border-box;
-  border-radius: 4rpx;
-  border: 2rpx solid #F0F2F5;
-  font-size: 22rpx;
-  font-family: PingFangSC-Medium, PingFang SC;
-  font-weight: 500;
-  color: #414141;
-  margin-bottom: 10rpx;
-}
-.making .heard .vantTabs .radioGroup .radioActive {
-  border: 2rpx solid #457CFB;
-  color: #457CFB;
-}
-.making .heard .labelClass {
+.dFillInformation .heard .labelClass {
   position: relative;
 }
-.making .heard .labelClass:after {
+.dFillInformation .heard .labelClass:after {
   position: absolute;
   right: 15rpx;
   top: 50%;
@@ -128,17 +109,17 @@
   font-size: 26rpx;
   color: #FF4D4F;
 }
-.making .heard .activeStyle {
+.dFillInformation .heard .activeStyle {
   font-weight: bold;
 }
-.making .caution {
+.dFillInformation .caution {
   text-align: center;
   font-size: 24rpx;
   color: #AAAAAA;
   margin-top: 64rpx;
   margin-bottom: 44rpx;
 }
-.making .beginOrder {
+.dFillInformation .beginOrder {
   position: fixed;
   left: 17%;
   margin-left: -100rpx;

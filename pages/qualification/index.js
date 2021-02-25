@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-08 16:40:22
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-02-25 10:27:50
+ * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
@@ -17,16 +17,30 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
+    radio: true,
     value: '',
+  },
+  // 单选框
+  onChangeRadio(event) {
+    this.setData({
+      radio: event.detail,
+    });
+  },
+  // tab切换
+  onChangeTab(event) {
+    // event.detail 为当前输入的值
+    this.setData({
+      active: event.detail.name
+    })
   },
   onChange(event) {
     // event.detail 为当前输入的值
     console.log(event.detail);
   },
   // 事件处理函数
-  bindViewTap() {
+  idSafety() {
     wx.navigateTo({
-      url: '../logs/logs'
+      url: '/pages/making/idSafety'
     })
   },
   onLoad() {

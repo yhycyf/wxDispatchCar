@@ -1,15 +1,14 @@
 <!--index.wxml-->
-<view class="making">
+<view class="dFillInformation">
   <view class="flexRow heard">
-    <van-tabs active="{{active}}"  bind:change="onChangeTab"
+    <van-tabs active="{{ active }}"  bind:change="onChangeTab"
     title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
-      <van-tab title="代步车资格验证" name="{{0}}">
+      <van-tab title="代步车资格验证">
         <van-cell-group>
           <van-field
             value="{{ value }}"
             placeholder="请输入车架号"
             label="车架号"
-            custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
@@ -21,7 +20,6 @@
             value="{{ value }}"
             placeholder="请输入报案号"
             label="报案号"
-            custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
@@ -31,37 +29,18 @@
             value="{{ value }}"
             placeholder="输入礼品码（非必填）"
             label="礼品码"
-            custom-style="font-weight: 500"
             title-width="124rpx"
             border
             bind:change="onChange"
           />
         </van-cell-group>
       </van-tab>
-      <van-tab title="您的车辆" name="{{1}}">
-        <van-radio-group class="flexRow radioGroup" value="{{ radio }}" bind:change="onChangeRadio">
-          <van-radio use-icon-slot name="{{0}}">
-            <view class="text {{radio == 0 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{1}}">
-            <view class="text {{radio == 1 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{2}}">
-            <view class="text {{radio == 2 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{3}}">
-            <view class="text {{radio == 3 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{4}}">
-            <view class="text {{radio == 4 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-        </van-radio-group>
+      <van-tab title="您的车辆">
         <van-cell-group>
           <van-field
             value="{{ value }}"
             placeholder="请输入车架号"
             label="车架号"
-            custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
@@ -73,7 +52,6 @@
             value="{{ value }}"
             placeholder="请输入报案号"
             label="报案号"
-            custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
@@ -83,7 +61,6 @@
             value="{{ value }}"
             placeholder="输入礼品码（非必填）"
             label="礼品码"
-            custom-style="font-weight: 500"
             title-width="124rpx"
             border
             bind:change="onChange"
