@@ -97,6 +97,25 @@
 .making .heard .vantTabs .van-tabs__line {
   background-color: transparent;
 }
+.making .heard .vantTabs .radioGroup {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.making .heard .vantTabs .radioGroup .text {
+  padding: 8rpx 12rpx;
+  box-sizing: border-box;
+  border-radius: 4rpx;
+  border: 2rpx solid #F0F2F5;
+  font-size: 22rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #414141;
+  margin-bottom: 10rpx;
+}
+.making .heard .vantTabs .radioGroup .radioActive {
+  border: 2rpx solid #457CFB;
+  color: #457CFB;
+}
 .making .heard .labelClass {
   position: relative;
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-24 11:59:21
+ * @LastEditTime: 2021-02-25 10:27:50
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -13,18 +13,24 @@ const app = getApp()
 Page({
   data: {
     motto: 'Helelo World',
-    active: 0,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    active: 0,
+    active: 1,
+    radio: true,
     value: '',
   },
+  // 单选框
+  onChangeRadio(event) {
+    this.setData({
+      radio: event.detail,
+    });
+  },
+  // tab切换
   onChangeTab(event) {
     // event.detail 为当前输入的值
-    console.log(event.detail);
     this.setData({
-      active: event.detail.index
+      active: event.detail.name
     })
   },
   onChange(event) {
