@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-22 15:50:23
+ * @LastEditTime: 2021-02-25 13:16:09
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -39,7 +39,7 @@ Page({
   // 事件处理函数
   beginOrder() {
     wx.navigateTo({
-      url: '/pages/making/index'
+      url: '/pages/qualification/index'
     })
   },
   moveToLocation() {

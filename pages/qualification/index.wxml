@@ -3,7 +3,7 @@
   <view class="flexRow heard">
     <van-tabs active="{{active}}"  bind:change="onChangeTab"
     title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
-      <van-tab title="代步车资格验证" name="{{0}}">
+      <van-tab title="代步车资格验证" name="{{1}}">
         <van-cell-group>
           <van-field
             value="{{ value }}"
@@ -38,7 +38,7 @@
           />
         </van-cell-group>
       </van-tab>
-      <van-tab title="您的车辆" name="{{1}}">
+      <van-tab title="您的车辆" name="{{0}}">
         <van-radio-group class="flexRow radioGroup" value="{{ radio }}" bind:change="onChangeRadio">
           <van-radio use-icon-slot name="{{0}}">
             <view class="text {{radio == 0 ? 'radioActive' : ''}}">京AC62743</view>
@@ -93,10 +93,10 @@
     </van-tabs>
   </view>
   <view class="caution">请正确填写，以便四维及第三方获取信息后为您提供服务。</view>
-  <view slot="beginOrder">
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="idSafety">
+  <view>
+    <cover-view class="flexRow qualification" hover-class="beginOrderActive" bindtap="beginOrder">
       <cover-view>验证资格</cover-view>
     </cover-view>
   </view>
-  </view>
+</view>
 

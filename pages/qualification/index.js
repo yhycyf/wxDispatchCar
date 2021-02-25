@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-25 10:27:50
- * @LastEditors: sueRimn
+ * @LastEditTime: 2021-02-25 13:34:02
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
@@ -38,9 +38,9 @@ Page({
     console.log(event.detail);
   },
   // 事件处理函数
-  idSafety() {
+  qualification() {
     wx.navigateTo({
-      url: '/pages/making/idSafety'
+      url: '/pages/idSafety/idSafety'
     })
   },
   onLoad() {
