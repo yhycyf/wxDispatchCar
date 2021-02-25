@@ -56,12 +56,6 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "search": {
-      "list": []
-    },
-    "conversation": {
-      "list": []
-    },
     "plugin": {
       "list": []
     },
@@ -85,6 +79,11 @@
           "name": "申请还车",
           "pathName": "pages/applyReturnCar/index",
           "query": "",
+          "scene": null
+        },
+        {
+          "name": "预约代步车信息填写",
+          "pathName": "pages/dFillInformation/index",
           "scene": null
         }
       ]

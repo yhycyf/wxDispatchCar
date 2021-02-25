@@ -1,42 +1,78 @@
 <!--index.wxml-->
-<view class="making">
+<view class="dFillInformation">
   <view class="flexRow heard">
-    <van-tabs title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
+    <van-tabs active="{{ active }}"  bind:change="onChangeTab"
+    title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
       <van-tab title="代步车资格验证">
         <van-cell-group>
           <van-field
             value="{{ value }}"
-            placeholder="请输入用户名"
+            placeholder="请输入车架号"
             label="车架号"
-            border="{{ false }}"
+            title-width="124rpx"
+            label-class="labelClass"
+            border
             bind:change="onChange"
-          />
+          >
+          <van-icon size="40rpx" slot="right-icon" name="photograph" />
+          </van-field>
           <van-field
             value="{{ value }}"
-            placeholder="请输入用户名"
+            placeholder="请输入报案号"
             label="报案号"
-            border="{{ false }}"
+            title-width="124rpx"
+            label-class="labelClass"
+            border
             bind:change="onChange"
           />
           <van-field
             value="{{ value }}"
-            placeholder="请输入用户名"
+            placeholder="输入礼品码（非必填）"
             label="礼品码"
-            border="{{ false }}"
+            title-width="124rpx"
+            border
             bind:change="onChange"
           />
         </van-cell-group>
       </van-tab>
       <van-tab title="您的车辆">
-        <view class="">车架号</view>
-        <view class="">报案号</view>
-        <view class="">礼品码</view>
+        <van-cell-group>
+          <van-field
+            value="{{ value }}"
+            placeholder="请输入车架号"
+            label="车架号"
+            title-width="124rpx"
+            label-class="labelClass"
+            border
+            bind:change="onChange"
+          >
+          <van-icon size="40rpx" slot="right-icon" name="photograph" />
+          </van-field>
+          <van-field
+            value="{{ value }}"
+            placeholder="请输入报案号"
+            label="报案号"
+            title-width="124rpx"
+            label-class="labelClass"
+            border
+            bind:change="onChange"
+          />
+          <van-field
+            value="{{ value }}"
+            placeholder="输入礼品码（非必填）"
+            label="礼品码"
+            title-width="124rpx"
+            border
+            bind:change="onChange"
+          />
+        </van-cell-group>
       </van-tab>
     </van-tabs>
   </view>
+  <view class="caution">请正确填写，以便四维及第三方获取信息后为您提供服务。</view>
   <view slot="beginOrder">
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>开始预约</cover-view>
+    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="idSafety">
+      <cover-view>验证资格</cover-view>
     </cover-view>
   </view>
   </view>
