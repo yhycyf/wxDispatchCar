@@ -1,5 +1,5 @@
 /**index.wxss**/
-.heard .leftBox {
+.dFillInformation .heard .leftBox {
   position: absolute;
   z-index: 101;
   left: 0rpx;
@@ -9,48 +9,48 @@
   background: #fff;
   justify-content: flex-start;
 }
-.heard .leftBox .userAvatarBox {
+.dFillInformation .heard .leftBox .userAvatarBox {
   border-radius: 50%;
   width: 60rpx;
   height: 60rpx;
   background: #fff;
   box-shadow: 0rpx 2rpx 4rpx 0rpx #DAE4EE;
 }
-.heard .leftBox .userAvatarBox .avatarBox {
+.dFillInformation .heard .leftBox .userAvatarBox .avatarBox {
   height: 52rpx;
   width: 52rpx;
   border-radius: 50%;
   overflow: hidden;
 }
-.heard .leftBox .userAvatarBox .avatarBox .userAvatar {
+.dFillInformation .heard .leftBox .userAvatarBox .avatarBox .userAvatar {
   width: 100%;
   height: 100%;
 }
-.heard .leftBox .line {
+.dFillInformation .heard .leftBox .line {
   width: 2rpx;
   height: 32rpx;
   background: #999;
   margin-left: 24rpx;
 }
-.heard .titleStyle {
+.dFillInformation .heard .titleStyle {
   font-size: 28px;
 }
-.heard .vantTabs .van-tab {
+.dFillInformation .heard .vantTabs .van-tab {
   font-size: 28rpx;
   color: #999999;
   background-color: #7C8498;
 }
-.heard .vantTabs .van-tab--active {
+.dFillInformation .heard .vantTabs .van-tab--active {
   color: #151515;
   background-color: #fff;
 }
-.heard .vantTabs .van-tabs__line {
+.dFillInformation .heard .vantTabs .van-tabs__line {
   background-color: transparent;
 }
-.heard .activeStyle {
+.dFillInformation .heard .activeStyle {
   font-weight: bold;
 }
-.beginOrder {
+.dFillInformation .beginOrder {
   position: fixed;
   bottom: 70rpx;
   left: 17%;

@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<view class="nameAuthentication">
+<view class="carAuthentication">
   <view class="upIdentity">
     <view class="heard">
       第一步：请拍摄身份证人像面
