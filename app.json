@@ -9,7 +9,7 @@
     "pages/nameAuthentication/index",
     "pages/carAuthentication/index",
     "pages/making/index",
-    "pages/dOrderDetails/index",
+    "pages/making/dOrderDetails/index",
     "pages/dDelayedCar/index",
     "pages/dPaymentDetails/index"
   ],

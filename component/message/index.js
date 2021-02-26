@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-02-26 09:57:57
+ * @LastEditTime: 2021-02-26 14:02:35
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
@@ -74,6 +74,14 @@ Component({
   },
 
   methods: {
+    submit(e) {
+      let type = e.currentTarget.dataset.type;
+      if(type == 'send') {
+        this.triggerEvent('showPopup')
+      } else {
+        
+      }
+    },
     showPopup(e) {
       let type = e.currentTarget.dataset.type;
       if(type == 'get') {

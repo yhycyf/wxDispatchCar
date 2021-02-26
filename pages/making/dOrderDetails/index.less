@@ -1,0 +1,90 @@
+/**index.wxss**/
+.orderDetail{
+    width: 100%;
+    background: #F6F7F9;
+    padding: 20rpx 30rpx;
+    box-sizing: border-box;
+    .detailsBox {
+        width: 100%;
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 0rpx 4rpx 8rpx 0px rgba(202, 204, 211, 0.66);
+        border-radius: 8rpx;
+        .detailTop {
+            .valueClass {
+                font-size: 24rpx;
+                font-family: PingFangSC-Semibold, PingFang SC;
+                font-weight: 600;
+                color: #777777;
+            }
+            .title {
+                justify-content: flex-start;
+                .van-cell-text {
+                    font-size: 32rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #212121;
+                }
+                .van-tag {
+                    padding: 2rpx 4rpx;
+                    font-size: 20rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #FFFFFF;
+                    margin-left: 8rpx;
+                }
+            }
+            .titleClass {
+                font-size: 24rpx;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #444444;
+            }
+            .labelClass {
+                font-size: 36rpx;
+                font-family: DINAlternate-Bold, DINAlternate;
+                font-weight: bold;
+                color: #333333;
+            }
+            .list {
+                width: 100%;
+                .leftChild {
+                    width: 60%;
+                }
+                .rightChild {
+                    width: 40%;
+                }
+            }
+            .content {
+                position: relative;
+                .titleClass {
+                    font-size: 24rpx;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    font-weight: 400;
+                    color: #444444;
+                }
+                .labelClass {
+                    font-size: 24rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #333333;
+                }
+            }
+            .content::after {
+                content: "";
+                width: 620rpx;
+                height: 2rpx;
+                background: #EFEFEF;
+                position: absolute;
+                top: 0;
+                left: 36rpx;
+            }
+        }
+
+    }
+    .detailsStatus {
+        .title {
+            justify-content: flex-start;
+        }
+    }
+}

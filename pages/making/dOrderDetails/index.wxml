@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="orderDetail">
+ <view class="detailsBox">
+  <van-cell-group custom-class="detailTop">
+    <van-cell value="ID：13213113" border="{{false}}" value-class="valueClass">
+      <view slot="title" class="flexRow title">
+        <view class="van-cell-text">出险代步车</view>
+        <van-tag size="medium" color="#00CB8B">免费三天</van-tag>
+      </view>
+    </van-cell>
+    <van-cell title="车架号" title-class="titleClass" label-class="labelClass" label="LSMASKDHGSJ1223" border="{{ false }}" />
+    <view class="flexRow list">
+      <van-cell title="手机号" title-class="titleClass" label-class="labelClass" label="13872828390" border="{{ false }}" class="leftChild" />
+      <van-cell title="车主" title-class="titleClass" label-class="labelClass" label="张三" border="{{ false }}" class="rightChild" />
+    </view>
+    <view class="content">
+      <van-cell title="送车时间" title-class="titleClass" label-class="labelClass" label="2020年10月29日 17:43" border="{{ false }}" />
+      <van-cell title="送车地址" title-class="titleClass" label-class="labelClass" label="北京市昌平区TBD云集中心地下停车场" border="{{ false }}" />
+    </view>
+  </van-cell-group>
+ </view>
+ <view class="detailsStatus">
+  <van-cell>
+    <view slot="title" class="flexRow title">
+      <van-icon size="32rpx" color="#457CFB"  name="clock-o" />
+      <view class="van-cell-text">订单进展</view>
+    </view>
+    <van-icon slot="right-icon" size="32rpx" color="#777777" name="replay" />
+  </van-cell>
+ </view>
+</view>
+

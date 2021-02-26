@@ -26,7 +26,7 @@
 			"outputPath": ""
 		},
 		"bundle": false,
-		"useCompilerModule": false,
+		"useCompilerModule": true,
 		"userConfirmedUseCompilerModuleSwitch": false,
 		"compileHotReLoad": false,
 		"useMultiFrameRuntime": true,
@@ -115,6 +115,13 @@
 					"id": 6,
 					"name": "预约代步车",
 					"pathName": "pages/making/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "订单详情",
+					"pathName": "pages/making/dOrderDetails/index",
 					"query": "",
 					"scene": null
 				}

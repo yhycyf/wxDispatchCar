@@ -85,7 +85,7 @@
 			</view>
 		</block>
 	</view>
-	<view class="flexRow submit"> 
+	<view class="flexRow submit"  bindtap="submit" data-type="{{type}}"> 
 		<view wx:if="{{type == 'get'}}" class="flexRow text"  hover-class="beginOrderActive">申请还车</view>
 		<view wx:if="{{type == 'send'}}" class="flexRow text sendCar" hover-class="beginOrderActive">预约</view>
 	</view>

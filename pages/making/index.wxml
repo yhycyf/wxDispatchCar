@@ -2,7 +2,19 @@
 <view class="flexCol making">
   <view class="title">2小时内到您的身边</view>
   <view class="content">
-    <message type="send"></message>
+    <message type="send" bindshowPopup="showPopup"></message>
   </view>
+  <van-popup z-index="1000000" custom-style="border-radius: 12rpx;" show="{{ show }}" position="center" bind:close="onClose">
+    <view class="flexCol box">
+      <view class="flexCol top">
+        <image class="image" src="{{status == 1 ? '../../image/upDriving1.png' : '../../image/upDriving1.png'}}"></image>
+        <view class="text">申请成功</view>
+        <view class="contentText">
+          您的申请已提交，系统将在审批通过后发送给您短信提醒您预约成功
+        </view>
+      </view>
+      <view class="flexRow bottomBtn" bindtap="goOrderDetail">查看订单</view>
+    </view>
+	</van-popup>
 </view>
 
