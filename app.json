@@ -11,10 +11,7 @@
     "pages/making/index",
     "pages/dOrderDetails/index",
     "pages/dDelayedCar/index",
-    "pages/dPaymentDetails/index",
-    
-    
-    "pages/logs/logs"
+    "pages/dPaymentDetails/index"
   ],
   "permission": {
     "scope.userLocation": {
