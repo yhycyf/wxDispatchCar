@@ -22,7 +22,8 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "四维代步车",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#F6F7F9"
   },
   "sitemapLocation": "sitemap.json"
 }

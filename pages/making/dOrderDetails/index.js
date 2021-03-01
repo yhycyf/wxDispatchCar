@@ -12,6 +12,7 @@ const app = getApp()
 
 Page({
   data: {
+    complete: true,
     motto: 'Helelo World',
     userInfo: {},
     hasUserInfo: false,
