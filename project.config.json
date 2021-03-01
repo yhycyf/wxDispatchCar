@@ -124,6 +124,13 @@
 					"pathName": "pages/making/dOrderDetails/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "延时还车",
+					"pathName": "pages/dDelayedCar/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

@@ -1,43 +1,79 @@
 <!--index.wxml-->
-<view class="making">
-  <view class="flexRow heard">
-    <van-tabs title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
-      <van-tab title="代步车资格验证">
-        <van-cell-group>
-          <van-field
-            value="{{ value }}"
-            placeholder="请输入用户名"
-            label="车架号"
-            border="{{ false }}"
-            bind:change="onChange"
-          />
-          <van-field
-            value="{{ value }}"
-            placeholder="请输入用户名"
-            label="报案号"
-            border="{{ false }}"
-            bind:change="onChange"
-          />
-          <van-field
-            value="{{ value }}"
-            placeholder="请输入用户名"
-            label="礼品码"
-            border="{{ false }}"
-            bind:change="onChange"
-          />
-        </van-cell-group>
-      </van-tab>
-      <van-tab title="您的车辆">
-        <view class="">车架号</view>
-        <view class="">报案号</view>
-        <view class="">礼品码</view>
-      </van-tab>
-    </van-tabs>
+<view class="delayedCar">
+  <view class="detailsBox">
+    <van-cell class="" border="{{false}}"
+      use-label-slot
+      value-class="valueClass">
+      <view slot="title" class="flexRow title">
+        <view class="van-cell-text">车牌号</view>
+      </view>
+      <view slot="label" class="label">
+        <view class="flexRow list">
+          <view class="number">京A888888</view>
+          <van-tag custom-class="icon" size="medium" color="#00CB8B">代步车</van-tag>
+        </view>
+      </view>
+    </van-cell>
+    <view class="flexRow listBox">
+      <van-cell title="使用时间" use-label-slot
+        title-class="titleClass"
+        border="{{ false }}">
+        <view slot="label" class="label">
+          <view class="flexRow list listbottom">
+            <view class="text">2021-07-01 17:43</view>
+          </view>
+        </view>
+      </van-cell>
+      <van-cell title="剩余使用时间" use-label-slot
+        title-class="titleClass"
+        border="{{ false }}">
+        <view slot="label" class="label">
+          <view class="flexRow list listbottom">
+            <view class="flexRow text">
+              <text class="red">23</text>小时<text class="red">17</text>分
+            </view>
+          </view>
+        </view>
+      </van-cell>
+    </view>
+    <view class="flexRow lineBox">
+      <view class="line"></view>
+    </view>
+    <view class="flexRow tips">温馨提示：如不在规定时间内归还车辆会影响您的征信。</view>
   </view>
-  <view slot="beginOrder">
-    <cover-view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>开始预约</cover-view>
-    </cover-view>
+  <view class="scopeContent">
+    <van-cell title="请选择延时范围" title-style="font-size: 28rpx;color: #333333;font-weight: 500;"
+      border="{{ false }}">
+    </van-cell>
+    <van-radio-group class="flexRow radioGroup" value="{{ radio }}" bind:change="onChangeRadio">
+      <van-radio use-icon-slot name="{{0}}" custom-class="radioClass">
+        <view class="flexRow text {{radio == 0 ? 'radioActive' : ''}}">1天</view>
+      </van-radio>
+      <van-radio use-icon-slot name="{{1}}" custom-class="radioClass">
+        <view class="flexRow text {{radio == 1 ? 'radioActive' : ''}}">2天</view>
+      </van-radio>
+      <van-radio use-icon-slot name="{{2}}" custom-class="radioClass">
+        <view class="flexRow text {{radio == 2 ? 'radioActive' : ''}}">3天</view>
+      </van-radio>
+    </van-radio-group>
+    <view class="flexRow customDay">自定义天数</view>
+    <van-cell title="延时日期至" use-label-slot
+      title-class="delayTitle"
+      border="{{ false }}">
+      <view slot="label" class="delayDay">
+        <view class="text">2021-07-01 17:43</view>
+      </view>
+    </van-cell>
+    <view class="flexRow lineBox">
+      <view class="line"></view>
+    </view>
+    <view class="priceTips">
+      价格说明：每次出险都可以免费使用3天代步车服务，如需延时则按照<text class="red">299/天</text>的单价收费，目前仅支持微信支付。
+    </view>
   </view>
+  <view class="flexRow bottom">
+    <view class="price">支付 <text class="red">299</text><text> 元</text></view>
+    <view class="flexRow btn">立即付款</view>
   </view>
+</view>
 
