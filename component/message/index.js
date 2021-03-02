@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-02-26 14:02:35
+ * @LastEditTime: 2021-03-02 14:39:17
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
@@ -79,7 +79,7 @@ Component({
       if(type == 'send') {
         this.triggerEvent('showPopup')
       } else {
-        
+        this.triggerEvent('goDelayedCarPage')
       }
     },
     showPopup(e) {

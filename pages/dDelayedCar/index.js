@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-01 18:37:35
+ * @LastEditTime: 2021-03-02 09:38:26
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -19,6 +19,11 @@ Page({
     active: 1,
     value: '',
     radio: 0,
+  },
+  payment() {
+    wx.navigateTo({
+      url: '/pages/dDelayedCar/payment/index'
+    })
   },
   // 单选框
   onChangeRadio(event) {

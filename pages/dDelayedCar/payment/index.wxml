@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="payment">
+  <view class="status">
+    <view class="flexCol center">
+      <image class="image" src="../../../image/upDriving2.png" />
+      <view class="statusText">{{payStatus ? '付款成功' : '付款失败'}}</view>
+      <text class="tips">您已成功延时还车，请在还车日期截止前归还车辆</text>
+    </view>
+  </view>
+  <view class="flexRow bottom">
+    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="godOrderDetails">
+      查看订单
+    </view>
+  </view>
+</view>
+

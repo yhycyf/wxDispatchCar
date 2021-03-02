@@ -11,6 +11,7 @@
     "pages/making/index",
     "pages/making/dOrderDetails/index",
     "pages/dDelayedCar/index",
+    "pages/dDelayedCar/payment/index",
     "pages/dPaymentDetails/index"
   ],
   "permission": {

@@ -73,7 +73,7 @@
   </view>
   <view class="flexRow bottom">
     <view class="price">支付 <text class="red">299</text><text> 元</text></view>
-    <view class="flexRow btn">立即付款</view>
+    <view class="flexRow btn" bindtap="payment">立即付款</view>
   </view>
 </view>
 

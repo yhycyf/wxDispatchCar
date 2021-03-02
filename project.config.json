@@ -131,6 +131,13 @@
 					"pathName": "pages/dDelayedCar/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "延时还车付款页面",
+					"pathName": "pages/dDelayedCar/payment/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

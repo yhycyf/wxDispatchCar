@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-02 14:32:14
+ * @LastEditTime: 2021-03-02 14:42:47
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -12,23 +12,13 @@ const app = getApp()
 
 Page({
   data: {
-    complete: true,
-    motto: 'Helelo World',
-    userInfo: {},
-    hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    active: 1,
-    value: '',
+    payStatus: true
   },
-  waitReturnCar() {
+  // 查看订单
+  godOrderDetails() {
     wx.navigateTo({
-      url: '/pages/dDelayedCar/index'
-    })
-  },
-  // 立即还车
-  goReturnCarPage() {
-    wx.navigateTo({
-      url: '/pages/applyReturnCar/index'
+      url: '/pages/making/dOrderDetails/index'
     })
   },
   onChange(event) {
