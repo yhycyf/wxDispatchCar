@@ -2,7 +2,10 @@
   "usingComponents": {
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "mp-dialog": "weui-miniprogram/dialog/dialog",
+    "van-tag": "@vant/weapp/tag/index",
     "map-custom": "../../component/map/index",
-    "van-icon": "@vant/weapp/icon/index"
+    "list": "../../component/list/index"
   }
 }

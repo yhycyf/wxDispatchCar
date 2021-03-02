@@ -1,0 +1,30 @@
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.beginOrderActive {
+  opacity: 0.85;
+}
+.weui-panel__hd:after {
+  border-bottom: none;
+}
+.weui-media-box__bd_in-appmsg {
+  flex: none;
+}
+.weui-cell__bd {
+  position: absolute;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #AAAAAA;
+  right: 36rpx;
+  top: 40rpx;
+}
