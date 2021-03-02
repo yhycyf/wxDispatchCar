@@ -94,9 +94,9 @@
   </view>
   <view class="caution">请正确填写，以便四维及第三方获取信息后为您提供服务。</view>
   <view>
-    <cover-view class="flexRow qualification" hover-class="beginOrderActive" bindtap="beginOrder">
-      <cover-view>验证资格</cover-view>
-    </cover-view>
+    <view class="flexRow qualification" hover-class="beginOrderActive" bindtap="qualification">
+      <view>验证资格</view>
+    </view>
   </view>
 </view>
 

@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-25 13:34:02
- * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2021-03-02 14:49:23
+ * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
@@ -20,6 +20,12 @@ Page({
     radio: true,
     value: '',
   },
+  // 资格验证
+  qualification() {
+    wx.navigateTo({
+      url: '/pages/idSafety/index'
+    })
+  },
   // 单选框
   onChangeRadio(event) {
     this.setData({
@@ -36,12 +42,6 @@ Page({
   onChange(event) {
     // event.detail 为当前输入的值
     console.log(event.detail);
-  },
-  // 事件处理函数
-  qualification() {
-    wx.navigateTo({
-      url: '/pages/idSafety/idSafety'
-    })
   },
   onLoad() {
     

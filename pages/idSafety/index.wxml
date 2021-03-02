@@ -33,7 +33,7 @@
         系统智能加密，实施保障你的信息安全
       </view>
     </view>
-    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="submit">
       完成
     </view>
   </view>
