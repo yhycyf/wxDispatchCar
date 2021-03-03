@@ -1,0 +1,76 @@
+/**index.wxss**/
+@import '../../../style/rest.less';
+.more{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    padding-top: 176rpx;
+    padding-bottom: 40rpx;
+    box-sizing: border-box;
+    .heard {
+        position: fixed;
+        z-index: @fixed-index;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        .tabs {
+            padding: 14rpx 30rpx 0 22rpx;
+            box-sizing: border-box;
+            justify-content: space-between;
+            .van-dropdown-menu {
+                height: 80rpx;
+            }
+            .titleClass {
+                font-size: 24rpx;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #191919;
+            }
+            .seach {
+                width: 504rpx;
+                .van-search__content {
+                    background-color: #fff;
+                    border: 2rpx solid #4B6EF3;
+                    padding-left: 100rpx;
+                }
+                .van-search {
+                    padding: 0;
+                }
+                .fieldClass {
+                    .van-icon  {
+                        width: 32rpx;
+                        height: 32rpx;
+                        color: #4B6EF3;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .collect {
+                .text {
+                    margin-top: 8rpx;
+                    font-size: 20rpx;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    font-weight: 400;
+                    color: #000000;
+                }
+            }
+        }
+        .screenBox {
+            height: 80rpx;
+            .screen {
+                width: 100%;
+            }
+            .van-dropdown-menu {
+                height: 60rpx;
+            }
+            .screenTitle {
+                font-size: 24rpx;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #3B3B3B;
+            }
+        }
+    }
+    
+}

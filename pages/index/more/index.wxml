@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="more">
+  <view class="heard">
+    <view class="flexRow tabs">
+      <van-dropdown-menu>
+        <van-dropdown-item title-class="titleClass" value="{{ cityValue }}" disabled options="{{ optionValue }}"/>
+      </van-dropdown-menu>
+      <view class="seach">
+        <van-search shape="round" background="#ffffff"
+          field-class="fieldClass"
+          placeholder-style="font-size: 28rpx; color: #4B6EF3;" 
+          value="{{ seachValue }}" placeholder="搜一搜“人保推荐”" />
+      </view>
+      <view class="flexCol collect" bindtap="goCollect">
+        <van-icon name="star-o" size="28rpx" color="#000000" />
+        <view class="text">收藏</view>
+      </view>
+    </view>
+    <view class="flexRow screenBox">
+      <van-dropdown-menu class="screen" active-color="#4B6EF3">
+        <van-dropdown-item title-class="screenTitle" value="{{ value1 }}" options="{{ option1 }}" />
+        <van-dropdown-item title-class="screenTitle" value="{{ value2 }}" options="{{ option2 }}" />
+        <van-dropdown-item title-class="screenTitle" value="{{ value3 }}" options="{{ option3 }}" />
+      </van-dropdown-menu>
+    </view>
+  </view>
+  <list></list>
+  <list></list>
+  <list></list>
+  <list></list>
+  <list></list>
+</view>
+

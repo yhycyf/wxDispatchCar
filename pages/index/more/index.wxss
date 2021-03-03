@@ -1,0 +1,85 @@
+/**index.wxss**/
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.beginOrderActive {
+  opacity: 0.85;
+}
+.more {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding-top: 176rpx;
+  padding-bottom: 40rpx;
+  box-sizing: border-box;
+}
+.more .heard {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+}
+.more .heard .tabs {
+  padding: 14rpx 30rpx 0 22rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.more .heard .tabs .van-dropdown-menu {
+  height: 80rpx;
+}
+.more .heard .tabs .titleClass {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #191919;
+}
+.more .heard .tabs .seach {
+  width: 504rpx;
+}
+.more .heard .tabs .seach .van-search__content {
+  background-color: #fff;
+  border: 2rpx solid #4B6EF3;
+  padding-left: 100rpx;
+}
+.more .heard .tabs .seach .van-search {
+  padding: 0;
+}
+.more .heard .tabs .seach .fieldClass .van-icon {
+  width: 32rpx;
+  height: 32rpx;
+  color: #4B6EF3;
+  font-weight: bold;
+}
+.more .heard .tabs .collect .text {
+  margin-top: 8rpx;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #000000;
+}
+.more .heard .screenBox {
+  height: 80rpx;
+}
+.more .heard .screenBox .screen {
+  width: 100%;
+}
+.more .heard .screenBox .van-dropdown-menu {
+  height: 60rpx;
+}
+.more .heard .screenBox .screenTitle {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #3B3B3B;
+}

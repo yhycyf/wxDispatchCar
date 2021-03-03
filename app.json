@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/index/more/index",
+    "pages/index/more/collect/index",
     "pages/qualification/index",
     
     "pages/applyReturnCar/index",

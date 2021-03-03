@@ -10,7 +10,7 @@
       </view>
       <view class="line"></view>
     </view>
-    <van-tabs 
+    <van-tabs sticky
       title-style="titleStyle" 
       custom-class="vantTabs" 
       nav-class="navClass"
@@ -39,9 +39,64 @@
         </map-custom>
       </van-tab>
       <van-tab title="接送车">
-        <list>
-
-        </list>
+        <view class="pickUp">
+          <view class="flexRow titleTop">
+            <view class="flexCol left">
+              <view class="title">四维代步车</view>
+              <view class="subhead">四维代步接送车</view>
+            </view>
+            <view class="flexRow right">
+              <view class="text">今日限行：</view>
+              <view class="num">7</view>
+              <view class="num">9</view>
+            </view>
+          </view>
+          <view class="content">
+            <view class="listBox">
+              <view class="seach">
+                <van-search shape="round" background="#ffffff"
+                  placeholder-style="font-size: 28rpx; color: #151515;" 
+                  disabled value="{{ seachValue }}" placeholder="您要把车送去哪儿" />
+              </view>
+              <van-grid border="{{ false }}" custom-class="gridClass">
+                <van-grid-item use-slot>
+                  <image
+                    style="width: 80rpx; height: 80rpx;"
+                    src="../../image/idcart1.png"
+                  />
+                  <text>代维修</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                  <image
+                    style="width: 80rpx; height: 80rpx"
+                    src="../../image/idcart1.png"
+                  />
+                  <text>代保养</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                  <image
+                    style="width: 80rpx; height: 80rpx"
+                    src="../../image/idcart1.png"
+                  />
+                  <text>代年检</text>
+                </van-grid-item>
+                <van-grid-item use-slot>
+                  <image
+                    style="width: 80rpx; height: 80rpx"
+                    src="../../image/idcart1.png"
+                  />
+                  <text>安全检测</text>
+                </van-grid-item>
+              </van-grid>
+              <view class="flexRow titleBox">
+                <view class="leftText">推荐车行</view>
+                <view class="rightText" bindtap="seeMore">查看更多</view>
+              </view>
+              <list></list>
+            </view>
+          </view>
+          <view class="bottomText">四维代步接送车</view>
+        </view>
       </van-tab>
       <van-tab title="道路救援" disabled>道路救援</van-tab>
       <van-tab title="代驾" disabled>代驾</van-tab>

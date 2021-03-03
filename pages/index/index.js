@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-02 17:06:58
+ * @LastEditTime: 2021-03-03 16:08:52
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -17,7 +17,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 2,
-    
+    seachValue: ''
   },
   
 
@@ -35,6 +35,12 @@ Page({
 
   onReady: function (e) {
     
+  },
+  // 查看更多
+  seeMore() {
+    wx.navigateTo({
+      url: '/pages/index/more/index'
+    })
   },
   // 事件处理函数
   beginOrder() {

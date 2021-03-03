@@ -138,6 +138,12 @@
 					"pathName": "pages/dDelayedCar/payment/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "查看更多",
+					"pathName": "pages/index/more/index",
+					"scene": null
 				}
 			]
 		}

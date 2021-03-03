@@ -1,5 +1,4 @@
 <view class="weui-panel weui-panel_access">
-	<view class="weui-panel__hd">推荐车行</view>
 	<view class="weui-panel__bd">
 		<navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
 			<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
@@ -8,12 +7,32 @@
 			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
 				<view class="weui-media-box__title">北京润德汽车维修</view>
 				<view class="weui-media-box__desc">昌平区北七家镇</view>
-				<van-tag plain round type="primary">人保推荐</van-tag>
+				<van-tag custom-class="customTag" plain round>人保推荐</van-tag>
 			</view>
-			<view class="rightArrow">
-			
+			<view class="flexCol rightArrow">
+				<view class="km">3.93km</view>
+				<view class="flexRow details">
+					<view class="text">详情</view>
+					<van-icon size="18rpx" color="#C6C7CC" name="arrow" />
+				</view>
+			</view>
+		</navigator>
+		<navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+			<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+				<image class="weui-media-box__thumb" src="{{icon60}}" />
+			</view>
+			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+				<view class="weui-media-box__title">北京润德汽车维修</view>
+				<view class="weui-media-box__desc">昌平区北七家镇</view>
+				<van-tag custom-class="customTag red" plain round>人保推荐</van-tag>
+			</view>
+			<view class="flexCol rightArrow">
+				<view class="km">3.93km</view>
+				<view class="flexRow details">
+					<view class="text">详情</view>
+					<van-icon size="18rpx" color="#C6C7CC" name="arrow" />
+				</view>
 			</view>
 		</navigator>
 	</view>
-	<view class="weui-cell__bd">查看更多</view>
 </view>

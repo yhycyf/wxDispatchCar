@@ -4,6 +4,6 @@
     "van-tab": "@vant/weapp/tab/index",
     "van-tabs": "@vant/weapp/tabs/index",
     "van-field": "@vant/weapp/field/index",
-    "message": "../../component/message/index"
+    "message": "/component/message/index"
   }
 }

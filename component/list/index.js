@@ -4,14 +4,15 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-02 14:39:17
+ * @LastEditTime: 2021-03-03 10:15:09
  */
 
 
 const app = getApp();
 Component({
   options: {
-    multipleSlots: true // 在组件定义时的选项中启用多slot支持
+    multipleSlots: true, // 在组件定义时的选项中启用多slot支持
+    addGlobalClass: true
   },
   observers: {
     
@@ -29,6 +30,9 @@ Component({
   data: {
     show: false,
     currentDate: '12:00',
+    item: {
+      a: 'a'
+    }
   }, // 私有数据，可用于模板渲染
 
   lifetimes: {
