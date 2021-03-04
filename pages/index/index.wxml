@@ -92,7 +92,7 @@
                 <view class="leftText">推荐车行</view>
                 <view class="rightText" bindtap="seeMore">查看更多</view>
               </view>
-              <list></list>
+              <list rightArrow="{{true}}"></list>
             </view>
           </view>
           <view class="bottomText">四维代步接送车</view>

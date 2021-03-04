@@ -24,10 +24,10 @@
       </van-dropdown-menu>
     </view>
   </view>
-  <list></list>
-  <list></list>
-  <list></list>
-  <list></list>
-  <list></list>
+  <list rightStar></list>
+  <list rightStar></list>
+  <list rightStar></list>
+  <list rightStar></list>
+  <list rightStar></list>
 </view>
 

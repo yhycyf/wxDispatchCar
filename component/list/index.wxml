@@ -2,36 +2,30 @@
 	<view class="weui-panel__bd">
 		<navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
 			<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-				<image class="weui-media-box__thumb" src="{{icon60}}" />
+				<image class="weui-media-box__thumb {{rightStar ? 'rightStarImg' : 'img'}}" src="{{icon60}}" />
 			</view>
 			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-				<view class="weui-media-box__title">北京润德汽车维修</view>
+				<view class="flexRow title">
+					<van-tag custom-class="titleTag {{rightStar ? 'green' : ''}}" color="#457CFB" text-color="#FFFFFF" type="primary">人保推荐</van-tag>
+					<view class="weui-media-box__title">北京润德汽车维修中心</view>
+				</view>
 				<view class="weui-media-box__desc">昌平区北七家镇</view>
-				<van-tag custom-class="customTag" plain round>人保推荐</van-tag>
+				<view wx:if="{{rightStar}}" class="km">3.93km</view>
+				<view class="tagBox">
+					<van-tag custom-class="customTag {{rightStar ? '' : 'red'}}" text-color="{{rightStar ? '#828282' : '#457CFB'}}" color="{{rightStar ? '#F2F3FA' : '#457CFB'}}" plain="{{rightStar ? false : true}}" round="{{rightStar ? false : true}}">人保推荐</van-tag>
+					<van-tag wx:if="{{rightStar}}" custom-class="borderTag" text-color="#828282">品质保证 人气精选</van-tag>
+				</view>
 			</view>
-			<view class="flexCol rightArrow">
+			<view wx:if="{{rightArrow}}" class="flexCol rightArrow">
 				<view class="km">3.93km</view>
 				<view class="flexRow details">
 					<view class="text">详情</view>
 					<van-icon size="18rpx" color="#C6C7CC" name="arrow" />
 				</view>
 			</view>
-		</navigator>
-		<navigator url="" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
-			<view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
-				<image class="weui-media-box__thumb" src="{{icon60}}" />
-			</view>
-			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-				<view class="weui-media-box__title">北京润德汽车维修</view>
-				<view class="weui-media-box__desc">昌平区北七家镇</view>
-				<van-tag custom-class="customTag red" plain round>人保推荐</van-tag>
-			</view>
-			<view class="flexCol rightArrow">
-				<view class="km">3.93km</view>
-				<view class="flexRow details">
-					<view class="text">详情</view>
-					<van-icon size="18rpx" color="#C6C7CC" name="arrow" />
-				</view>
+			<view wx:if="{{rightStar}}" class="flexCol rightArrow">
+				<van-icon name="star-o" size="46rpx" color="#000000" />
+				<!-- <van-icon name="star" size="46rpx" color="#FFAF19" /> -->
 			</view>
 		</navigator>
 	</view>

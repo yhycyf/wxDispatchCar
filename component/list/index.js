@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-03 10:15:09
+ * @LastEditTime: 2021-03-03 17:59:31
  */
 
 
@@ -24,7 +24,14 @@ Component({
       type: String,
       value: ''
     },
-    
+    rightArrow: {
+      type: Boolean,
+      value: false
+    },
+    rightStar: {
+      type: Boolean,
+      value: false
+    }
   },
 
   data: {
