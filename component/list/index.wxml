@@ -1,7 +1,7 @@
 <view class="weui-panel weui-panel_access">
 	<view class="weui-panel__bd">
 		<navigator url="{{rightArrow ? '/pages/index/shopDetails/index' : ''}}" class="weui-media-box weui-media-box_appmsg" hover-class="{{rightArrow ? 'weui-cell_active' : 'none'}}">
-			<view class="{{rightStar ? 'rightStarImg' : 'img'}}">
+			<view class="listImg {{rightStar ? 'rightStarImg' : 'img'}}">
 				<image mode="aspectFill" class="weui-media-box__thumb" src="{{'https://img.yzcdn.cn/vant/cat.jpeg'}}" />
 			</view>
 			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">

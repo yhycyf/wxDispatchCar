@@ -55,20 +55,20 @@
   color: #151515;
   line-height: 28rpx;
 }
-.weui-media-box__hd image {
+.listImg image {
   border-radius: 4rpx;
 }
-.weui-media-box__hd.img {
+.listImg.img {
   margin-right: 16rpx;
 }
-.weui-media-box__hd.img image {
+.listImg.img image {
   width: 162rpx;
   height: 116rpx;
 }
-.weui-media-box__hd.rightStarImg {
+.listImg.rightStarImg {
   margin-right: 28rpx;
 }
-.weui-media-box__hd.rightStarImg image {
+.listImg.rightStarImg image {
   width: 206rpx;
   height: 148rpx;
 }
