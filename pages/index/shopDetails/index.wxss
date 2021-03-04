@@ -1,0 +1,196 @@
+/**index.wxss**/
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.beginOrderActive {
+  opacity: 0.85;
+}
+.shopDetails {
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 170rpx;
+  box-sizing: border-box;
+}
+.shopDetails .contentTop {
+  width: 100%;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.shopDetails .contentTop .bigImg {
+  border-radius: 16rpx;
+  width: 100%;
+  height: 376rpx;
+}
+.shopDetails .contentTop .listTextCol {
+  margin-top: 14rpx;
+  width: 100%;
+  align-items: flex-start;
+}
+.shopDetails .contentTop .listTextCol .tag {
+  font-size: 20rpx;
+}
+.shopDetails .contentTop .listTextCol .title {
+  line-height: 1;
+}
+.shopDetails .contentTop .listTextCol .title .text {
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+  line-height: 50rpx;
+  margin-right: 6rpx;
+}
+.shopDetails .contentTop .listTextCol .starBox {
+  margin-top: 8rpx;
+}
+.shopDetails .contentTop .listTextCol .starBox .text {
+  margin-left: 8rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #457CFB;
+}
+.shopDetails .contentTop .listTextCol .business {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+}
+.shopDetails .contentTop .listTextCol .typeTag van-tag {
+  margin-right: 12rpx;
+}
+.shopDetails .contentTop .listTextCol .address {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-top: 10rpx;
+}
+.shopDetails .contentTop .listTextCol .distance {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #777777;
+}
+.shopDetails .contentTop .listTextCol .phoneBox {
+  position: absolute;
+  right: 30rpx;
+  bottom: 24rpx;
+}
+.shopDetails .contentTop .listTextCol .phoneBox .text {
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #777777;
+}
+.shopDetails .lineBox {
+  width: 100%;
+  height: 20rpx;
+  background: #F6F7F8;
+}
+.shopDetails .carIntroduce {
+  width: 100%;
+  padding: 10rpx 0 10rpx 0rpx;
+  box-sizing: border-box;
+  background: #fff;
+  align-items: flex-start;
+}
+.shopDetails .carIntroduce .title {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  color: #333333;
+}
+.shopDetails .carIntroduce .listShowImage {
+  width: 100%;
+  margin-top: 8rpx;
+}
+.shopDetails .carIntroduce .listShowImage .scroll-view {
+  width: 100%;
+  height: 192rpx;
+  white-space: nowrap;
+}
+.shopDetails .carIntroduce .listShowImage .scroll-view .imageBox {
+  width: 280rpx;
+  height: 192rpx;
+  margin-right: 16rpx;
+  display: inline-block;
+  overflow: hidden;
+}
+.shopDetails .carIntroduce .listShowImage .scroll-view .imageBox image {
+  width: 100%;
+  height: 100%;
+  border-radius: 12rpx;
+}
+.shopDetails .carIntroduce .listShowImage .scroll-view .imageBox:first-child {
+  margin-left: 30rpx;
+}
+.shopDetails .carIntroduce .listShowImage .scroll-view .imageBox:last-child {
+  margin-right: 30rpx;
+}
+.shopDetails .carIntroduce .serveBox {
+  padding: 22rpx 30rpx 0;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+.shopDetails .carIntroduce .serveBox .serveTitle {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.shopDetails .carIntroduce .serveBox .contentText {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  padding-bottom: 12rpx;
+  border-bottom: 2rpx solid #EEEFF2;
+}
+.shopDetails .carIntroduce .fixedBottom {
+  width: 100%;
+  height: 164rpx;
+  padding: 24rpx 30rpx;
+  padding-bottom: 58rpx;
+  box-sizing: border-box;
+  background: #fff;
+  justify-content: flex-start;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.shopDetails .carIntroduce .fixedBottom .left .text {
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #777777;
+}
+.shopDetails .carIntroduce .fixedBottom .right {
+  margin-left: 26rpx;
+}
+.shopDetails .carIntroduce .fixedBottom .right .btn {
+  width: 620rpx;
+  height: 80rpx;
+  background: #457CFB;
+  border-radius: 38rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}

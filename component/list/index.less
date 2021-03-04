@@ -13,13 +13,6 @@
     border-top: none;
 }
 
-.weui-media-box__hd_in-appmsg {
-    margin-right: 16rpx;
-    width: 162rpx;
-    height: 116rpx;
-    text-align: center;
-    
-}
     
 
 .weui-media-box:not(:first-child)::before {
@@ -58,13 +51,22 @@
     
     
 .weui-media-box__hd {
-    .img {
-        width: 162rpx;
-        height: 116rpx;
+    image {
+        border-radius: 4rpx;
     }
-    .rightStarImg {
-        width: 206rpx;
-        height: 148rpx;
+    &.img {
+        margin-right: 16rpx;
+        image {
+            width: 162rpx;
+            height: 116rpx;
+        }
+    }
+    &.rightStarImg {
+        margin-right: 28rpx;
+        image {
+            width: 206rpx;
+            height: 148rpx;
+        }
     }
 }
 

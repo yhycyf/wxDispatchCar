@@ -24,12 +24,6 @@
   height: 0;
   border-top: none;
 }
-.weui-media-box__hd_in-appmsg {
-  margin-right: 16rpx;
-  width: 162rpx;
-  height: 116rpx;
-  text-align: center;
-}
 .weui-media-box:not(:first-child)::before {
   content: " ";
   position: absolute;
@@ -61,11 +55,20 @@
   color: #151515;
   line-height: 28rpx;
 }
-.weui-media-box__hd .img {
+.weui-media-box__hd image {
+  border-radius: 4rpx;
+}
+.weui-media-box__hd.img {
+  margin-right: 16rpx;
+}
+.weui-media-box__hd.img image {
   width: 162rpx;
   height: 116rpx;
 }
-.weui-media-box__hd .rightStarImg {
+.weui-media-box__hd.rightStarImg {
+  margin-right: 28rpx;
+}
+.weui-media-box__hd.rightStarImg image {
   width: 206rpx;
   height: 148rpx;
 }

@@ -1,0 +1,88 @@
+<!--index.wxml-->
+<view class="shopDetails">
+  <view class="flexCol contentTop">
+    <image class="bigImg"
+      mode="aspectFill"
+      src="https://img.yzcdn.cn/vant/cat.jpeg"
+    />
+    <view class="flexCol listTextCol">
+      <view class="flexRow title">
+        <view class="text">北京润德汽车维修中心</view>
+        <van-tag custom-class="tag" color="#ECF1FC" text-color="#457CFB" type="primary">人保推荐</van-tag>
+      </view>
+      <view class="flexRow starBox">
+        <van-rate 
+          readonly
+          gutter="2rpx"
+          value="{{ starValue }}"
+          size="24rpx"
+          color="#457CFB"
+          allow-half
+          void-color="#eee"
+          void-icon="star"
+        />
+        <view class="text">5.0分</view>
+      </view>
+      <view class="business">营业中 周一至周日 8:30-20:30</view>
+      <view class="flexRow typeTag">
+        <van-tag custom-class="tag" color="#457CFB" text-color="#457CFB" plain type="primary">维修</van-tag>
+        <van-tag custom-class="tag" color="#457CFB" text-color="#457CFB" plain type="primary">保养</van-tag>
+        <van-tag custom-class="tag" color="#457CFB" text-color="#457CFB" plain type="primary">年检</van-tag>
+        <van-tag custom-class="tag" color="#457CFB" text-color="#457CFB" plain type="primary">安全检测</van-tag>
+      </view>
+      <view class="address">地址：昌平区北七家郑上路郑各庄村委会南行50米</view>
+      <view class="distance">距您490m，步行需要5分钟</view>
+      <view class="flexCol phoneBox">
+        <van-icon size="42rpx" color="#457CFB" name="phone" />
+        <view class="text">电话</view>
+      </view>
+    </view>
+  </view>
+  <view class="lineBox"></view>
+  <view class="flexCol carIntroduce">
+    <view class="title">车间介绍</view>
+    <view class="listShowImage">
+      <scroll-view class="scroll-view" scroll-x="{{true}}" style="width: 100%">
+        <view class="imageBox">
+          <image
+            mode="aspectFill"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+        </view>
+        <view class="imageBox">
+          <image
+            mode="aspectFill"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+        </view>
+        <view class="imageBox">
+          <image
+            mode="aspectFill"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+        </view>
+        <view class="imageBox">
+          <image
+            mode="aspectFill"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+        </view>
+      </scroll-view>
+    </view>
+    <view class="flexCol serveBox">
+      <view class="serveTitle">服务介绍</view>
+      <view class="contentText">中国人保官方授权店中国人保官方授权店中国人保官方，授权店中
+        国人保官方授权店中国人保官方授权店。</view>
+    </view>
+    <view class="flexRow fixedBottom">
+      <view class="flexCol left">
+        <van-icon size="44rpx" color="#000000" name="service" />
+        <view class="text">客服</view>
+      </view>
+      <view class="right">
+        <view class="flexRow btn" hover-class="beginOrderActive">预约接送车服务</view>
+      </view>
+    </view>
+  </view>
+</view>
+

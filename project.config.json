@@ -143,6 +143,14 @@
 					"id": -1,
 					"name": "查看更多",
 					"pathName": "pages/index/more/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "店铺详情",
+					"pathName": "pages/index/shopDetails/index",
+					"query": "",
 					"scene": null
 				}
 			]
