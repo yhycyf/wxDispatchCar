@@ -5,9 +5,12 @@
 				<image class="weui-media-box__thumb {{rightStar ? 'rightStarImg' : 'img'}}" src="{{icon60}}" />
 			</view>
 			<view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
-				<view class="flexRow title">
+				<view wx:if="{{rightStar}}" class="flexRow title">
 					<van-tag custom-class="titleTag {{rightStar ? 'green' : ''}}" color="#457CFB" text-color="#FFFFFF" type="primary">人保推荐</van-tag>
 					<view class="weui-media-box__title">北京润德汽车维修中心</view>
+				</view>
+				<view wx:else class="flexRow title">
+					<view class="weui-media-box__title">北京润德汽车维修</view>
 				</view>
 				<view class="weui-media-box__desc">昌平区北七家镇</view>
 				<view wx:if="{{rightStar}}" class="km">3.93km</view>
