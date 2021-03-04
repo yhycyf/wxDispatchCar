@@ -5,7 +5,7 @@
     
 }
 .weui-media-box__bd_in-appmsg {
-    flex: none;
+    flex: none !important;
 }
 
 .weui-panel::after, .weui-panel::before {
@@ -80,6 +80,10 @@
 
 .weui-media-box__bd {
     .title {
+        margin-bottom: 8rpx;
+        van-tag {
+            line-height: 1;
+        }
         .titleTag {
             font-size: 20rpx;
             font-weight: 400;

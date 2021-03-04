@@ -17,7 +17,7 @@
   border-bottom: none;
 }
 .weui-media-box__bd_in-appmsg {
-  flex: none;
+  flex: none !important;
 }
 .weui-panel::after,
 .weui-panel::before {
@@ -77,6 +77,12 @@
   color: #AAAAAA;
   right: 36rpx;
   top: 40rpx;
+}
+.weui-media-box__bd .title {
+  margin-bottom: 8rpx;
+}
+.weui-media-box__bd .title van-tag {
+  line-height: 1;
 }
 .weui-media-box__bd .title .titleTag {
   font-size: 20rpx;
