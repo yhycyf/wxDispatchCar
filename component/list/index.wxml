@@ -26,7 +26,7 @@
 					<van-icon size="18rpx" color="#C6C7CC" name="arrow" />
 				</view>
 			</view>
-			<view wx:if="{{rightStar}}" class="flexCol rightArrow">
+			<view wx:if="{{rightStar && showStar}}" class="flexCol rightArrow">
 				<van-icon name="star-o" size="46rpx" color="#000000" />
 				<!-- <van-icon name="star" size="46rpx" color="#FFAF19" /> -->
 			</view>

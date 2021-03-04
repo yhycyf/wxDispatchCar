@@ -1,5 +1,5 @@
 <!--index.wxml-->
 <view class="collect">
-  <list></list>
+  <list rightStar showStar="{{false}}"></list>
 </view>
 

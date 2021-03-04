@@ -31,6 +31,10 @@ Component({
     rightStar: {
       type: Boolean,
       value: false
+    },
+    showStar: {
+      type: Boolean,
+      value: true
     }
   },
 
