@@ -1,0 +1,99 @@
+{
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": 0,
+          "name": "资格验证",
+          "pathName": "pages/qualification/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "申请还车",
+          "pathName": "pages/applyReturnCar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 2,
+          "name": "安全认证",
+          "pathName": "pages/idSafety/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 3,
+          "name": "实名认证",
+          "pathName": "pages/nameAuthentication/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 4,
+          "name": "车辆信息认证",
+          "pathName": "pages/carAuthentication/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "预约代步车",
+          "pathName": "pages/making/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 6,
+          "name": "订单详情",
+          "pathName": "pages/making/dOrderDetails/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "延时还车",
+          "pathName": "pages/dDelayedCar/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 8,
+          "name": "延时还车付款页面",
+          "pathName": "pages/dDelayedCar/payment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": -1,
+          "name": "查看更多",
+          "pathName": "pages/index/more/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "id": 10,
+          "name": "店铺详情",
+          "pathName": "pages/index/shopDetails/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/personalCenter/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

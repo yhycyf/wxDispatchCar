@@ -18,7 +18,11 @@
     "pages/making/dOrderDetails/index",
     "pages/dDelayedCar/index",
     "pages/dDelayedCar/payment/index",
-    "pages/dPaymentDetails/index"
+    "pages/dPaymentDetails/index",
+
+    "pages/personalCenter/index"
+
+
   ],
   "useExtendedLib": {
     "weui": true
