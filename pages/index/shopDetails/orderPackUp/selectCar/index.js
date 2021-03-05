@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-04 17:11:55
+ * @LastEditTime: 2021-03-05 16:09:56
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -11,18 +11,30 @@
 const app = getApp()
 
 Page({
+  options: {
+    addGlobalClass: true
+  },
   data: {
-    starValue: 4.5
+    radio: '',
+    disabled: true
   },
 
   onReady: function (e) {
     
   },
-  goOrderPackUp() {
-    wx.navigateTo({
-      url: '/pages/index/shopDetails/orderPackUp/index'
-    })
+  onChange(event) {
+    this.setData({
+      radio: event.detail,
+    });
   },
+
+  onClick(event) {
+    const { name } = event.currentTarget.dataset;
+    this.setData({
+      radio: name,
+    });
+  },
+
   onLoad() {
     
   },

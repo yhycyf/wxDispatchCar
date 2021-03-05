@@ -79,7 +79,7 @@
         <van-icon size="44rpx" color="#000000" name="service" />
         <view class="text">客服</view>
       </view>
-      <view class="right">
+      <view class="right" bindtap="goOrderPackUp">
         <view class="flexRow btn" hover-class="beginOrderActive">预约接送车服务</view>
       </view>
     </view>

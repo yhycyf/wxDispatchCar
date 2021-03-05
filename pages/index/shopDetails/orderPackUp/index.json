@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "packup-message": "/component/packMessage/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "navigationBarTitleText": "预约接送车"
+}

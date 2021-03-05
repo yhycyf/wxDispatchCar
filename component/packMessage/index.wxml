@@ -1,0 +1,96 @@
+<view class="goGetCar">
+	<view class="flexCol content">
+		<view class="flexRow list" bindtap="serveTypeShow">
+			<view class="flexRow iconBox">
+				<image class="icon" src="../../image/place.png"></image>
+			</view>
+			<view class="textWidth {{serveType ? 'select' : ''}}">{{serveType ? serveType : '请选择服务方式'}}</view>
+			<view class="rightArrow">
+				<van-icon size="28rpx" color="#777777" name="arrow" />
+			</view>
+		</view>
+		<view class="flexRow list" bindtap="selectLocation">
+			<view class="flexRow iconBox">
+				<image class="icon" src="../../image/shop.png"></image>
+			</view>
+			<view class="textWidth {{getCarLocation ? 'select' : ''}}">{{getCarLocation ? getCarLocation : '选择门店'}}</view>
+			<view class="flexRow tipsBox" wx:if="{{showTipsBox}}">
+				<image class="triangle" src="../../image/triangle_top.png"></image>
+				<view class="flexRow locationText">
+					<view class="text" catchtap="getTips">
+						<view class="address">{{historyAddress}}</view>
+					</view>
+					<image class="icon" src="../../image/close.png" catchtap="closeTipsBox"></image>
+				</view>
+			</view>
+		</view>
+		<view class="flexRow list">
+			<view class="flexRow iconBox">
+				<image class="icon" src="../../image/place.png"></image>
+			</view>
+			<view class="textWidth select">{{'北京市昌平区TBD云集中心'}}</view>
+		</view>
+		<view class="line"></view>
+		<view class="flexRow list childBox" bindtap="showPopup" data-type="{{type}}">
+			<view class="flexRow child">
+				<view class="flexRow iconBox">
+					<image class="iconTime" src="../../image/time_image.png"></image>
+				</view>
+				<view class="textWidth {{getCarTime ? 'select' : ''}}">{{getCarTime ? getCarTime : '选择时间'}}</view>
+			</view>
+			<view class="flexRow child">
+				<view class="flexRow iconBox">
+					<image class="iconPerson" src="../../image/person_small.png"></image>
+				</view>
+				<view class="nameText">张三</view>
+			</view>
+		</view>
+		<view class="line"></view>
+
+		<block>
+			<view class="flexRow list childBox">
+				<view class="flexRow child">
+					<view class="flexRow iconBox">
+						<image class="iconIphone" src="../../image/phone_image.png"></image>
+					</view>
+					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText" type="number" placeholder="请输入手机号"/>
+				</view>
+				<view class="flexRow child">
+					<view class="remove">修改</view>
+				</view>
+			</view>
+			<view class="line"></view>
+			<view class="flexRow list">
+				<view class="flexRow child">
+					<view class="flexRow iconBox">
+						<van-icon size="32rpx" color="#457CFB" name="lock" />
+					</view>
+					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText" type="number" placeholder="请输入验证码"/>
+				</view>
+			</view>
+			<view class="line"></view>
+			<!-- <view class="flexRow list">
+				<view class="flexRow iconBox">
+					<image class="iconPerson" src="../../image/person_small.png"></image>
+				</view>
+				<view class="nameText">张三</view>
+			</view>
+			<view class="line"></view> -->
+			<view class="flexRow agree">
+				<van-checkbox label-class="labelClass" checked-color="#00CB8B" icon-size="24rpx" value="{{ checked }}" bind:change="onChangeAgree">
+					已阅读并同意《代步车使用协议》
+				</van-checkbox>
+			</view>
+		</block>
+	</view>
+	<view class="flexRow submit"  bindtap="submit"> 
+		<view class="flexRow text sendCar" hover-class="beginOrderActive">预约接送车</view>
+	</view>
+	<datetime-picker show="{{show}}"></datetime-picker>
+	<van-action-sheet
+		show="{{ serveTypeShow }}"
+		actions="{{ actions }}"
+		bind:close="onServeTypeClose"
+		bind:select="onServeTypeSelect"
+	/>
+</view>

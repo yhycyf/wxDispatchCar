@@ -152,6 +152,19 @@
 					"pathName": "pages/index/shopDetails/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预约接送车",
+					"pathName": "pages/index/shopDetails/orderPackUp/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "选择车辆",
+					"pathName": "pages/index/shopDetails/orderPackUp/selectCar/index",
+					"scene": null
 				}
 			]
 		}

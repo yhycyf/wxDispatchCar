@@ -1,0 +1,272 @@
+/**index.wxss**/
+.orderDetail{
+    width: 100%;
+    background: #F6F7F9;
+    padding: 20rpx 30rpx;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 200rpx;
+    .detailsBox {
+        width: 100%;
+        overflow: hidden;
+        background: #FFFFFF;
+        box-shadow: 0rpx 4rpx 8rpx 0px rgba(202, 204, 211, 0.66);
+        border-radius: 8rpx;
+        .detailTop {
+            .valueClass {
+                font-size: 24rpx;
+                font-family: PingFangSC-Semibold, PingFang SC;
+                font-weight: 600;
+                color: #777777;
+            }
+            .title {
+                justify-content: flex-start;
+                .van-cell-text {
+                    font-size: 32rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #212121;
+                }
+                .van-tag {
+                    padding: 2rpx 4rpx;
+                    font-size: 20rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #FFFFFF;
+                    margin-left: 8rpx;
+                }
+            }
+            .titleClass {
+                font-size: 24rpx;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #444444;
+            }
+            .labelClass {
+                font-size: 36rpx;
+                font-family: DINAlternate-Bold, DINAlternate;
+                font-weight: bold;
+                color: #333333;
+            }
+            .list {
+                width: 100%;
+                .leftChild {
+                    width: 60%;
+                }
+                .rightChild {
+                    width: 40%;
+                }
+            }
+            .content {
+                position: relative;
+                .titleClass {
+                    font-size: 24rpx;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    font-weight: 400;
+                    color: #444444;
+                }
+                .labelClass {
+                    font-size: 24rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #333333;
+                }
+            }
+            .content::after {
+                content: "";
+                width: 620rpx;
+                height: 2rpx;
+                background: #EFEFEF;
+                position: absolute;
+                top: 0;
+                left: 36rpx;
+            }
+        }
+
+    }
+    .detailsStatus {
+        background: #FFFFFF;
+        box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(202, 204, 211, 0.66);
+        border-radius: 8rpx;
+        margin-top: 28rpx;
+        overflow: hidden;
+        .title {
+            justify-content: flex-start;
+            .timeStatus {
+                width: 38rpx;
+                height: 38rpx;
+            };
+        }
+        .van-cell-text {
+            margin-left: 10rpx;
+            font-size: 32rpx;
+            font-family: PingFangSC-Medium, PingFang SC;
+            font-weight: 500;
+            color: #212121;
+        }
+        .listBox {
+           
+            .title {
+                .timeStatus {
+                    width: 44rpx;
+                    height: 44rpx;
+                }
+                .listTitle {
+                    font-size: 24rpx;
+                    font-family: PingFangSC-Medium, PingFang SC;
+                    font-weight: 500;
+                    color: #333333;
+                    margin-left: -10rpx;
+                }
+            }
+            .label {
+                padding-left: 12rpx;
+                .listLabel {
+                    font-size: 24rpx;
+                    font-family: PingFangSC-Regular, PingFang SC;
+                    font-weight: 400;
+                    color: #777777;
+                    padding-left: 22rpx;
+                    box-sizing: border-box;
+                }
+                .labelStep {
+                    width: 100%;
+                    align-items: flex-start;
+                    padding-left: 20rpx;
+                    padding-right: 40rpx;
+                    box-sizing: border-box;
+                    border-left: 1rpx dashed #DDDEE3;
+                    padding-top: 10rpx;
+                    padding-bottom: 30rpx;
+                    .list {
+                        width: 100%;
+                        justify-content: space-between;
+                        .left {
+                            align-items: flex-start;
+                            font-size: 24rpx;
+                            font-family: PingFangSC-Regular, PingFang SC;
+                            font-weight: 400;
+                            color: #777777;
+                            text {
+                                color: #EC0000;
+                                margin-left: 4rpx;
+                            }
+                            .carName {
+                                .plateNumber {
+                                    padding: 2rpx 4rpx;
+                                    background: linear-gradient(180deg, #FFFFFF 0%, #88C3FF 100%);
+                                    border-radius: 4rpx;
+                                    border: 2rpx solid #D8E8F9;
+                                    font-size: 28rpx;
+                                    font-family: PingFangSC-Medium, PingFang SC;
+                                    font-weight: 500;
+                                    color: #151515;
+                                }
+                                .name {
+                                    font-size: 22rpx;
+                                    font-family: PingFangSC-Regular, PingFang SC;
+                                    font-weight: 400;
+                                    color: #333333;
+                                    margin-left: 8rpx;
+                                }
+                            }
+                            .driver {
+                                font-size: 22rpx;
+                                font-family: PingFangSC-Regular, PingFang SC;
+                                font-weight: 400;
+                                color: #777777;
+                                margin-top: 20rpx;
+                            }
+                        }
+                        .right {
+                            .phone {
+                                width: 152rpx;
+                                height: 48rpx;
+                                border-radius: 4rpx;
+                                border: 2rpx solid #E3E3E3;
+                                text {
+                                    font-size: 24rpx;
+                                    font-family: PingFangSC-Regular, PingFang SC;
+                                    font-weight: 400;
+                                    color: #343434;
+                                    margin-left: 6rpx;
+                                }
+                            }
+                            .carImg {
+                                width: 218rpx;
+                                height: 130rpx;
+                            }
+                        }
+                    }
+                    .list:nth-of-type(2) {
+                        margin-top: 20rpx;
+                    }
+                }
+                .noPadding {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+                .noBorder {
+                    border-left: none;
+                }
+            }
+        }
+        .complete {
+            .listTitle {
+                color: #AAAAAA !important;
+            }
+            .left {
+                color: #AAAAAA !important;
+                text {
+                    color: #AAAAAA !important;
+                }
+            }
+        }
+        // .paddingTop {
+        //     padding-top: 0;
+        // }
+        .paddingBottom {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .bottom {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 160rpx;
+        background: #FFFFFF;
+        box-shadow: 0px 4rpx 8rpx 0rpx rgba(79, 82, 84, 0.66);
+        padding: 0rpx 31rpx 60rpx;
+        box-sizing: border-box;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .btn {
+            padding: 16rpx 40rpx;
+            border-radius: 38rpx;
+            border: 3rpx solid #777777;
+            font-size: 28rpx;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #777777;
+        }
+        .btn {
+            margin-left: 16rpx;
+        }
+    }
+    .unfold {
+        width: 100%;
+        margin: 36rpx 0 20rpx;
+        .text {
+            font-size: 22rpx;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #333333;
+        }
+        .icon {
+            margin-left: 4rpx;
+        }
+    }
+}

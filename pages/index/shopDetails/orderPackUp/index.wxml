@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="orderPackUp">
+  <van-notice-bar
+    custom-class="noticeBar"
+    color="#FFA703"
+    background="#FDEFE3"
+    scrollable="{{ false }}"
+    text="须遵循北京限行原则"
+  />
+  <navigator class="flexRow carShowBox" url="/pages/index/shopDetails/orderPackUp/selectCar/index" hover-class="none">
+    <view class="flexRow left">
+      <image mode="scaleToFill" src="{{'https://img.yzcdn.cn/vant/cat.jpeg'}}"></image>
+      <view class="flexCol textLeft">
+        <view class="title">添加您的车辆</view>
+        <view class="tips">进入车辆管理</view>
+      </view>
+    </view>
+    <view class="rightArrow">
+      <van-icon size="32rpx" color="#000000" name="arrow" />
+    </view>
+  </navigator>
+  <view class="packUpContentBox">
+    <view class="flexRow titleTop">
+      <image class="icon" src="{{'../../../../image/calendar.png'}}"></image>
+      <view class="text">预约接送车</view>
+    </view>
+    <view class="packUpBox">
+      <packup-message bindgoOrderDetails="goOrderDetails"></packup-message>
+    </view>
+  </view>
+</view>
+

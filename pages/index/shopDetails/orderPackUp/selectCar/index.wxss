@@ -1,0 +1,111 @@
+/**index.wxss**/
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.beginOrderActive {
+  opacity: 0.85;
+}
+.selectCar {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 20rpx 30rpx 0 30rpx;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+  background: #F6F7F9;
+}
+.selectCar .radioGroup {
+  width: 100%;
+  box-sizing: border-box;
+  background: #F6F7F9;
+}
+.selectCar .radioGroup .remove {
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  height: 100%;
+  color: #ee0a24;
+  background: #F6F7F9;
+  font-size: 24rpx;
+}
+.selectCar .carShowBox {
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  overflow: hidden;
+  border: 4rpx solid transparent;
+}
+.selectCar .carShowBox .left {
+  justify-content: flex-start;
+}
+.selectCar .carShowBox .left image {
+  width: 246rpx;
+  height: 138rpx;
+}
+.selectCar .carShowBox .left .textLeft {
+  margin-left: 26rpx;
+  align-items: flex-start;
+}
+.selectCar .carShowBox .left .textLeft .title {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #151515;
+}
+.selectCar .carShowBox .left .textLeft .tips {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #AAAAAA;
+}
+.selectCar van-swipe-cell:not(:first-child) .carShowBox {
+  margin-top: 20rpx;
+}
+.selectCar .border {
+  border: 4rpx solid #457CFB;
+}
+.selectCar .bottomCarbox {
+  width: 100%;
+  padding: 58rpx 36rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background: #F4F7FF;
+  border-radius: 16px;
+  margin-top: 20rpx;
+}
+.selectCar .bottomCarbox .left {
+  align-items: flex-start;
+}
+.selectCar .bottomCarbox .left .title {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #151515;
+}
+.selectCar .bottomCarbox .left .text {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #777777;
+}
+.selectCar .bottomCarbox .right {
+  width: 256rpx;
+  height: 68rpx;
+  background: #457CFB;
+  border-radius: 44rpx;
+  font-size: 28rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+}

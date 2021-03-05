@@ -1,0 +1,90 @@
+/**index.wxss**/
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.beginOrderActive {
+  opacity: 0.85;
+}
+.orderPackUp {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #457CFB 0%, rgba(247, 247, 255, 0) 100%);
+  position: relative;
+  padding-bottom: 40rpx;
+  box-sizing: border-box;
+}
+.orderPackUp .noticeBar.van-notice-bar {
+  height: 50rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFA703;
+}
+.orderPackUp .carShowBox {
+  width: 100%;
+  background: #fff;
+  justify-content: space-between;
+  padding: 20rpx 64rpx 18rpx 30rpx;
+  box-sizing: border-box;
+}
+.orderPackUp .carShowBox .left image {
+  width: 246rpx;
+  height: 138rpx;
+}
+.orderPackUp .carShowBox .left .textLeft {
+  margin-left: 26rpx;
+  align-items: flex-start;
+}
+.orderPackUp .carShowBox .left .textLeft .title {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #151515;
+}
+.orderPackUp .carShowBox .left .textLeft .tips {
+  margin-top: 8rpx;
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #AAAAAA;
+}
+.orderPackUp .packUpContentBox {
+  width: 100%;
+  padding: 32rpx 30rpx;
+  box-sizing: border-box;
+}
+.orderPackUp .packUpContentBox .titleTop {
+  justify-content: flex-start;
+  padding-left: 36rpx;
+}
+.orderPackUp .packUpContentBox .titleTop .icon {
+  width: 32rpx;
+  height: 32rpx;
+}
+.orderPackUp .packUpContentBox .titleTop .text {
+  margin-left: 18rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.orderPackUp .packUpContentBox .packUpBox {
+  margin-top: 24rpx;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  background: #FFFFFF;
+  box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(202, 204, 211, 0.66);
+  border-radius: 16rpx;
+  padding: 34rpx 40rpx 40rpx;
+  box-sizing: border-box;
+}
