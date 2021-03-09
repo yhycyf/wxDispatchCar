@@ -1,21 +1,23 @@
 <!--index.wxml-->
-<view class="orderDetail">
+<view class="nowPay">
   <view class="detailsBox">
     <van-cell-group custom-class="detailTop" border="{{false}}">
-      <van-cell use-label-slot title="车牌号" title-class="titleClass" border="{{ false }}">
-        <view class="flexRow labelClassBox" slot="label">
-          <view class="labelClass">A888888</view>
-          <van-tag custom-class="titleTag" color="#457CFB" text-color="#FFFFFF" type="primary">人保推荐</van-tag>
+      <van-cell title-class="titleClass" value-class="valueClass" value="ID：13213113" border="{{ false }}">
+        <view class="flexRow labelClassBox" slot="title">
+          <view class="labelClass">接送车</view>
+          <van-tag custom-class="flexRow titleTag" color="#457CFB" text-color="#457CFB" type="primary" round plain>上门接车</van-tag>
         </view>
       </van-cell>
+      <van-cell title="选择门店" title-class="smallTitle" label-class="selectLabel" label="北京中进百旺4S店" border="{{ false }}" class="leftChild" />
       <view class="flexRow list">
-        <van-cell title="门店地址" title-class="titleClass" label-class="labelClass" label="北京中进百旺4S店" border="{{ false }}" class="leftChild" />
-        <van-cell title="车型" title-class="titleClass" label-class="labelClass" label="广汽菲克 白色 2.4L" border="{{ false }}" class="rightChild" />
+        <van-cell title="接送车辆" title-class="smallTitle" label-class="selectLabel" label="京A88888" border="{{ false }}" class="leftChild" />
+        <van-cell title="车主" title-class="smallTitle" label-class="selectLabel small" label="张三" border="{{ false }}" class="rightChild" />
       </view>
-      <view class="content">
-        <van-cell title="送车时间" title-class="titleClass" label-class="labelClass" label="2020年10月29日 17:43" border="{{ false }}" />
-        <van-cell title="送车地址" title-class="titleClass" label-class="labelClass" label="北京市昌平区TBD云集中心地下停车场" border="{{ false }}" />
+      <view class="flexRow content">
+        <van-cell title="接车时间" title-class="smallTitle" label-class="smallLabel" label="2020年10月29日 17:43" border="{{ false }}" class="leftChild" />
+        <van-cell title="车主手机" title-class="smallTitle" label-class="smallLabel" label="138*****923" border="{{ false }}" class="rightChild" />
       </view>
+      <van-cell title="接车地址" title-class="smallTitle" label-class="smallLabel" label="北京市昌平区TBD云集中心地下停车场" border="{{ false }}" class="leftChild" />
       <view class="flexRow unfold">
         <view class="text">展开</view>
         <van-icon class="icon" size="16rpx" color="#000000" name="arrow-down" />
@@ -74,9 +76,9 @@
     <van-cell custom-class="listBox paddingBottom" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
         <image class="timeStatus" src="../../../../../image/circle_active.png"></image>
-        <view class="listTitle">{{'送车上门'}}</view>
+        <view class="listTitle">{{'上门接车'}}</view>
       </view>
-      <block wx:if="{{false}}">
+      <block wx:if="{{true}}">
         <view slot="label" class="label">
           <view class="flexCol labelStep noPadding">
               <view class="flexRow list">
@@ -112,7 +114,7 @@
           </view>
         </view>
       </block>
-      <block wx:if="{{true}}">
+      <block wx:if="{{false}}">
         <view slot="label" class="label">
           <view class="flexCol labelStep">
             <view class="flexRow list">
@@ -146,8 +148,7 @@
   </view>
   <view class="flexRow bottom">
     <view class="flexRow btn">联系客服</view>
-    <view class="flexRow btn" bindtap="goReturnCarPage">立即还车</view>
-    <view class="flexRow btn" bindtap="waitReturnCar">延时还车</view>
+    <view class="flexRow btn" bindtap="cancelDetails">取消订单</view>
   </view>
 </view>
 

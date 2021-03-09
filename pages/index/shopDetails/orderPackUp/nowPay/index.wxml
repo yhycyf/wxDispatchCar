@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="nowPay">
+  <view class="detailsBox">
+    <van-cell-group custom-class="detailTop" border="{{false}}">
+      <van-cell use-label-slot title="车牌号" title-class="titleClass" border="{{ false }}">
+        <view class="flexRow labelClassBox" slot="label">
+          <view class="labelClass">京A888888</view>
+          <van-tag custom-class="titleTag" color="#457CFB" text-color="#FFFFFF" type="primary">接送车</van-tag>
+        </view>
+      </van-cell>
+      <view class="flexRow list">
+        <van-cell title="门店地址" title-class="titleClass" label-class="labelClass" label="北京中进百旺4S店" border="{{ false }}" class="leftChild" />
+        <van-cell title="车型" title-class="titleClass" label-class="labelClass small" label="广汽菲克 白色 2.4L" border="{{ false }}" class="rightChild" />
+      </view>
+      <view class="content">
+        <van-cell title="接车时间" title-class="titleClass" label-class="labelClass" label="2020年10月29日 17:43" border="{{ false }}" />
+        <van-cell title="接车地址" title-class="titleClass" label-class="labelClass" label="北京市昌平区TBD云集中心地下停车场" border="{{ false }}" />
+      </view>
+    </van-cell-group>
+  </view>
+  <view class="detailsStatus">
+    <van-cell-group border="{{false}}">
+      <van-cell value-class="valueClass" title-style="font-size: 28rpx; color: #151515;" title="基础费用" value="￥188.00" border="{{false}}" />
+      <van-cell value-class="valueClass" title-style="font-size: 28rpx; color: #151515;" title="验车费用" value="￥188.00" border="{{false}}" />
+      <van-cell value-class="valueClass red" value="-￥188.00" is-link border="{{false}}">
+        <view slot="title" class="flexRow cellTitle">
+          <view class="van-cell-text">优惠卷</view>
+          <van-tag color="#E82121" custom-class="tag" type="danger" plain>推荐优惠</van-tag>
+        </view>
+      </van-cell>
+    </van-cell-group>
+    <view class="flexRow totalBox">
+      合计：
+      <view class="num">￥0.00</view>
+    </view>
+  </view>
+  <view class="flexRow bottom">
+    <view class="price">支付 <text class="red">299</text><text> 元</text></view>
+    <view class="flexRow btn" bindtap="payment">立即付款</view>
+  </view>
+</view>
+

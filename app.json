@@ -4,6 +4,7 @@
     "pages/index/shopDetails/index",
     "pages/index/shopDetails/orderPackUp/index",
     "pages/index/shopDetails/orderPackUp/selectCar/index",
+    "pages/index/shopDetails/orderPackUp/nowPay/index",
     "pages/index/shopDetails/orderPackUp/orderDetails/index",
     "pages/index/more/index",
     "pages/index/more/collect/index",

@@ -1,5 +1,5 @@
 /**index.wxss**/
-.orderDetail {
+.nowPay {
   background: #F6F7F9;
   padding: 20rpx 30rpx;
   box-sizing: border-box;
@@ -7,29 +7,52 @@
   min-height: 100vh;
   padding-bottom: 200rpx;
 }
-.orderDetail .detailsBox {
+.nowPay .detailsBox {
   width: 100%;
   overflow: hidden;
   background: #FFFFFF;
   box-shadow: 0rpx 4rpx 8rpx 0px rgba(202, 204, 211, 0.66);
   border-radius: 8rpx;
 }
-.orderDetail .detailsBox .detailTop .valueClass {
+.nowPay .detailsBox .detailTop .valueClass {
   font-size: 24rpx;
   font-family: PingFangSC-Semibold, PingFang SC;
   font-weight: 600;
   color: #777777;
 }
-.orderDetail .detailsBox .detailTop .title {
+.nowPay .detailsBox .detailTop .labelClassBox {
   justify-content: flex-start;
 }
-.orderDetail .detailsBox .detailTop .title .van-cell-text {
+.nowPay .detailsBox .detailTop .labelClassBox .labelClass {
+  font-size: 32rpx;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  color: #333333;
+}
+.nowPay .detailsBox .detailTop .labelClassBox van-tag {
+  line-height: 1;
+  margin-top: -4rpx;
+}
+.nowPay .detailsBox .detailTop .labelClassBox .titleTag {
+  font-size: 20rpx;
+  margin-left: 18rpx;
+}
+.nowPay .detailsBox .detailTop .valueClass {
+  font-size: 24rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #777777;
+}
+.nowPay .detailsBox .detailTop .title {
+  justify-content: flex-start;
+}
+.nowPay .detailsBox .detailTop .title .van-cell-text {
   font-size: 32rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #212121;
 }
-.orderDetail .detailsBox .detailTop .title .van-tag {
+.nowPay .detailsBox .detailTop .title .van-tag {
   padding: 2rpx 4rpx;
   font-size: 20rpx;
   font-family: PingFangSC-Medium, PingFang SC;
@@ -37,43 +60,58 @@
   color: #FFFFFF;
   margin-left: 8rpx;
 }
-.orderDetail .detailsBox .detailTop .titleClass {
+.nowPay .detailsBox .detailTop .titleClass {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #212121;
+}
+.nowPay .detailsBox .detailTop .smallTitle {
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #444444;
 }
-.orderDetail .detailsBox .detailTop .labelClass {
-  font-size: 36rpx;
-  font-family: DINAlternate-Bold, DINAlternate;
-  font-weight: bold;
-  color: #333333;
-}
-.orderDetail .detailsBox .detailTop .list {
-  width: 100%;
-}
-.orderDetail .detailsBox .detailTop .list .leftChild {
-  width: 60%;
-}
-.orderDetail .detailsBox .detailTop .list .rightChild {
-  width: 40%;
-}
-.orderDetail .detailsBox .detailTop .content {
-  position: relative;
-}
-.orderDetail .detailsBox .detailTop .content .titleClass {
-  font-size: 24rpx;
-  font-family: PingFangSC-Regular, PingFang SC;
-  font-weight: 400;
-  color: #444444;
-}
-.orderDetail .detailsBox .detailTop .content .labelClass {
+.nowPay .detailsBox .detailTop .smallLabel {
   font-size: 24rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #333333;
 }
-.orderDetail .detailsBox .detailTop .content::after {
+.nowPay .detailsBox .detailTop .selectLabel {
+  font-size: 36rpx;
+  font-family: PingFangSC-Semibold, PingFang SC;
+  font-weight: 600;
+  color: #333333;
+}
+.nowPay .detailsBox .detailTop .small {
+  font-size: 32rpx;
+}
+.nowPay .detailsBox .detailTop .list {
+  width: 100%;
+  justify-content: space-between;
+}
+.nowPay .detailsBox .detailTop .list .rightChild {
+  width: 30%;
+}
+.nowPay .detailsBox .detailTop .content {
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+}
+.nowPay .detailsBox .detailTop .content .titleClass {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #444444;
+}
+.nowPay .detailsBox .detailTop .content .labelClass {
+  font-size: 24rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333333;
+}
+.nowPay .detailsBox .detailTop .content::after {
   content: "";
   width: 620rpx;
   height: 2rpx;
@@ -82,42 +120,42 @@
   top: 0;
   left: 36rpx;
 }
-.orderDetail .detailsStatus {
+.nowPay .detailsStatus {
   background: #FFFFFF;
   box-shadow: 0rpx 4rpx 8rpx 0rpx rgba(202, 204, 211, 0.66);
   border-radius: 8rpx;
   margin-top: 28rpx;
   overflow: hidden;
 }
-.orderDetail .detailsStatus .title {
+.nowPay .detailsStatus .title {
   justify-content: flex-start;
 }
-.orderDetail .detailsStatus .title .timeStatus {
+.nowPay .detailsStatus .title .timeStatus {
   width: 38rpx;
   height: 38rpx;
 }
-.orderDetail .detailsStatus .van-cell-text {
+.nowPay .detailsStatus .van-cell-text {
   margin-left: 10rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #212121;
 }
-.orderDetail .detailsStatus .listBox .title .timeStatus {
+.nowPay .detailsStatus .listBox .title .timeStatus {
   width: 44rpx;
   height: 44rpx;
 }
-.orderDetail .detailsStatus .listBox .title .listTitle {
+.nowPay .detailsStatus .listBox .title .listTitle {
   font-size: 24rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #333333;
   margin-left: -10rpx;
 }
-.orderDetail .detailsStatus .listBox .label {
+.nowPay .detailsStatus .listBox .label {
   padding-left: 12rpx;
 }
-.orderDetail .detailsStatus .listBox .label .listLabel {
+.nowPay .detailsStatus .listBox .label .listLabel {
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
@@ -125,7 +163,7 @@
   padding-left: 22rpx;
   box-sizing: border-box;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep {
+.nowPay .detailsStatus .listBox .label .labelStep {
   width: 100%;
   align-items: flex-start;
   padding-left: 20rpx;
@@ -135,22 +173,22 @@
   padding-top: 10rpx;
   padding-bottom: 30rpx;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list {
+.nowPay .detailsStatus .listBox .label .labelStep .list {
   width: 100%;
   justify-content: space-between;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .left {
+.nowPay .detailsStatus .listBox .label .labelStep .list .left {
   align-items: flex-start;
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #777777;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .left text {
+.nowPay .detailsStatus .listBox .label .labelStep .list .left text {
   color: #EC0000;
   margin-left: 4rpx;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .left .carName .plateNumber {
+.nowPay .detailsStatus .listBox .label .labelStep .list .left .carName .plateNumber {
   padding: 2rpx 4rpx;
   background: linear-gradient(180deg, #FFFFFF 0%, #88C3FF 100%);
   border-radius: 4rpx;
@@ -160,61 +198,61 @@
   font-weight: 500;
   color: #151515;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .left .carName .name {
+.nowPay .detailsStatus .listBox .label .labelStep .list .left .carName .name {
   font-size: 22rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #333333;
   margin-left: 8rpx;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .left .driver {
+.nowPay .detailsStatus .listBox .label .labelStep .list .left .driver {
   font-size: 22rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #777777;
   margin-top: 20rpx;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .right .phone {
+.nowPay .detailsStatus .listBox .label .labelStep .list .right .phone {
   width: 152rpx;
   height: 48rpx;
   border-radius: 4rpx;
   border: 2rpx solid #E3E3E3;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .right .phone text {
+.nowPay .detailsStatus .listBox .label .labelStep .list .right .phone text {
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #343434;
   margin-left: 6rpx;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list .right .carImg {
+.nowPay .detailsStatus .listBox .label .labelStep .list .right .carImg {
   width: 218rpx;
   height: 130rpx;
 }
-.orderDetail .detailsStatus .listBox .label .labelStep .list:nth-of-type(2) {
+.nowPay .detailsStatus .listBox .label .labelStep .list:nth-of-type(2) {
   margin-top: 20rpx;
 }
-.orderDetail .detailsStatus .listBox .label .noPadding {
+.nowPay .detailsStatus .listBox .label .noPadding {
   padding-top: 0;
   padding-bottom: 0;
 }
-.orderDetail .detailsStatus .listBox .label .noBorder {
+.nowPay .detailsStatus .listBox .label .noBorder {
   border-left: none;
 }
-.orderDetail .detailsStatus .complete .listTitle {
+.nowPay .detailsStatus .complete .listTitle {
   color: #AAAAAA !important;
 }
-.orderDetail .detailsStatus .complete .left {
+.nowPay .detailsStatus .complete .left {
   color: #AAAAAA !important;
 }
-.orderDetail .detailsStatus .complete .left text {
+.nowPay .detailsStatus .complete .left text {
   color: #AAAAAA !important;
 }
-.orderDetail .detailsStatus .paddingBottom {
+.nowPay .detailsStatus .paddingBottom {
   padding-top: 0;
   padding-bottom: 0;
 }
-.orderDetail .bottom {
+.nowPay .bottom {
   position: fixed;
   left: 0;
   bottom: 0;
@@ -227,7 +265,7 @@
   justify-content: flex-end;
   align-items: flex-end;
 }
-.orderDetail .bottom .btn {
+.nowPay .bottom .btn {
   padding: 16rpx 40rpx;
   border-radius: 38rpx;
   border: 3rpx solid #777777;
@@ -236,19 +274,19 @@
   font-weight: 400;
   color: #777777;
 }
-.orderDetail .bottom .btn {
+.nowPay .bottom .btn {
   margin-left: 16rpx;
 }
-.orderDetail .unfold {
+.nowPay .unfold {
   width: 100%;
   margin: 36rpx 0 20rpx;
 }
-.orderDetail .unfold .text {
+.nowPay .unfold .text {
   font-size: 22rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #333333;
 }
-.orderDetail .unfold .icon {
+.nowPay .unfold .icon {
   margin-left: 4rpx;
 }

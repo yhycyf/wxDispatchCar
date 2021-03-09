@@ -164,6 +164,21 @@
 					"id": -1,
 					"name": "选择车辆",
 					"pathName": "pages/index/shopDetails/orderPackUp/selectCar/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "预约接送车立即付款",
+					"pathName": "pages/index/shopDetails/orderPackUp/nowPay/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预约接送车订单详情",
+					"pathName": "pages/index/shopDetails/orderPackUp/orderDetails/index",
+					"query": "",
 					"scene": null
 				}
 			]
