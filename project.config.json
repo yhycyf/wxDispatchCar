@@ -180,6 +180,27 @@
 					"pathName": "pages/index/shopDetails/orderPackUp/orderDetails/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人中心",
+					"pathName": "pages/personalCenter/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的订单",
+					"pathName": "pages/personalCenter/myOrder/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加车辆",
+					"pathName": "pages/index/shopDetails/orderPackUp/addCar/index",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

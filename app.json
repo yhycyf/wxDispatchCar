@@ -4,6 +4,7 @@
     "pages/index/shopDetails/index",
     "pages/index/shopDetails/orderPackUp/index",
     "pages/index/shopDetails/orderPackUp/selectCar/index",
+    "pages/index/shopDetails/orderPackUp/addCar/index",
     "pages/index/shopDetails/orderPackUp/nowPay/index",
     "pages/index/shopDetails/orderPackUp/orderDetails/index",
     "pages/index/more/index",
@@ -21,7 +22,8 @@
     "pages/dDelayedCar/payment/index",
     "pages/dPaymentDetails/index",
 
-    "pages/personalCenter/index"
+    "pages/personalCenter/index",
+    "pages/personalCenter/myOrder/index"
 
 
   ],

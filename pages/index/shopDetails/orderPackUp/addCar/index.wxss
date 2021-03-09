@@ -1,0 +1,197 @@
+/**index.wxss**/
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.flexCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.beginOrderActive {
+  opacity: 0.85;
+}
+.addCar {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 100vh;
+}
+.addCar .noticeBar.van-notice-bar {
+  height: 50rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFA703;
+}
+.addCar .upIdentity {
+  margin-top: 38rpx;
+  margin-bottom: 28rpx;
+}
+.addCar .upIdentity .center {
+  margin: 0 auto;
+  width: 690rpx;
+  height: 326rpx;
+  border: 2rpx dashed #EBEBEB;
+}
+.addCar .upIdentity .center image {
+  width: 326.94rpx;
+  height: 190.08rpx;
+  margin-bottom: 24rpx;
+}
+.addCar .upIdentity .center text {
+  color: #777777;
+  font-size: 22rpx;
+}
+.addCar .heard {
+  width: 100%;
+}
+.addCar .heard van-cell-group {
+  width: 100%;
+}
+.addCar .heard .leftBox {
+  position: absolute;
+  z-index: 101;
+  left: 0rpx;
+  top: 0;
+  width: 113rpx;
+  height: 88rpx;
+  background: #fff;
+  justify-content: flex-start;
+}
+.addCar .heard .leftBox .userAvatarBox {
+  border-radius: 50%;
+  width: 60rpx;
+  height: 60rpx;
+  background: #fff;
+  box-shadow: 0rpx 2rpx 4rpx 0rpx #DAE4EE;
+}
+.addCar .heard .leftBox .userAvatarBox .avatarBox {
+  height: 52rpx;
+  width: 52rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.addCar .heard .leftBox .userAvatarBox .avatarBox .userAvatar {
+  width: 100%;
+  height: 100%;
+}
+.addCar .heard .leftBox .line {
+  width: 2rpx;
+  height: 32rpx;
+  background: #999;
+  margin-left: 24rpx;
+}
+.addCar .heard .titleStyle {
+  font-size: 28px;
+}
+.addCar .heard .vantTabs {
+  width: 690rpx;
+  border-radius: 8rpx;
+  overflow: hidden;
+  background: #FFFFFF;
+  box-shadow: 0px 8rpx 14rpx 0px rgba(214, 228, 246, 0.42);
+}
+.addCar .heard .vantTabs .van-tabs__nav {
+  background: #7C8498;
+}
+.addCar .heard .vantTabs .van-tab {
+  font-size: 28rpx;
+  color: #999999;
+  background: #7C8498;
+}
+.addCar .heard .vantTabs .van-tab {
+  position: relative;
+  overflow: unset;
+}
+.addCar .heard .vantTabs .van-tab:nth-of-type(2).van-tab--active:after {
+  content: "";
+  width: 105rpx;
+  height: 65rpx;
+  position: absolute;
+  right: -27px;
+  top: 13px;
+  background: #fff;
+  transform: rotate(60deg);
+  z-index: 1;
+}
+.addCar .heard .vantTabs .van-tab + .van-tab.van-tab--active:after {
+  content: "";
+  width: 105rpx;
+  height: 65rpx;
+  position: absolute;
+  left: -27px;
+  top: 13px;
+  background: #fff;
+  transform: rotate(-60deg);
+  z-index: 1;
+}
+.addCar .heard .vantTabs .van-tabs__content {
+  padding: 63rpx 0;
+  box-sizing: border-box;
+}
+.addCar .heard .vantTabs .van-tab--active {
+  color: #151515;
+  background-color: #fff;
+}
+.addCar .heard .vantTabs .van-tabs__line {
+  background-color: transparent;
+}
+.addCar .heard .vantTabs .radioGroup {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.addCar .heard .vantTabs .radioGroup .text {
+  padding: 8rpx 12rpx;
+  box-sizing: border-box;
+  border-radius: 4rpx;
+  border: 2rpx solid #F0F2F5;
+  font-size: 22rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #414141;
+  margin-bottom: 10rpx;
+}
+.addCar .heard .vantTabs .radioGroup .radioActive {
+  border: 2rpx solid #457CFB;
+  color: #457CFB;
+}
+.addCar .heard .activeStyle {
+  font-weight: bold;
+}
+.addCar .caution {
+  text-align: center;
+  font-size: 24rpx;
+  color: #AAAAAA;
+  margin-top: 64rpx;
+  margin-bottom: 44rpx;
+}
+.addCar .whatIsNot {
+  margin-top: 26rpx;
+}
+.addCar .whatIsNot .icon {
+  width: 22rpx;
+  height: 26rpx;
+  margin-right: 6rpx;
+}
+.addCar .whatIsNot .text {
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #457CFB;
+}
+.addCar .qualification {
+  position: fixed;
+  bottom: 60rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 690rpx;
+  height: 88rpx;
+  background: #457CFB;
+  border-radius: 45rpx;
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+}

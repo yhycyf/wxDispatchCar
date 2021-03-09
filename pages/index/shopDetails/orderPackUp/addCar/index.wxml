@@ -1,0 +1,60 @@
+<!--index.wxml-->
+<view class="addCar">
+  <van-notice-bar
+    custom-class="noticeBar"
+    color="#FFA703"
+    background="#FDEFE3"
+    scrollable="{{ false }}"
+    text="添加车辆信息，以便您更方便的使用车主服务"
+  />
+  <view class="upIdentity">
+    <view class="flexRow flexCol center">
+      <image class="icon" src="../../../../../image/upDriving2.png" />
+      <text>扫描行驶证 自动填写信息</text>
+    </view>
+  </view>
+  <view class="flexCol heard">
+    <van-cell-group>
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入车牌号"
+        label="车牌号码"
+        custom-style="font-weight: 500"
+        title-width="124rpx"
+        label-class="labelClass"
+        border
+        bind:change="onChange"
+      >
+      </van-field>
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入车架号"
+        label="车架号码"
+        custom-style="font-weight: 500"
+        title-width="124rpx"
+        label-class="labelClass"
+        border
+        bind:change="onChange"
+      />
+      <van-field
+        value="{{ value }}"
+        placeholder="请输入车牌号"
+        label="品牌车系"
+        custom-style="font-weight: 500"
+        title-width="124rpx"
+        border
+        bind:change="onChange"
+      />
+    </van-cell-group>
+  </view>
+  <view class="flexRow whatIsNot">
+    <image class="icon" src="../../../../../image/e.png" />
+    <view class="text">
+      当地交管局查询必须信息，四维将对您的信息加密，请放心填写
+    </view>
+  </view>
+  <view class="flexRow qualification" hover-class="beginOrderActive" bindtap="submit">
+    <view>确认</view>
+  </view>
+</view>
+
