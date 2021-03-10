@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-03 16:08:52
+ * @LastEditTime: 2021-03-10 15:59:52
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -35,6 +35,12 @@ Page({
 
   onReady: function (e) {
     
+  },
+  // 个人中心
+  goUserCenter() {
+    wx.navigateTo({
+      url: '/pages/personalCenter/index'
+    })
   },
   // 查看更多
   seeMore() {

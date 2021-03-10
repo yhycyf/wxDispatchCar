@@ -1,11 +1,10 @@
 <!--index.wxml-->
 <view class="index">
   <view class="flexRow heard">
-    <view class="flexRow leftBox">
+    <view class="flexRow leftBox" bindtap="goUserCenter">
       <view class="flexRow userAvatarBox">
         <view class="avatarBox">
           <open-data class="userAvatar" mode='aspectFit' type="userAvatarUrl"></open-data>
-          <!-- <view class='user_face'></view> -->
         </view>
       </view>
       <view class="line"></view>

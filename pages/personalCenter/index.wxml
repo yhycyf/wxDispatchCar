@@ -87,7 +87,7 @@
     <van-cell
       is-link
       link-type="navigateTo"
-      url="/pages/dashboard/index"
+      url="/pages/personalCenter/setting/index"
       border="{{false}}"
     >
       <view class="flexRow left">
