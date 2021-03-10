@@ -5,14 +5,13 @@
     "pages/index/shopDetails/orderPackUp/index",
     "pages/index/shopDetails/orderPackUp/selectCar/index",
     "pages/index/shopDetails/orderPackUp/addCar/index",
+    "pages/index/shopDetails/orderPackUp/addCarSuccess/index",
     "pages/index/shopDetails/orderPackUp/nowPay/index",
     "pages/index/shopDetails/orderPackUp/orderDetails/index",
     "pages/index/more/index",
     "pages/index/more/collect/index",
     "pages/qualification/index",
-    
     "pages/applyReturnCar/index",
-    
     "pages/idSafety/index",
     "pages/nameAuthentication/index",
     "pages/carAuthentication/index",
@@ -21,9 +20,12 @@
     "pages/dDelayedCar/index",
     "pages/dDelayedCar/payment/index",
     "pages/dPaymentDetails/index",
-
     "pages/personalCenter/index",
-    "pages/personalCenter/myOrder/index"
+    "pages/personalCenter/myOrder/index",
+    "pages/personalCenter/myCard/index",
+    "pages/personalCenter/setting/index",
+    "pages/personalCenter/changePhone/index",
+    "pages/personalCenter/changePhone/success/index"
 
 
   ],

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-10 10:27:00
+ * @LastEditTime: 2021-03-10 14:48:18
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -12,20 +12,20 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Helelo World',
-    userInfo: {},
-    hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    active: 1,
-    radio: true,
-    value: '',
+    phoneValue: "",
+    nameValue: ""
   },
-  pay() {
-    wx.redirectTo({
-      url: '/pages/index/shopDetails/orderPackUp/addCarSuccess/index'
+  submit() {
+    wx.navigateTo({
+      url: `/pages/personalCenter/changePhone/success/index`
     })
   },
-  onChange(event) {
+  onChangePhone(event) {
+    // event.detail 为当前输入的值
+    console.log(event.detail);
+  },
+  onChangeName(event) {
     // event.detail 为当前输入的值
     console.log(event.detail);
   },

@@ -201,6 +201,33 @@
 					"pathName": "pages/index/shopDetails/orderPackUp/addCar/index",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "卡券包",
+					"pathName": "pages/personalCenter/myCard/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "设置",
+					"pathName": "pages/personalCenter/setting/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "修改手机号",
+					"pathName": "pages/personalCenter/changePhone/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "添加车辆成功",
+					"pathName": "pages/index/shopDetails/orderPackUp/addCarSuccess/index",
+					"scene": null
 				}
 			]
 		}

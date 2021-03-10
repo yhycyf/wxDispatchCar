@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<view class="flexCol myCard">
+  <view class="flexCol list">
+    <view class="title">出险代步车</view>
+    <view class="tips">出险验证后立享优惠哦～</view>
+    <view class="tag">尊享代步车优惠特权</view>
+    <view class="flexRow btnBox">
+      <image class="btnImg" src="../../../image/btn_yellow.png" />
+      <view class="text">立即使用</view>
+    </view>
+    <view class="flexCol rightView">
+      <view class="count">免费3天</view>
+      <view class="estimate">预计省￥879.00</view>
+    </view>
+    <image class="backGroundImg" src="../../../image/card_1.png" />
+  </view>
+  <view class="flexCol list">
+    <view class="title">接送车</view>
+    <view class="tips">免单次基础服务费</view>
+    <view class="tag">尊享代步车优惠特权</view>
+    <view class="flexRow btnBox">
+      <image class="btnImg" src="../../../image/btn_blue.png" />
+      <view class="text">立即使用</view>
+    </view>
+    <view class="flexCol rightView">
+      <view class="count">免费次卡</view>
+      <view class="estimate">预计省￥299.00</view>
+    </view>
+    <image class="backGroundImg" src="../../../image/card_2.png" />
+  </view>
+</view>
+

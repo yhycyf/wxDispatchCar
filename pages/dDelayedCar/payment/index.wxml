@@ -2,7 +2,7 @@
 <view class="payment">
   <view class="status">
     <view class="flexCol center">
-      <image class="image" src="../../../image/upDriving2.png" />
+      <image class="image" src="{{payStatus ? '../../../image/pay_success.png' : '../../../image/pay_fail.png'}}" />
       <view class="statusText">{{payStatus ? '付款成功' : '付款失败'}}</view>
       <text class="tips">您已成功延时还车，请在还车日期截止前归还车辆</text>
     </view>

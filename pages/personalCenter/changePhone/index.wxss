@@ -1,0 +1,54 @@
+/**index.wxss**/
+.changePhone {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 94rpx;
+  box-sizing: border-box;
+  background: #F6F7F9;
+  justify-content: flex-start;
+}
+.changePhone .title {
+  font-size: 36rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #151515;
+}
+.changePhone .content {
+  width: 100%;
+  margin-top: 60rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+.changePhone .content .van-field__label {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #151515;
+}
+.changePhone .content .van-cell {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.changePhone .content .sendCode {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #E82121;
+}
+.changePhone .content .valueClass {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #777777;
+}
+.changePhone .content .btn {
+  margin-top: 70rpx;
+  width: 100%;
+  height: 80rpx;
+  background: #457CFB;
+  border-radius: 44rpx;
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}

@@ -1,0 +1,92 @@
+/**index.wxss**/
+.myCard {
+  width: 100%;
+  min-height: 100vh;
+  padding: 28rpx 30rpx;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.myCard .list {
+  align-items: flex-start;
+  padding: 32rpx 36rpx 26rpx;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 16rpx;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  color: #87492C;
+}
+.myCard .list .backGroundImg {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.myCard .list .title {
+  font-size: 32rpx;
+  font-family: AliHYAiHei;
+  font-weight: bold;
+}
+.myCard .list .tips {
+  margin-top: 16rpx;
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+.myCard .list .tag {
+  padding: 2rpx 12rpx;
+  box-sizing: border-box;
+  font-size: 22rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  border: 2rpx solid #C7A06F;
+  margin-top: 54rpx;
+}
+.myCard .list .btnBox {
+  margin-top: 18rpx;
+  width: 100%;
+  height: 72rpx;
+  border-radius: 36rpx;
+  position: relative;
+  z-index: 1;
+}
+.myCard .list .btnBox .btnImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+.myCard .list .btnBox .text {
+  font-size: 28rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.myCard .list .rightView {
+  position: absolute;
+  top: 36rpx;
+  right: 36rpx;
+  align-items: flex-end;
+}
+.myCard .list .rightView .count {
+  font-size: 32rpx;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+}
+.myCard .list .rightView .estimate {
+  font-size: 24rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+}
+.myCard .list:not(:nth-of-type(1)) {
+  margin-top: 36rpx;
+  color: #445369;
+}
+.myCard .list:not(:nth-of-type(1)) .tag {
+  border: 2rpx solid #9CB6D6;
+}

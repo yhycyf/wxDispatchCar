@@ -1,0 +1,29 @@
+<!--index.wxml-->
+<view class="flexCol changePhone">
+  <view class="title">请输入新手机号</view>
+  <view class="content">
+    <van-cell-group>
+      <van-field
+        label="新手机号"
+        value="{{ phoneValue }}"
+        placeholder="输入手机号"
+        placeholder-style="font-size: 32rpx;font-weight: 400;color: #AAAAAA;"
+        border="{{ false }}"
+        bind:change="onChangePhone"
+      >
+        <view slot="button" class="sendCode">获取验证码</view>
+      </van-field>
+      <van-field custom-style="margin-top: 20rpx;"
+        label="验证码"
+        value="{{ nameValue }}"
+        placeholder="输入验证码"
+        placeholder-style="font-size: 32rpx; font-weight: 400; color: #AAAAAA;"
+        border="{{ false }}"
+        bind:change="onChangeName"
+      />
+    </van-cell-group>
+
+    <view class="flexRow btn" bindtap="submit">确认</view>
+  </view>
+</view>
+

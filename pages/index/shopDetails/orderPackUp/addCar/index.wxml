@@ -53,7 +53,7 @@
       当地交管局查询必须信息，四维将对您的信息加密，请放心填写
     </view>
   </view>
-  <view class="flexRow qualification" hover-class="beginOrderActive" bindtap="submit">
+  <view class="flexRow qualification" hover-class="beginOrderActive" bindtap="pay">
     <view>确认</view>
   </view>
 </view>

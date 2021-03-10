@@ -212,3 +212,7 @@
   color: #151515;
   margin-top: 8rpx;
 }
+.heard .pickUp .imgBox {
+  width: 80rpx;
+  height: 80rpx;
+}

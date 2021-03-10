@@ -21,7 +21,7 @@
       <view class="title">车辆管理</view>
       <view class="leftNub">11232</view>
     </view>
-    <view class="right">
+    <view class="right" bindtap="goCard">
       <view class="title">卡券包</view>
       <view class="leftNub">1123</view>
     </view>

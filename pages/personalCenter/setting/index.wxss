@@ -1,0 +1,16 @@
+/**index.wxss**/
+.setting {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #F6F7F9;
+}
+.setting .valueClass {
+  font-size: 32rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #777777;
+}
+.setting .van-cell {
+  margin-top: 12rpx;
+}

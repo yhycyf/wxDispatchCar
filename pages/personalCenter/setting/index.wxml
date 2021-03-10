@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<view class="setting">
+  <van-cell-group>
+    <van-cell title-style="font-size: 32rpx;font-weight: 500; color: #151515;"
+     title="用户名" value-class="valueClass" value="牛牛" boder="{{false}}" />
+    <van-cell custom-class="van-cell" bindtap="changePhone"
+    title-style="font-size: 32rpx;font-weight: 500; color: #151515;"
+    title="修改手机号码" is-link value-class="valueClass" value="134*****765" boder="{{false}}" />
+  </van-cell-group>
+</view>
+

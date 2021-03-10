@@ -26,6 +26,12 @@ Page({
       url: '/pages/personalCenter/myOrder/index'
     })
   },
+  // 卡券管理
+  goCard() {
+    wx.navigateTo({
+      url: `/pages/personalCenter/myCard/index`
+    })
+  },
   // 车辆管理
   goSelectCar() {
     wx.navigateTo({

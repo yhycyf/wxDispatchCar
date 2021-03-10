@@ -60,31 +60,39 @@
               </view>
               <van-grid border="{{ false }}" custom-class="gridClass">
                 <van-grid-item use-slot>
-                  <image
-                    style="width: 80rpx; height: 80rpx;"
-                    src="../../image/idcart1.png"
-                  />
+                  <view class="flexRow imgBox">
+                    <image
+                      style="width: 78rpx; height: 72rpx;"
+                      src="../../image/send_type_1.png"
+                    />
+                  </view>
                   <text>代维修</text>
                 </van-grid-item>
                 <van-grid-item use-slot>
-                  <image
-                    style="width: 80rpx; height: 80rpx"
-                    src="../../image/idcart1.png"
-                  />
+                  <view class="flexRow imgBox">
+                    <image
+                      style="width: 60rpx; height: 72rpx"
+                      src="../../image/send_type_2.png"
+                    />
+                  </view>
                   <text>代保养</text>
                 </van-grid-item>
                 <van-grid-item use-slot>
-                  <image
-                    style="width: 80rpx; height: 80rpx"
-                    src="../../image/idcart1.png"
-                  />
+                  <view class="flexRow imgBox">
+                    <image
+                      style="width: 78rpx; height: 66rpx"
+                      src="../../image/send_type_3.png"
+                    />
+                  </view>
                   <text>代年检</text>
                 </van-grid-item>
                 <van-grid-item use-slot>
-                  <image
-                    style="width: 80rpx; height: 80rpx"
-                    src="../../image/idcart1.png"
-                  />
+                  <view class="flexRow imgBox">
+                    <image
+                      style="width: 62rpx; height: 72rpx"
+                      src="../../image/send_type_4.png"
+                    />
+                  </view>
                   <text>安全检测</text>
                 </van-grid-item>
               </van-grid>

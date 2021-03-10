@@ -1,36 +1,40 @@
 /**index.wxss**/
-.payment {
-  margin-top: 48rpx;
+.addCarSuccess {
+  padding-top: 80rpx;
+  box-sizing: border-box;
 }
-.payment .status {
+.addCarSuccess .status {
   margin-bottom: 28rpx;
 }
-.payment .status .center .image {
-  width: 332rpx;
-  height: 156rpx;
+.addCarSuccess .status .center .image {
+  width: 388rpx;
+  height: 184rpx;
   margin-bottom: 24rpx;
 }
-.payment .status .center .statusText {
+.addCarSuccess .status .center .statusText {
   font-size: 36rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #151515;
 }
-.payment .status .center .tips {
+.addCarSuccess .status .center .tips {
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #9F9F9F;
   margin-top: 16rpx;
 }
-.payment .bottom {
-  margin-top: 46rpx;
+.addCarSuccess .btnBox {
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  margin-top: 70rpx;
 }
-.payment .bottom .beginOrder {
-  width: 618rpx;
+.addCarSuccess .btnBox .btn {
+  width: 100%;
   height: 80rpx;
   background: #457CFB;
-  border-radius: 40rpx;
+  border-radius: 44rpx;
   font-size: 32rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
