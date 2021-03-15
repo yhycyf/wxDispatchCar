@@ -75,6 +75,27 @@ const scooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/scoot
 // (发送验证码）
 const scooterOrderCode = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCode'), 'GET');
 
+//（订单详情）（出险代步车）
+const scooterOrderDetails = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderDetails'), 'GET');
+
+//（订单详情）（出险代步车）（取消订单）
+const scooterOrderCancel = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCancel'), 'PUT');
+
+//（个人中心）（车辆管理）
+const getUserPersonageCarCount = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageCarCount'), 'GET');
+
+//（个人中心）（我的订单）
+const getUserPersonageFromCount = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageFromCount'), 'GET');
+
+//（个人中心）（我的订单）（全部）
+const getUserPersonageFrom = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageFrom'), 'GET');
+
+//（修改手机号码）（确认）
+const updateUpPhone = (params) => wxRequest(params, wrapUrl('user-personage/updateUpPhone'), 'PUT');
+
+//（修改手机号码）（获取验证码）
+const updateUpPhoneCode = (params) => wxRequest(params, wrapUrl('user-personage/updateUpPhoneCode'), 'PUT');
+
 
 module.exports = {
   qualificationVerification,
@@ -82,5 +103,13 @@ module.exports = {
   addIdentity,
   addDrivingLicence,
   scooterOrder,
-  scooterOrderCode
+  scooterOrderCode,
+  scooterOrderDetails,
+  scooterOrderCancel,
+  getUserPersonageCarCount,
+  getUserPersonageFromCount,
+  getUserPersonageFrom,
+  updateUpPhone,
+  updateUpPhoneCode
+
 };

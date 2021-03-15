@@ -147,8 +147,9 @@
   </view>
   <view class="flexRow bottom">
     <view class="flexRow btn">联系客服</view>
-    <view class="flexRow btn" bindtap="goReturnCarPage">立即还车</view>
-    <view class="flexRow btn" bindtap="waitReturnCar">延时还车</view>
+    <!-- <view class="flexRow btn" bindtap="goReturnCarPage">立即还车</view>
+    <view class="flexRow btn" bindtap="waitReturnCar">延时还车</view> -->
+    <view class="flexRow btn" bindtap="cancelDetail">取消订单</view>
   </view>
 </view>
 

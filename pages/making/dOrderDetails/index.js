@@ -1,14 +1,16 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-02 14:32:14
+ * @LastEditTime: 2021-03-15 17:57:18
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
 // index.js
 // 获取应用实例
-const app = getApp()
+import api from '../../../api/api';
+import utils from '../../../utils/index';
+const app = getApp();
 
 Page({
   data: {
@@ -19,6 +21,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     value: '',
+    id: 1,
   },
   waitReturnCar() {
     wx.navigateTo({
@@ -40,6 +43,33 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+
+  async scooterOrderDetails() {
+    let id = this.data.id;
+    let res = await api.scooterOrderDetails({
+      scooterFormId: id
+    });
+    if(res.flag) {
+      console.log('订单详情', res)
+    } else {
+      utils.showToast(res.message)
+    }
+  },
+  // 取消订单
+  async cancelDetail() {
+    let res = await api.scooterOrderCancel({
+      scooterFormId: id
+    });
+    if(res.flag) {
+      console.log('取消订单成功', res)
+    } else {
+      utils.showToast(res.message)
+    }
+    console.log('取消订单', res)
+  },
+  onShow() {
+    this.scooterOrderDetails();
   },
   onLoad() {
     

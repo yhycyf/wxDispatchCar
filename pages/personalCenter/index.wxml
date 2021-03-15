@@ -15,11 +15,11 @@
     <image class="backGroundIng" src="../../image/pCtop.png" />
     <view class="left" bindtap="myOrder">
       <view class="title">我的订单</view>
-      <view class="leftNub">11232</view>
+      <view class="leftNub">{{fromCount}}</view>
     </view>
     <view class="center" bindtap="goSelectCar"> 
       <view class="title">车辆管理</view>
-      <view class="leftNub">11232</view>
+      <view class="leftNub">{{carCount}}</view>
     </view>
     <view class="right" bindtap="goCard">
       <view class="title">卡券包</view>

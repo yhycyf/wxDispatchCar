@@ -21,7 +21,15 @@ Page({
     active: 1,
     value: '',
     status: 1, //0失败 1成功
-    form: {}
+    form: {
+      code: '',
+      name: '',
+      phone: '',
+      scooterFormId: '',
+      sfOutCarSite: '',
+      sfOutCarTime: '',
+      upPhone: ''
+    }
   },
   onChange(event) {
     // event.detail 为当前输入的值
