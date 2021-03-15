@@ -44,7 +44,7 @@ export const wxRequest = (params, url, types) => {
       header: {
         'content-type': types === 'GET' ? 'application/json' : 'application/x-www-form-urlencoded'
       },
-      timeout: 1000,
+      timeout: 10000,
 
       success(res) {
         resolve(res.data);

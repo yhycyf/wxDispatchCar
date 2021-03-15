@@ -4,9 +4,8 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-02-26 09:52:12
+ * @LastEditTime: 2021-03-15 15:08:20
  */
-
 const app = getApp();
 Component({
   options: {
@@ -25,12 +24,31 @@ Component({
   },
 
   data: {
-    currentDate: '12:00',
-    filter(type, options) {
-      if (type === 'minute') {
-        return options.filter((option) => option % 5 === 0);
+    minDate: new Date().getTime() + 1000 * 3600 * 2,
+    maxDate: new Date().getTime() + 1000 * 3600 * 24 * 365,
+    currentDate: new Date().getTime() + 1000 * 3600 * 2,
+    formatter(type, value) {
+      if (type === 'year') {
+        return `${value}年`;
+      } else if (type === 'month') {
+        return `${value}月`;
+      } else if (type === 'day') {
+        return `${value}日`;
+      } else if (type === 'hour') {
+        return `${value}点`;
+      } else if (type === 'minute') {
+        return `${value}分`;
       }
-
+      return value;
+    },
+    filter(type, options) {
+      if(type == 'year') {
+        return options.filter((option) => {
+          if(option == new Date().getFullYear()) {
+            return option
+          }
+        })
+      }
       return options;
     },
   }, // 私有数据，可用于模板渲染
@@ -62,7 +80,17 @@ Component({
   },
 
   methods: {
-  
+    onInput(event) {
+      console.log('onInput', event)
+      this.setData({
+        currentDate: event.detail,
+      });
+    },
+    confirm(event) {
+      console.log('confirm', event)
+      this.triggerEvent('currentDate', this.data.currentDate)
+      this.setData({ show: false });
+    },
     onClose() {
       this.setData({ show: false });
     },

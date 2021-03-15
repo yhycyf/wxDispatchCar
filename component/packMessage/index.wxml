@@ -56,7 +56,7 @@
 					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText" type="number" placeholder="请输入手机号"/>
 				</view>
 				<view class="flexRow child">
-					<view class="remove">修改</view>
+					<view class="sendCode {{codeSelect ? 'codeSelect' : ''}}">发送验证码</view>
 				</view>
 			</view>
 			<view class="line"></view>

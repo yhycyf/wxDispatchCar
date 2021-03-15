@@ -1,14 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-02 14:40:37
+ * @LastEditTime: 2021-03-15 16:47:57
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
 // index.js
 // 获取应用实例
-import utils from '../../utils/wxRequest'
+import wxRequest from '../../utils/wxRequest';
+import utils from '../../utils/index'
 const app = getApp();
 
 Page({
@@ -50,7 +51,7 @@ Page({
   },
   async selectLocation() {
     let that = this;
-    let setting = await utils.getSetting('scope.userLocation');
+    let setting = await wxRequest.getSetting('scope.userLocation');
     if(setting) {
       wx.chooseLocation({
         success: function (e) {

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-12 18:42:57
+ * @LastEditTime: 2021-03-15 10:21:05
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -35,8 +35,8 @@ Page({
     if(!form.imgDrivingLicenceA && !form.imgDrivingLicenceB) {
       return;
     }
-    // utils.showLoading();
-    let res = await api.addDrivingLicence(this.data.form);
+    utils.showLoading();
+    let res = await api.addDrivingLicence(form);
     console.log('下一步', res)
     utils.hideLoading();
     if(res.flag) {
@@ -44,7 +44,7 @@ Page({
       utils.sleep(1000);
       wx.navigateBack();
     } else {
-      utils.showToast(res.message, 'error');
+      utils.showToast(res.message, ' ', 2000);
       this.setData({
         fileListA: [],
         fileListB: [],

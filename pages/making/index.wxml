@@ -2,7 +2,10 @@
 <view class="flexCol making">
   <view class="title">2小时内到您的身边</view>
   <view class="content">
-    <message type="send" bindshowPopup="showPopup"></message>
+    <message type="send" bindshowPopup="showPopup" 
+      bind:currentDate="currentDate"
+      bind:sfOutCarSite="sfOutCarSite"
+    ></message>
   </view>
   <van-popup z-index="1000000" custom-style="border-radius: 12rpx;" show="{{ show }}" position="center" bind:close="onClose">
     <view class="flexCol box">

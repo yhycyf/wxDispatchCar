@@ -8,7 +8,8 @@
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
-import utils from '../../utils/wxRequest'
+import wxRequest from '../../utils/wxRequest';
+import utils from '../../utils/index'
 const app = getApp();
 Component({
   options: {
@@ -128,7 +129,7 @@ Component({
     },
     async selectLocation() {
       let that = this;
-      let setting = await utils.getSetting('scope.userLocation');
+      let setting = await wxRequest.getSetting('scope.userLocation');
       if(setting) {
         wx.chooseLocation({
           success: function (e) {

@@ -27,7 +27,7 @@
 			<view class="flexRow iconBox">
 				<image class="iconTime" src="../../image/time_image.png"></image>
 			</view>
-			<view class="textWidth {{getCarTime ? 'select' : ''}}">{{getCarTime ? getCarTime : type == 'send' ? '送车时间' : type == 'get' ? '取车时间' : ''}}</view>
+			<view class="noSelect {{getCarTime ? 'select' : ''}}">{{getCarTime ? getCarTime : type == 'send' ? '送车时间' : type == 'get' ? '取车时间' : ''}}</view>
 		</view>
 		<view class="line"></view>
 
@@ -55,10 +55,14 @@
 					<view class="flexRow iconBox">
 						<image class="iconIphone" src="../../image/phone_image.png"></image>
 					</view>
-					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText" type="number" placeholder="请输入手机号"/>
+					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText"
+					 type="number" placeholder="请输入手机号" maxlength="11"
+					 value="{{ phone }}" bindinput="onChangePhone"
+					 />
 				</view>
-				<view class="flexRow child">
-					<view class="remove">修改</view>
+				<view class="flexRow child" bindtap="sendCode">
+					<view wx:if="{{!countDown}}" class="sendCode {{phone ? 'codeSelect' : ''}}">发送验证码</view>
+					<view wx:else class="sendCode">{{countDown}}s</view>
 				</view>
 			</view>
 			<view class="line"></view>
@@ -90,5 +94,5 @@
 		<view wx:if="{{type == 'send'}}" class="flexRow text sendCar" hover-class="beginOrderActive">预约</view>
 	</view>
 
-	<datetime-picker show="{{show}}"></datetime-picker>
+	<datetime-picker show="{{show}}" bind:currentDate="currentDate"></datetime-picker>
 </view>

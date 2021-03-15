@@ -1,14 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-02-26 16:12:02
+ * @LastEditTime: 2021-03-15 15:51:16
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
 // index.js
 // 获取应用实例
-const app = getApp()
+import {formatTime} from '../../utils/format'
+const app = getApp();
 
 Page({
   data: {
@@ -20,6 +21,7 @@ Page({
     active: 1,
     value: '',
     status: 1, //0失败 1成功
+    form: {}
   },
   onChange(event) {
     // event.detail 为当前输入的值
@@ -40,6 +42,19 @@ Page({
   bindViewTap() {
     wx.navigateTo({
       url: '../logs/logs'
+    })
+  },
+  // 送车时间
+  sfOutCarSite(event) {
+    this.setData({
+      'form.sfOutCarSite': event.detail
+    })
+  },
+  // 送车地点
+  currentDate(event) {
+    let currentTimes = formatTime(new Date(event.detail));
+    this.setData({
+      'form.sfOutCarTime': currentTimes
     })
   },
   onLoad() {

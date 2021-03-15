@@ -59,17 +59,28 @@ const login = async(params) => {
 
 // 代步车资格验证
 const qualificationVerification = (params) => wxRequest(params, wrapUrl('user-personage/qualificationVerification'), 'PUT');  
+
 // 您的车辆
 const getQualificationVerification = (params) => wxRequest(params, wrapUrl('user-personage/getQualificationVerification'), 'GET');
+
 // 实名认证(下一步)
 const addIdentity = (params) => wxRequest(params, wrapUrl('user-personage/addIdentity'), 'POST');
+
 // 车辆信息认证(下一步)
 const addDrivingLicence = (params) => wxRequest(params, wrapUrl('user-personage/addDrivingLicence'), 'POST');
+
+// (出险代步车）（预约）
+const scooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrder'), 'GET');
+
+// (发送验证码）
+const scooterOrderCode = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCode'), 'GET');
 
 
 module.exports = {
   qualificationVerification,
   getQualificationVerification,
   addIdentity,
-  addDrivingLicence
+  addDrivingLicence,
+  scooterOrder,
+  scooterOrderCode
 };

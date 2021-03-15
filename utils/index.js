@@ -229,6 +229,8 @@ const countDownSeconds = (value) => {
 };
 
 
+
+
 // 有离线收益就设置小红点
 const showTabBarRedDot = () => {
   tt.showTabBarRedDot({
@@ -290,6 +292,16 @@ const hideLoading = (title = ' ',mask = true) => {
 }
 
 
+const isPhone = (value) => {
+  let flag = /^[1][3,5,7,8][0-9]{9}$/.test(value);
+  if(flag) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+
 
 export default {
   cdnUrl,
@@ -309,5 +321,6 @@ export default {
   sleep,
   showToast,
   showLoading,
-  hideLoading
+  hideLoading,
+  isPhone
 };

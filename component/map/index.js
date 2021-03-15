@@ -8,7 +8,8 @@
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
-import utils from '../../utils/wxRequest'
+import wxRequest from '../../utils/wxRequest';
+import utils from '../../utils/index'
 const app = getApp();
 Component({
   options: {
@@ -112,7 +113,7 @@ Component({
       let that = this;
       let lat= "markers[0].latitude";
       let log= "markers[0].longitude";
-      let setting = await utils.getSetting('scope.userLocation');
+      let setting = await wxRequest.getSetting('scope.userLocation');
       console.log('setting', setting)
       if(setting) {
         this.mapCtx.moveToLocation({
