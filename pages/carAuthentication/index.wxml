@@ -1,11 +1,26 @@
 <!--index.wxml-->
-<view class="nameAuthentication">
+<view class="carAuthentication">
   <view class="upIdentity">
     <view class="heard">
       第一步：请拍摄驾驶证正面
     </view>
     <view class="flexRow flexCol center">
-      <image class="icon" src="../../image/upDriving1.png" />
+      <van-uploader max-size="{{1048576 * 3}}" max-count="1" deletable="{{ true }}"
+        disabled="{{form.imgDrivingLicenceA}}"
+        bind:after-read="afterReadA" bind:delete="deleteFileListA" bind:oversize="oversize">
+        <view class="iconBox">
+          <image class="icon" src="../../image/upDriving1.png" />
+          <view wx:if="{{fileListA[0].url}}" class="imagTop">
+            <view class="childBox">
+              <view class="flexCol failBox" wx:if="{{fileListA[0].url && !form.imgDrivingLicenceA && upLoadFail}}" >
+                <image class="img fail" src="../../image/fail_img.png" />
+                <view class="flexRow text">上传失败 请重新上传</view>
+              </view>
+              <image wx:if="{{fileListA[0].url && form.imgDrivingLicenceA && !upLoadFail}}" class="img success" src="../../image/success_img.png" />
+            </view>
+          </view>
+        </view>
+      </van-uploader>
       <text>请拍摄驾驶证正面</text>
     </view>
   </view>
@@ -14,7 +29,22 @@
       第二步：请拍摄驾驶证副页
     </view>
     <view class="flexRow flexCol center">
-      <image class="icon" src="../../image/upDriving2.png" />
+      <van-uploader max-size="{{1048576 * 3}}" max-count="1" deletable="{{ true }}"
+        disabled="{{form.imgDrivingLicenceB}}"
+        bind:after-read="afterReadB" bind:delete="deleteFileListB" bind:oversize="oversize">
+        <view class="iconBox">
+          <image class="icon" src="../../image/upDriving2.png" />
+          <view wx:if="{{fileListB[0].url}}" class="imagTop">
+            <view class="childBox">
+              <view class="flexCol failBox" wx:if="{{fileListB[0].url && !form.imgDrivingLicenceB && upLoadFail}}" >
+                <image class="img fail" src="../../image/fail_img.png" />
+                <view class="flexRow text">上传失败 请重新上传</view>
+              </view>
+              <image wx:if="{{fileListB[0].url && form.imgDrivingLicenceB && !upLoadFail}}" class="img success" src="../../image/success_img.png" />
+            </view>
+          </view>
+        </view>
+      </van-uploader>
       <text>请保证驾驶证清晰有效大小不超过3M</text>
     </view>
   </view>
@@ -25,7 +55,7 @@
         系统智能加密，实施保障你的信息安全
       </view>
     </view>
-    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="beginOrder">
+    <view class="flexRow beginOrder {{form.imgDrivingLicenceA && form.imgDrivingLicenceB ? 'ok' : ''}}" hover-class="beginOrderActive" bindtap="navigateBack">
       下一步
     </view>
   </view>

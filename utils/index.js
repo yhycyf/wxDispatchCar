@@ -1,7 +1,6 @@
 
 import regeneratorRuntime from './runtime';
 export const cdnUrl = 'https://cdn.fairgame.cn/love-powder-app/image/';
-const Qiniu = require('./qiniuUploader.js');
 
 const countDown = (time) => {
   let now  = new Date();
@@ -58,40 +57,16 @@ const showFavoriteGuide = () => {
 };
 
 
-/**
- * 上传图片
- * path:图片地址
- * callback:回调
- */
-const upLoadImg = (tempFilePaths, path, str) => new Promise((resolve, reject) => {
-  Qiniu.upload(
-    tempFilePaths,
-    (res) => {
-      wx.hideLoading();
-      resolve(res.imageURL);
-    },
-    (error) => {
-      reject(error);
-    },
-    {
-      key: path + str,     // [非必须]自定义文件 key。如果不设置，默认为使用微信小程序 API 的临时文件名
-      region: 'SCN',
-      domain: 'https://taskimg.youwanshe.cn',  // // bucket 域名，下载资源时用到。如果设置，会在 success callback 的 res 参数加上可以直接使用的 ImageURL 字段。否则需要自己拼接
-      // 以下方法三选一即可，优先级为：uptoken > uptokenURL > uptokenFunc
-      // uptoken: 'https://app.genwowanba.com/box/token', // 由其他程序生成七牛 uptoken
-      // uptokenURL: hostUrl + 'job/qiniu/token', // 从指定 url 通过 HTTP GET 获取 uptoken，返回的格式必须是 json 且包含 uptoken 字段，例如： {"uptoken": "[yourTokenString]"}
-      uptokenURL: 'https://task.youwanshe.cn/' + 'job/qiniu/token',
-      uploadURL: 'https://upload-z2.qiniup.com/'
-    },
-    (res) => {
-      console.log('上传进度', res.progress);
-      console.log('已经上传的数据长度', res.totalBytesSent);
-      console.log('预期需要上传的数据总长度', res.totalBytesExpectedToSend);
-    }
-  );
-}).catch((err) => {
-  console.log('qiniu upload error: ' + err);
-});
+function _getSuffix (filename) {
+  var pos = filename.lastIndexOf('.')
+  var suffix = ''
+  if (pos != -1) {
+      suffix = filename.substring(++pos)
+  }
+  return suffix;
+}
+
+
 
 
 const commonShare = (res, path) => {
@@ -266,6 +241,54 @@ const showTabBarRedDot = () => {
 };
 
 
+const chooseImage = (params) => {
+  return new Promise((resolve, reject) => {
+    wx.chooseImage({
+      count: params.count || 1,
+      sizeType: params.sizeType || [ 'original', 'compressed' ],
+      sourceType: params.sourceType || [ 'album', 'camera' ],
+      success(res) {
+        // tempFilePath可以作为img标签的src属性显示图片
+        resolve(res);
+      },
+      fail(res) {
+        reject(res);
+      }
+    });
+  }).catch((err) => {
+    console.log('chooseImageErr', err);
+  });
+};
+
+// 返回一个Promise
+const sleep = ((time)=> {
+	return new Promise((resolve)=> {
+		setTimeout(resolve,time)
+	})
+});
+
+
+const showToast = (content,icon = 'none',time = 1000) => {
+  console.log('icon', icon)
+	wx.showToast({
+		title: content,
+		icon: icon,
+		duration: time,
+		mask: true,
+	})
+};
+
+const showLoading = (title = ' ',mask = true) => {
+	wx.showLoading({
+        title: title,
+        mask: mask
+	})
+};
+
+const hideLoading = (title = ' ',mask = true) => {
+	wx.hideLoading();
+}
+
 
 
 export default {
@@ -273,7 +296,6 @@ export default {
   countDown,
   reportAnalytics,
   showFavoriteGuide,
-  upLoadImg,
   oneMonthAfter,
   subMduioStr,
   countDownDays,
@@ -282,5 +304,10 @@ export default {
   commonShare,
   countDownMinutes,
   showTabBarRedDot,
-  sliceStr
+  sliceStr,
+  chooseImage,
+  sleep,
+  showToast,
+  showLoading,
+  hideLoading
 };

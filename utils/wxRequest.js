@@ -1,11 +1,11 @@
 /** 线上地址**/
-const hostUrl = 'https://rank.youledaka.cn/';
+// const hostUrl = 'https://rank.youledaka.cn/';
 
 /** 测试后台地址**/
-// const hostUrl = 'https://douyinstar.genwowan8.com/';
+const hostUrl = 'http://106.39.35.194:8082/';
 
-export const appid = 'tt7d780bc5e2420d0e';
-const appVersion = '1.0.5';
+export const appid = '';
+const appVersion = '1.0.0';
 import regeneratorRuntime from './runtime';
 
 const wrapUrl = (action) => {
@@ -26,9 +26,8 @@ export const wxRequest = (params, url, types) => {
   // 合并对象(公共参数加传入参数合并对象)
   let datas = params || {};
   datas.user_id = wx.getStorageSync('user_id') || '';
-  datas.platform = wx.getStorageSync('isDouyin') ? 2 : 1;
-
-  if (types == 2) {
+  datas.upPhone = wx.getStorageSync('upPhone') || 15510283555;
+  if (types == 'POST') {
     Object.keys(datas).map((key) => {
       if (typeof datas[key] == 'object') {
         datas[key] = JSON.stringify(datas[key]);
@@ -41,9 +40,9 @@ export const wxRequest = (params, url, types) => {
     wx.request({
       url: url,
       data: datas,
-      method: types === 1 ? 'GET' : 'POST',
+      method: types,
       header: {
-        'content-type': types === 1 ? 'application/json' : 'application/x-www-form-urlencoded'
+        'content-type': types === 'GET' ? 'application/json' : 'application/x-www-form-urlencoded'
       },
       timeout: 1000,
 

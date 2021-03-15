@@ -6,86 +6,80 @@
       <van-tab title="代步车资格验证" name="{{1}}">
         <van-cell-group>
           <van-field
-            value="{{ value }}"
+            value="{{ form1.vin }}"
             placeholder="请输入车架号"
             label="车架号"
             custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
+            data-type="vin"
             bind:change="onChange"
           >
           <van-icon size="40rpx" slot="right-icon" name="photograph" />
           </van-field>
           <van-field
-            value="{{ value }}"
+            value="{{ form1.reportNo }}"
             placeholder="请输入报案号"
             label="报案号"
             custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
+            data-type="reportNo"
             bind:change="onChange"
           />
           <van-field
-            value="{{ value }}"
+            value="{{ form1.gift }}"
             placeholder="输入礼品码（非必填）"
             label="礼品码"
             custom-style="font-weight: 500"
             title-width="124rpx"
             border
+            data-type="gift"
             bind:change="onChange"
           />
         </van-cell-group>
       </van-tab>
-      <van-tab title="您的车辆" name="{{0}}">
+      <van-tab title="您的车辆" name="{{2}}">
         <van-radio-group class="flexRow radioGroup" value="{{ radio }}" bind:change="onChangeRadio">
-          <van-radio use-icon-slot name="{{0}}">
-            <view class="text {{radio == 0 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{1}}">
-            <view class="text {{radio == 1 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{2}}">
-            <view class="text {{radio == 2 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{3}}">
-            <view class="text {{radio == 3 ? 'radioActive' : ''}}">京AC62743</view>
-          </van-radio>
-          <van-radio use-icon-slot name="{{4}}">
-            <view class="text {{radio == 4 ? 'radioActive' : ''}}">京AC62743</view>
+          <van-radio use-icon-slot name="{{index}}" wx:for="{{myCarList}}" wx:for-index="index" wx:for-item="item" wx:key="index" data-index="{{item}}">
+            <view class="text {{radio == index ? 'radioActive' : ''}}">{{item.ucPlateNo}}</view>
           </van-radio>
         </van-radio-group>
         <van-cell-group>
           <van-field
-            value="{{ value }}"
+            value="{{ form2.vin }}"
             placeholder="请输入车架号"
             label="车架号"
             custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
+            data-type="vin"
             bind:change="onChange"
           >
           <van-icon size="40rpx" slot="right-icon" name="photograph" />
           </van-field>
           <van-field
-            value="{{ value }}"
+            value="{{ form2.reportNo }}"
             placeholder="请输入报案号"
             label="报案号"
             custom-style="font-weight: 500"
             title-width="124rpx"
             label-class="labelClass"
             border
+            data-type="reportNo"
             bind:change="onChange"
           />
           <van-field
-            value="{{ value }}"
+            value="{{ form2.gift }}"
             placeholder="输入礼品码（非必填）"
             label="礼品码"
             custom-style="font-weight: 500"
             title-width="124rpx"
             border
+            data-type="gift"
             bind:change="onChange"
           />
         </van-cell-group>

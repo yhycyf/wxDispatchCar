@@ -19,14 +19,66 @@
             height: 326rpx;
             border: 2rpx dotted #EBEBEB;
             border-top: none;
-            image{
-                width: 326.94rpx;
-                height: 190.08rpx;
-                margin-bottom: 24rpx;
+            .iconBox {
+                position: relative;
+                .icon{
+                    width: 326.94rpx;
+                    height: 190.08rpx;
+                }
+                .imagTop {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: rgba(221, 222, 227,0.75);
+                    border-radius: 15rpx;
+                    .childBox {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        .img {
+                            width: 100rpx;
+                            height: 100rpx;
+                            margin-top: -16rpx;
+                        }
+                        .failBox {
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%,-50%);
+                            .text {
+                                position: absolute;
+                                left: 0;
+                                bottom: 0;
+                                width: 100%;
+                                height: 40rpx;
+                                background: #C0C0C0;
+                                font-size: 20rpx;
+                                font-family: PingFangSC-Regular, PingFang SC;
+                                font-weight: 400;
+                                color: #E82121;
+                                border-bottom-left-radius: 16rpx;
+                                border-bottom-right-radius: 16rpx;
+                            }
+                        }  
+                        .success {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            margin-top: -10rpx;
+                            transform: translate(-50%,-50%);
+                        }
+                    }
+
+                }
             }
             text{
                 color:#777777;
                 font-size: 22rpx;
+                margin-top: 24rpx;
             }
         }
     }  
@@ -104,6 +156,10 @@
             font-size: 32rpx;
             font-weight: 500;
             color: #AAAAAA;
+        }
+        .ok {
+            background: #457CFB;
+            color: #FFFFFF;
         }
     }
 

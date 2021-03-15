@@ -8,6 +8,7 @@
  */
 // index.js
 // 获取应用实例
+import api from '../../api/api'
 const app = getApp()
 
 Page({

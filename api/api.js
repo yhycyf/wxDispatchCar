@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-10 15:19:22
+ * @LastEditTime: 2021-03-12 18:17:38
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';
@@ -15,7 +15,7 @@ import regeneratorRuntime  from '../utils/runtime';
  */
 
 const loginSave = async(params) => {
-  let res = await wxRequest(params, wrapUrl('login/save'), 2);
+  let res = await wxRequest(params, wrapUrl('login/save'), 'POST');
   return res;
 };
 
@@ -38,7 +38,7 @@ const login = async(params) => {
     appid: appid,
     code,
     share_friend: params.share_friend
-  }, wrapUrl('login/login'), 1);
+  }, wrapUrl('login/login'), 'GET');
   console.log('data', data);
 
   wx.setStorageSync('is_userInfo', data.is_userInfo);
@@ -57,11 +57,19 @@ const login = async(params) => {
 
 
 
-
-const getPayInfo = (params) => wxRequest(params, wrapUrl('pay/get-pay-info'), 1);  // 支付检测
+// 代步车资格验证
+const qualificationVerification = (params) => wxRequest(params, wrapUrl('user-personage/qualificationVerification'), 'PUT');  
+// 您的车辆
+const getQualificationVerification = (params) => wxRequest(params, wrapUrl('user-personage/getQualificationVerification'), 'GET');
+// 实名认证(下一步)
+const addIdentity = (params) => wxRequest(params, wrapUrl('user-personage/addIdentity'), 'POST');
+// 车辆信息认证(下一步)
+const addDrivingLicence = (params) => wxRequest(params, wrapUrl('user-personage/addDrivingLicence'), 'POST');
 
 
 module.exports = {
-  login,
-  
+  qualificationVerification,
+  getQualificationVerification,
+  addIdentity,
+  addDrivingLicence
 };

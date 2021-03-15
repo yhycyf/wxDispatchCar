@@ -1,11 +1,11 @@
 /**index.wxss**/
-.nameAuthentication {
+.carAuthentication {
   margin-top: 48rpx;
 }
-.nameAuthentication .upIdentity {
+.carAuthentication .upIdentity {
   margin-bottom: 28rpx;
 }
-.nameAuthentication .upIdentity .heard {
+.carAuthentication .upIdentity .heard {
   width: 690rpx;
   height: 60rpx;
   margin: 0 auto;
@@ -15,27 +15,78 @@
   color: #000;
   font-weight: 400;
 }
-.nameAuthentication .upIdentity .center {
+.carAuthentication .upIdentity .center {
   margin: 0 auto;
   width: 690rpx;
   height: 326rpx;
   border: 2rpx dotted #EBEBEB;
   border-top: none;
 }
-.nameAuthentication .upIdentity .center image {
+.carAuthentication .upIdentity .center .iconBox {
+  position: relative;
+}
+.carAuthentication .upIdentity .center .iconBox .icon {
   width: 326.94rpx;
   height: 190.08rpx;
-  margin-bottom: 24rpx;
 }
-.nameAuthentication .upIdentity .center text {
+.carAuthentication .upIdentity .center .iconBox .imagTop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(221, 222, 227, 0.75);
+  border-radius: 15rpx;
+}
+.carAuthentication .upIdentity .center .iconBox .imagTop .childBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.carAuthentication .upIdentity .center .iconBox .imagTop .childBox .img {
+  width: 100rpx;
+  height: 100rpx;
+  margin-top: -16rpx;
+}
+.carAuthentication .upIdentity .center .iconBox .imagTop .childBox .failBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.carAuthentication .upIdentity .center .iconBox .imagTop .childBox .failBox .text {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 40rpx;
+  background: #C0C0C0;
+  font-size: 20rpx;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #E82121;
+  border-bottom-left-radius: 16rpx;
+  border-bottom-right-radius: 16rpx;
+}
+.carAuthentication .upIdentity .center .iconBox .imagTop .childBox .success {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -10rpx;
+  transform: translate(-50%, -50%);
+}
+.carAuthentication .upIdentity .center text {
   color: #777777;
   font-size: 22rpx;
+  margin-top: 24rpx;
 }
-.nameAuthentication .idSafetyCenter {
+.carAuthentication .idSafetyCenter {
   width: 690rpx;
   margin: 0 auto;
 }
-.nameAuthentication .idSafetyCenter .nameAuthentication {
+.carAuthentication .idSafetyCenter .nameAuthentication {
   width: 690rpx;
   height: 167rpx;
   background: #FFFFFF;
@@ -45,22 +96,22 @@
   padding: 0 36rpx;
   box-sizing: border-box;
 }
-.nameAuthentication .idSafetyCenter .nameAuthentication .leftBox .idImage {
+.carAuthentication .idSafetyCenter .nameAuthentication .leftBox .idImage {
   width: 46rpx;
   height: 38rpx;
 }
-.nameAuthentication .idSafetyCenter .nameAuthentication .leftBox .text {
+.carAuthentication .idSafetyCenter .nameAuthentication .leftBox .text {
   margin-left: 20rpx;
   font-size: 24rpx;
   color: #777777;
   align-items: flex-start;
 }
-.nameAuthentication .idSafetyCenter .nameAuthentication .leftBox .text h5 {
+.carAuthentication .idSafetyCenter .nameAuthentication .leftBox .text h5 {
   font-size: 32rpx;
   color: #151515;
   margin-bottom: 6rpx;
 }
-.nameAuthentication .idSafetyCenter .nameAuthentication .goComplete {
+.carAuthentication .idSafetyCenter .nameAuthentication .goComplete {
   width: 110rpx;
   height: 54rpx;
   font-size: 24rpx;
@@ -68,7 +119,7 @@
   background-color: #457CFB;
   border-radius: 40rpx;
 }
-.nameAuthentication .idSafetyCenter .nameAuthentication .noComplete {
+.carAuthentication .idSafetyCenter .nameAuthentication .noComplete {
   width: 110rpx;
   height: 54rpx;
   font-size: 24rpx;
@@ -76,25 +127,25 @@
   background-color: #DDDEE3;
   border-radius: 40rpx;
 }
-.nameAuthentication .bottom {
+.carAuthentication .bottom {
   position: fixed;
   left: 50%;
   bottom: 68rpx;
   transform: translateX(-50%);
 }
-.nameAuthentication .bottom .whatIsNot {
+.carAuthentication .bottom .whatIsNot {
   margin-bottom: 34rpx;
 }
-.nameAuthentication .bottom .whatIsNot .icon {
+.carAuthentication .bottom .whatIsNot .icon {
   width: 22rpx;
   height: 26rpx;
 }
-.nameAuthentication .bottom .whatIsNot .text {
+.carAuthentication .bottom .whatIsNot .text {
   font-size: 22rpx;
   color: #AAAAAA;
   margin-left: 6rpx;
 }
-.nameAuthentication .bottom .beginOrder {
+.carAuthentication .bottom .beginOrder {
   width: 690rpx;
   height: 88rpx;
   background: #DDDEE3;
@@ -102,4 +153,8 @@
   font-size: 32rpx;
   font-weight: 500;
   color: #AAAAAA;
+}
+.carAuthentication .bottom .ok {
+  background: #457CFB;
+  color: #FFFFFF;
 }

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-02 14:50:45
+ * @LastEditTime: 2021-03-10 16:22:35
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -18,6 +18,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     value: '',
+  },
+  goNameAuthentication() {
+    wx.navigateTo({
+      url: '/pages/nameAuthentication/index'
+    })
+  },
+  goCarAuthentication() {
+    wx.navigateTo({
+      url: '/pages/carAuthentication/index'
+    })
   },
   submit() {
     wx.navigateTo({
