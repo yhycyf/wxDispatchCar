@@ -36,6 +36,25 @@
             </cover-view>
           </view>
         </map-custom>
+        <view class="fixedIndexImage">
+          <image wx:if="{{true}}" class="image" src="../../image/index_top_image_1.png"></image>
+          <view wx:if="{{false}}" class="flexRow imageList">
+            <view class="flexCol left">
+              <view class="flexRow title">
+                正在为您调配司机中
+                <view class="tag">代步车</view>
+              </view>
+              <view class="flexRow status">
+                预计 <view class="time">11:30</view> 到达目的地
+              </view>
+            </view>
+            <view class="flexRow right">
+              查看订单
+              <van-icon size="20rpx" color="#AAAAAA" name="arrow" />
+            </view>
+            <image class="backGroundImg" src="../../image/index_top_image_2.png"></image>
+          </view>
+        </view>
       </van-tab>
       <van-tab title="接送车">
         <view class="pickUp">
