@@ -3,15 +3,15 @@
   <van-tabs swipeable line-width="56rpx" line-height="4rpx" active="{{ active }}" bind:change="onChange">
     <van-tab title="全部">
       <view class="listBox">
-        <view class="flexCol list">
+        <view class="flexCol list" wx:for="{{formList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
           <view class="flexRow title">
-            <view class="text">出险代步车</view>
+            <view class="text">{{item.sfName}}</view>
             <van-tag custom-class="titleTag" color="#00CB8B" text-color="#FFFFFF" type="primary">接送车</van-tag>
             <van-tag custom-class="titleTag" color="#457CFB" text-color="#457CFB" type="primary" plain>上门接车</van-tag>
           </view>
           <view class="flexCol info">
             <view class="row">时间：2020年10月29日 17:43</view>
-            <view class="row">地址：北京市昌平区云集中心</view>
+            <view class="row">地址：{{item.sfOutCarSite}}</view>
             <view class="row">门店：北京中进百旺4S店</view>
           </view>
           <view class="flexRow btnBox">

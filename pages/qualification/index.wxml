@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="making">
   <view class="flexRow heard">
-    <van-tabs active="{{active}}"  bind:change="onChangeTab"
+    <van-tabs active="{{active}}" bind:change="onChangeTab"
     title-inactive-color="#ffffff" title-active-color="#151515" custom-class="vantTabs">
       <van-tab title="代步车资格验证" name="{{1}}">
         <van-cell-group>

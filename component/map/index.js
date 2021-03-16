@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-02-22 22:20:54
+ * @LastEditTime: 2021-03-16 10:41:24
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
@@ -82,7 +82,7 @@ Component({
       let lat= "markers[0].latitude";
       let log= "markers[0].longitude";
       if(e.type == 'end' && e.causedBy == 'drag') {
-        let result = await utils.getAddress(str);
+        let result = await wxRequest.getAddress(str);
         that.setData({
           [lat]: result.data.result.location.lat,
           [log]: result.data.result.location.lng,
@@ -126,7 +126,7 @@ Component({
                     latitude: res.latitude,
                     longitude: res.longitude
                   }
-                  let result = await utils.getAddress(str);
+                  let result = await wxRequest.getAddress(str);
                   // console.log('地点111', result)
                   that.setData({
                     [lat]: result.data.result.location.lat,
