@@ -31,20 +31,38 @@ const getCode = () => new Promise((resolve, reject) => {
   });
 });
 
+// // 静默登录
+// const login = async(params) => {
+//   let code = await getCode();
+//   let data = await wxRequest({
+//     appid: appid,
+//     code,
+//     share_friend: params.share_friend
+//   }, wrapUrl('login/login'), 'GET');
+//   console.log('data', data);
+
+//   wx.setStorageSync('is_userInfo', data.is_userInfo);
+//   wx.setStorageSync('user_id', data.user_id);
+//   wx.setStorageSync('ticket', data.ticket);
+//   wx.setStorageSync('user_identity', data.user_identity);
+
+
+//   if (data.is_userInfo) {  // 老用户
+//     wx.setStorageSync('name', data.name);
+//     wx.setStorageSync('avatar', data.avatar);
+//   }
+//   console.log('返回成功');
+//   return data;
+// };
+
+
 // 静默登录
 const login = async(params) => {
   let code = await getCode();
   let data = await wxRequest({
-    appid: appid,
-    code,
-    share_friend: params.share_friend
-  }, wrapUrl('login/login'), 'GET');
+    code
+  }, wrapUrl('user-personage/wxlogin'), 'POST');
   console.log('data', data);
-
-  wx.setStorageSync('is_userInfo', data.is_userInfo);
-  wx.setStorageSync('user_id', data.user_id);
-  wx.setStorageSync('ticket', data.ticket);
-  wx.setStorageSync('user_identity', data.user_identity);
 
 
   if (data.is_userInfo) {  // 老用户
@@ -96,8 +114,18 @@ const updateUpPhone = (params) => wxRequest(params, wrapUrl('user-personage/upda
 //（修改手机号码）（获取验证码）
 const updateUpPhoneCode = (params) => wxRequest(params, wrapUrl('user-personage/updateUpPhoneCode'), 'PUT');
 
+// // 查询车辆
+// const getPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getPersonageCar'), 'GET');
+
+// // 查询车辆
+// const getPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getPersonageCar'), 'GET');
+
+// // 查询车辆
+// const getPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getPersonageCar'), 'GET');
+
 
 module.exports = {
+  login,
   qualificationVerification,
   getQualificationVerification,
   addIdentity,

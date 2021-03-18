@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-16 11:29:04
+ * @LastEditTime: 2021-03-18 09:45:08
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -58,7 +58,11 @@ Page({
   moveToLocation() {
     this.selectComponent('#map').moveToLocation();
   },
+  async wxLogin() {
+    let res = await api.login();
+    console.log('用户登录', res)
+  },
   onLoad() {
-    
+    this.wxLogin();
   },
 })
