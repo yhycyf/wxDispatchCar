@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-12 18:17:38
+ * @LastEditTime: 2021-03-18 11:35:02
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';

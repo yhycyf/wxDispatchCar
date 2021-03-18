@@ -4,7 +4,7 @@
 /** 测试后台地址**/
 const hostUrl = 'http://106.39.35.194:8082/';
 
-export const appid = '';
+export const appid = 'wx1371e1609a017dd2';
 const appVersion = '1.0.0';
 import regeneratorRuntime from './runtime';
 
