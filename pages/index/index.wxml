@@ -129,5 +129,8 @@
       <van-tab title="汽车租赁" disabled>汽车租赁</van-tab>
     </van-tabs>
   </view>
+  <view class="fixedLoginBtn">
+    <login-btn show="{{loginBtn}}"></login-btn>
+  </view>
 </view>
 

@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-18 11:35:02
+ * @LastEditTime: 2021-03-18 17:22:25
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';
@@ -57,7 +57,7 @@ const getCode = () => new Promise((resolve, reject) => {
 
 
 // 静默登录
-const login = async(params) => {
+const login = async() => {
   let code = await getCode();
   let data = await wxRequest({
     code
@@ -73,6 +73,10 @@ const login = async(params) => {
   return data;
 };
 
+
+
+//（微信登陆）（用户信息存储）
+const userInformationStorage = (params) => wxRequest(params, wrapUrl('user-personage/userInformationStorage'), 'PUT');
 
 
 // 代步车资格验证
@@ -126,6 +130,8 @@ const updateUpPhoneCode = (params) => wxRequest(params, wrapUrl('user-personage/
 
 module.exports = {
   login,
+  getCode,
+  userInformationStorage,
   qualificationVerification,
   getQualificationVerification,
   addIdentity,

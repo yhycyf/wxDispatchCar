@@ -5,10 +5,11 @@
     "mp-dialog": "weui-miniprogram/dialog/dialog",
     "van-icon": "@vant/weapp/icon/index",
     "van-tag": "@vant/weapp/tag/index",
-    "map-custom": "/component/map/index",
-    "list": "/component/list/index",
     "van-search": "@vant/weapp/search/index",
     "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index"
+    "van-grid-item": "@vant/weapp/grid-item/index",
+    "map-custom": "/component/map/index",
+    "list": "/component/list/index",
+    "login-btn": "/component/loginBtn/index"
   }
 }

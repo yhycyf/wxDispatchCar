@@ -19,6 +19,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     seachValue: '',
+    loginBtn: true
   },
   
 
@@ -60,6 +61,7 @@ Page({
   },
   async wxLogin() {
     let res = await api.login();
+    
     console.log('用户登录', res)
   },
   onLoad() {

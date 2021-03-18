@@ -27,6 +27,7 @@ export const wxRequest = (params, url, types) => {
   let datas = params || {};
   datas.user_id = wx.getStorageSync('user_id') || '';
   datas.upPhone = wx.getStorageSync('upPhone') || 15510283555;
+  datas.appid = appid || '';
   if (types == 'POST') {
     Object.keys(datas).map((key) => {
       if (typeof datas[key] == 'object') {
