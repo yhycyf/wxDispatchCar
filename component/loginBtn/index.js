@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-19 11:37:51
+ * @LastEditTime: 2021-03-19 14:49:41
  */
 
 import api from '../../api/api'
@@ -60,7 +60,6 @@ Component({
     async getPhoneNumber (e) {
       console.log('e', e)
 
-
       let detail = e.detail;
       if (detail.errMsg == "getPhoneNumber:fail user deny" || detail.errMsg == "getPhoneNumber:fail:user denied") {
         wx.showToast({
@@ -69,10 +68,6 @@ Component({
           duration: 1500
         })
         return false;
-      }
-      let code = await api.getCode();
-      if (!code) {
-        return;
       }
 
       let res = await api.userInformationStorage({
