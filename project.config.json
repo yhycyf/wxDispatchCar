@@ -6,16 +6,16 @@
 	"setting": {
 		"urlCheck": false,
 		"es6": true,
-		"enhance": true,
 		"postcss": true,
 		"preloadBackgroundData": false,
 		"minified": true,
 		"newFeature": false,
-		"coverView": true,
-		"nodeModules": true,
 		"autoAudits": false,
+		"coverView": true,
 		"showShadowRootInWxmlPanel": true,
 		"scopeDataCheck": false,
+		"enhance": true,
+		"nodeModules": true,
 		"uglifyFileName": false,
 		"checkInvalidKey": true,
 		"checkSiteMap": true,
@@ -26,7 +26,7 @@
 			"outputPath": ""
 		},
 		"bundle": false,
-		"useCompilerModule": true,
+		"useCompilerModule": false,
 		"userConfirmedUseCompilerModuleSwitch": false,
 		"compileHotReLoad": false,
 		"useMultiFrameRuntime": true,
@@ -46,7 +46,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.15.0",
-	"appid": "wx707f54de37f2d457",
+	"appid": "wx1371e1609a017dd2",
 	"projectname": "dimensional",
 	"debugOptions": {
 		"hidedInDevtools": []

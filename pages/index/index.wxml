@@ -130,7 +130,7 @@
     </van-tabs>
   </view>
   <view class="fixedLoginBtn">
-    <login-btn show="{{loginBtn}}"></login-btn>
+    <login-btn show="{{loginBtn}}" bind:getPhoneNumber="getPhoneNumber"></login-btn>
   </view>
 </view>
 

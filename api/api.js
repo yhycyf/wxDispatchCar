@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-18 17:22:25
+ * @LastEditTime: 2021-03-19 14:09:12
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';
@@ -59,18 +59,13 @@ const getCode = () => new Promise((resolve, reject) => {
 // 静默登录
 const login = async() => {
   let code = await getCode();
-  let data = await wxRequest({
+  let res = await wxRequest({
     code
   }, wrapUrl('user-personage/wxlogin'), 'POST');
-  console.log('data', data);
-
-
-  if (data.is_userInfo) {  // 老用户
-    wx.setStorageSync('name', data.name);
-    wx.setStorageSync('avatar', data.avatar);
-  }
-  console.log('返回成功');
-  return data;
+  console.log('data', res);
+  wx.setStorageSync('userId',res.data.userId);
+  wx.setStorageSync('sessionKey',res.data.sessionKey);
+  return res;
 };
 
 

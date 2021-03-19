@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-18 09:45:08
+ * @LastEditTime: 2021-03-19 14:39:43
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -19,7 +19,7 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     seachValue: '',
-    loginBtn: true
+    loginBtn: false,
   },
   
 
@@ -60,9 +60,30 @@ Page({
     this.selectComponent('#map').moveToLocation();
   },
   async wxLogin() {
-    let res = await api.login();
-    
-    console.log('用户登录', res)
+    if(!wx.getStorageSync('userId')) {
+      let res = await api.login();
+      if(res.flag) {
+        if(res.data.isNewUser) {
+          this.setData({
+            loginBtn: true
+          })
+        }
+      } else {
+        utils.showToast(res.message, ' ', 1500)
+      }
+    }
+    // console.log('用户登录', res)
+  },
+  // 授权手机号回调
+  getPhoneNumber(e) {
+    if(e.detail.flag) {
+      this.setData({
+        loginBtn: false
+      })
+      utils.showToast('登录成功', 'success', 1500)
+    } else {
+      utils.showToast(e.detail.message, ' ', 1500)
+    }
   },
   onLoad() {
     this.wxLogin();

@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-18 17:54:13
+ * @LastEditTime: 2021-03-19 11:37:51
  */
 
 import api from '../../api/api'
@@ -23,7 +23,7 @@ Component({
     show: {
       type: Boolean,
       value: false
-    }
+    },
   },
 
   data: {
@@ -70,17 +70,17 @@ Component({
         })
         return false;
       }
-      // let code = await api.getCode();
-      // if (!code) {
-      //   return;
-      // }
+      let code = await api.getCode();
+      if (!code) {
+        return;
+      }
 
-      // let res = await api.userInformationStorage({
-      //   code: code, 
-      //   encryptedData: detail.encryptedData,
-      //   iv: detail.iv
-      // });
-      // console.log('信息解密', res)
+      let res = await api.userInformationStorage({
+        encryptedData: detail.encryptedData,
+        vi: detail.iv
+      });
+      this.triggerEvent('getPhoneNumber', res)
+      console.log('手机信息解密', res)
     }
   }
 
