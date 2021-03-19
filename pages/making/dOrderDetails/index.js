@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-15 17:57:18
+ * @LastEditTime: 2021-03-19 15:46:11
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -16,12 +16,12 @@ Page({
   data: {
     complete: true,
     motto: 'Helelo World',
-    userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     value: '',
-    id: 1,
+    detailInfo: {}, //订单详情
+    orderProgress: {}, //订单进展
   },
   waitReturnCar() {
     wx.navigateTo({
@@ -44,18 +44,32 @@ Page({
       url: '../logs/logs'
     })
   },
-
-  async scooterOrderDetails() {
-    let id = this.data.id;
-    let res = await api.scooterOrderDetails({
-      scooterFormId: id
-    });
+  // 查看订单
+  async viewRunningOrders() {
+    let res = await api.viewRunningOrders();
     if(res.flag) {
+      this.setData({
+        detailInfo: res.data
+      })
       console.log('订单详情', res)
     } else {
       utils.showToast(res.message)
     }
   },
+
+  // 订单进展
+  async orderProgress() {
+    let res = await api.orderProgress();
+    if(res.flag) {
+      this.setData({
+        orderProgress: res.data
+      })
+      console.log('订单进展', res)
+    } else {
+      utils.showToast(res.message)
+    }
+  },
+  
   // 取消订单
   async cancelDetail() {
     let res = await api.scooterOrderCancel({
@@ -69,7 +83,8 @@ Page({
     console.log('取消订单', res)
   },
   onShow() {
-    this.scooterOrderDetails();
+    this.viewRunningOrders();
+    this.orderProgress();
   },
   onLoad() {
     

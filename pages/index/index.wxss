@@ -60,6 +60,7 @@
   box-sizing: border-box;
 }
 .heard .vantTabs .van-tabs__wrap {
+  height: 88rpx;
   background: #ffffff;
 }
 .heard .vantTabs scroll-view {

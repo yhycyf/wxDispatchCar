@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-19 14:09:12
+ * @LastEditTime: 2021-03-19 15:48:32
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';
@@ -92,8 +92,11 @@ const scooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/scoot
 // (发送验证码）
 const scooterOrderCode = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCode'), 'GET');
 
-//（订单详情）（出险代步车）
-const scooterOrderDetails = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderDetails'), 'GET');
+// (四维代步车）（开始预约）（查看订单）
+const viewRunningOrders = (params) => wxRequest(params, wrapUrl('user-personage/viewRunningOrders'), 'GET');
+
+//（四维代步车）（开始预约）（订单进展）
+const orderProgress = (params) => wxRequest(params, wrapUrl('user-personage/orderProgress'), 'GET');
 
 //（订单详情）（出险代步车）（取消订单）
 const scooterOrderCancel = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCancel'), 'PUT');
@@ -133,7 +136,8 @@ module.exports = {
   addDrivingLicence,
   scooterOrder,
   scooterOrderCode,
-  scooterOrderDetails,
+  viewRunningOrders,
+  orderProgress,
   scooterOrderCancel,
   getUserPersonageCarCount,
   getUserPersonageFromCount,
