@@ -11,12 +11,12 @@
 			<view class="flexRow iconBox">
 				<image class="icon" src="../../image/place.png"></image>
 			</view>
-			<view class="textWidth {{getCarLocation ? 'select' : ''}}">{{getCarLocation ? getCarLocation : type == 'send' ? '送车地点' : type == 'get' ? '取车地点' : ''}}</view>
-			<view class="flexRow tipsBox" wx:if="{{showTipsBox}}">
+			<view class="textWidth {{getCarLocation && !showTipsBox ? 'select' : ''}}">{{getCarLocation && !showTipsBox ? getCarLocation : type == 'send' ? '送车地点' : type == 'get' ? '取车地点' : ''}}</view>
+			<view class="flexRow tipsBox" wx:if="{{showTipsBox && type == 'get' && getCarLocation}}">
 				<image class="triangle" src="../../image/triangle_top.png"></image>
 				<view class="flexRow locationText">
-					<view class="text" catchtap="getTips">
-						<view>{{historyAddress}}</view>
+					<view class="textBox" catchtap="getTips">
+						<view class="text">{{getCarLocation}}</view>
 					</view>
 					<image class="icon" src="../../image/close.png" catchtap="closeTipsBox"></image>
 				</view>

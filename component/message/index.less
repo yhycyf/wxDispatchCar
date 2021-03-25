@@ -95,21 +95,25 @@
           }
           .tipsBox {
               margin-left: 34rpx;
-              width: 282rpx;
               justify-content: flex-end;
               position: relative;
               .locationText {
-                  width: 282rpx;
                   height: 60rpx;
                   background: #1A1840;
                   border-radius: 4rpx;
                   justify-content: space-around;
-                  .text {
-                      font-size: 24rpx;
-                      font-family: PingFangSC-Regular, PingFang SC;
-                      font-weight: 400;
-                      color: #FFFFFF;
-                      padding: 0 5rpx;
+                  .textBox {
+                      .text {
+                          max-width: 200rpx;
+                          text-overflow: ellipsis;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          font-size: 24rpx;
+                          font-family: PingFangSC-Regular, PingFang SC;
+                          font-weight: 400;
+                          color: #FFFFFF;
+                          padding: 0 5rpx 0 10rpx;
+                      }
                   }
                   .icon {
                       width: 38rpx;

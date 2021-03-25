@@ -238,22 +238,6 @@ const getUserInfo = () =>
   });
 
 
-  const getAddress = (str) => new Promise((resolve,reject) => {
-    var getAddressUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + str.latitude + "," + str.longitude + "&key=" + 'P5TBZ-ZMSE6-G7WS3-EW2FS-7WO6K-N7FRL' + "&get_poi=1";
-    wx.request({
-      url: getAddressUrl,
-      success: function (result) {
-        console.log('result', result)
-        resolve(result);
-      }
-    })
-  })
-
-
-
-
-
-
   
 module.exports = {
   appid,
@@ -263,5 +247,4 @@ module.exports = {
   appVersion,
   getUserInfo,
   getSetting,
-  getAddress
 };

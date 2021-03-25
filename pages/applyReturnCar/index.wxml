@@ -3,7 +3,7 @@
   <map-custom height="{{0}}" id="map" bindlocationEvent="locationEvent">
   </map-custom>
   <view class="goGetCar">
-    <message type="get" getCarLocation="{{getCarLocation}}" bindshowPopup="showPopup" bindgoDelayedCarPage="goDelayedCarPage"></message>
+    <message id="message" type="get" getCarLocation="{{getCarLocation}}" bindshowPopup="showPopup" bindgoDelayedCarPage="goDelayedCarPage"></message>
   </view>
   <datetime-picker show="{{show}}"></datetime-picker>
 </view>

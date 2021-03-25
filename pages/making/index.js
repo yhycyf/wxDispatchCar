@@ -1,14 +1,15 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-15 15:51:16
+ * @LastEditTime: 2021-03-22 17:07:43
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
 // index.js
 // 获取应用实例
-import {formatTime} from '../../utils/format'
+import {formatTime} from '../../utils/format';
+import utils from '../../utils/index'
 const app = getApp();
 
 Page({
@@ -52,13 +53,14 @@ Page({
       url: '../logs/logs'
     })
   },
-  // 送车时间
+  // 送车地点 
   sfOutCarSite(event) {
+    console.log('event', event)
     this.setData({
-      'form.sfOutCarSite': event.detail
+      'form.sfOutCarSite': event.detail.name
     })
   },
-  // 送车地点
+  //送车时间
   currentDate(event) {
     let currentTimes = formatTime(new Date(event.detail));
     this.setData({
@@ -66,6 +68,19 @@ Page({
     })
   },
   onLoad() {
-    
+   let qqmapsdk = utils.qqmapsdk();
+
+    qqmapsdk.search({
+      keyword: '酒店',
+      success: function (res) {
+          console.log('1111',res);
+      },
+      fail: function (res) {
+          console.log('2222',res);
+      },
+      complete: function (res) {
+          console.log('3333',res);
+      }
+    });
   },
 })

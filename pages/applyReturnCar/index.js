@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-15 16:47:57
+ * @LastEditTime: 2021-03-22 15:23:43
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -19,6 +19,7 @@ Page({
     actions: [
       { name: '获取用户信息', color: '#07c160', openType: 'getUserInfo' },
     ],
+    callBackTimes: 0,
   },
   onReady: function (e) {
     
@@ -45,8 +46,12 @@ Page({
   },
   locationEvent(e) {
     console.log('回调', e)
+    if(this.data.callBackTimes > 0) {
+      this.selectComponent('#message').closeTipsBox();
+    }
     this.setData({
-      getCarLocation: e.detail.result.pois[0].title
+      getCarLocation: e.detail.result.pois[0].title,
+      callBackTimes: this.data.callBackTimes + 1
     })
   },
   async selectLocation() {

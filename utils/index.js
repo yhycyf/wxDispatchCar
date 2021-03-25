@@ -1,6 +1,8 @@
 
 import regeneratorRuntime from './runtime';
 export const cdnUrl = 'https://cdn.fairgame.cn/love-powder-app/image/';
+const QQMapWX = require('./qqmap-wx-jssdk.min');
+const mapKey = 'P5TBZ-ZMSE6-G7WS3-EW2FS-7WO6K-N7FRL';
 
 const countDown = (time) => {
   let now  = new Date();
@@ -303,6 +305,27 @@ const isPhone = (value) => {
 
 
 
+const getAddress = (str) => new Promise((resolve,reject) => {
+  var getAddressUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + str.latitude + "," + str.longitude + "&key=" + mapKey + "&get_poi=1";
+  wx.request({
+    url: getAddressUrl,
+    success: function (result) {
+      console.log('result', result)
+      resolve(result);
+    }
+  })
+})
+
+const qqmapsdk = () => {
+  let qqmapsdk = new QQMapWX({
+    key: mapKey
+  });
+
+  return qqmapsdk;
+}
+
+
+
 export default {
   cdnUrl,
   countDown,
@@ -322,5 +345,7 @@ export default {
   showToast,
   showLoading,
   hideLoading,
-  isPhone
+  isPhone,
+  getAddress,
+  qqmapsdk
 };

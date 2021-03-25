@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-15 17:15:29
+ * @LastEditTime: 2021-03-22 16:14:32
  */
 import wxRequest from '../../utils/wxRequest'
 import {showTime} from '../../utils/format'
@@ -34,7 +34,6 @@ Component({
   data: {
     show: false,
     showTipsBox: true,
-    historyAddress: '北京 TBD云集中心',
     getCarTime: '',
     checked: false,
     phone: '',
@@ -105,7 +104,7 @@ Component({
               getCarLocation: e.name,
               showTipsBox: false
             })
-            that.triggerEvent('sfOutCarSite', e.name)
+            that.triggerEvent('sfOutCarSite', e)
           },
         })
       }
@@ -119,7 +118,7 @@ Component({
     },
     getTips() {
       this.setData({
-        getCarLocation: this.data.historyAddress
+        getCarLocation: this.data.getCarLocation
       })
       this.triggerEvent('sfOutCarSite', this.data.historyAddress)
       this.closeTipsBox();
