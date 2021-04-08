@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-11 14:46:12
+ * @LastEditTime: 2021-04-08 16:47:10
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -9,7 +9,8 @@
 // index.js
 // 获取应用实例
 import api from '../../api/api';
-import utils from '../../utils/index'
+import utils from '../../utils/index';
+import uploadFile from '../../utils/uploadImg/uploadImg';
 const app = getApp()
 
 Page({
@@ -31,10 +32,55 @@ Page({
       reportNo: "",
       gift: ""
     },
-    myCarList: []
+    myCarList: [],
+    realNameSystem: false,  //是否实名制
   },
   onShow() {
     this.getQualificationVerification();
+    this.realNameSystemStatus();
+  },
+  oversize() {
+    utils.showToast('文件大小超出限制','none',1500)
+  },
+  afterReadA(event) {
+    let that = this;
+    const { file } = event.detail;
+    utils.showLoading('识别中...');
+    uploadFile(file.url, 'daibuche', async(res)=> {
+      // console.log('上传成功', res)
+      let res1 = await api.drivingPermitScan({
+        imgName: res
+      })
+      utils.hideLoading();
+      if(res1.flag) {
+        if(this.data.active == 1) {
+          this.setData({
+            'form1.vin': res1.data.vin
+          })
+        } else {
+          this.setData({
+            'form2.vin': res1.data.vin
+          })
+        }
+      } else {
+        utils.showToast(res1.message, 'error')
+      }
+      // console.log('识别成功', res1)
+
+    },(err)=> {
+      utils.hideLoading();
+     
+      utils.showToast('识别失败', 'error')
+      // console.log('上传失败', err)
+    }); //初始化
+  
+  },
+  async realNameSystemStatus() {
+    let res = await api.realNameSystemStatus();
+    this.setData({
+      realNameSystem: res.data.realNameSystem
+    });
+    // console.log('是否实名制', res)
   },
   async getQualificationVerification() {
     let res = await api.getQualificationVerification();
@@ -43,7 +89,7 @@ Page({
         myCarList: res.data
       });
     } else {
-      utils.showToast(res.message);
+      // utils.showToast(res.message);
     }
     console.log('我的车辆', res)
   },
@@ -65,22 +111,35 @@ Page({
       return;
     }
     let res = await api.qualificationVerification(parms);
-    console.log('资格验证', res);
+    // console.log('资格验证', res);
 
     if(res.flag == true) {
       utils.showToast('验证成功','success');
       await utils.sleep(1000);
-      
-      wx.navigateTo({
-        url: '/pages/idSafety/index',
-        success: function() {
-          that.setData({
-            form1: {},
-            form2: {},
-            radio: 'none'
-          })
-        }
-      })
+
+      // if(!this.data.realNameSystem) {  //未实名
+      //   wx.redirectTo({
+      //     url: '/pages/idSafety/index',
+      //     success: function() {
+      //       that.setData({
+      //         form1: {},
+      //         form2: {},
+      //         radio: 'none'
+      //       })
+      //     }
+      //   })
+      // } else {   //已实名
+      //   wx.redirectTo({
+      //     url: '/pages/making/index',
+      //     success: function() {
+      //       that.setData({
+      //         form1: {},
+      //         form2: {},
+      //         radio: 'none'
+      //       })
+      //     }
+      //   })
+      // }
     } else {
       utils.showToast(res.message);
     }

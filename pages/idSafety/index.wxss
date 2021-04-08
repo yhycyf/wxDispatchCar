@@ -42,20 +42,20 @@
   color: #151515;
   margin-bottom: 6rpx;
 }
-.idSafety .idSafetyCenter .nameAuthentication .goComplete {
-  width: 110rpx;
-  height: 54rpx;
-  font-size: 24rpx;
-  color: #fff;
-  background-color: #457CFB;
-  border-radius: 40rpx;
-}
 .idSafety .idSafetyCenter .nameAuthentication .noComplete {
   width: 110rpx;
   height: 54rpx;
   font-size: 24rpx;
   color: #fff;
   background-color: #DDDEE3;
+  border-radius: 40rpx;
+}
+.idSafety .idSafetyCenter .nameAuthentication .complete {
+  width: 110rpx;
+  height: 54rpx;
+  font-size: 24rpx;
+  color: #fff;
+  background-color: #457CFB;
   border-radius: 40rpx;
 }
 .idSafety .bottom {
@@ -84,4 +84,8 @@
   font-size: 32rpx;
   font-weight: 500;
   color: #AAAAAA;
+}
+.idSafety .bottom .complete {
+  background-color: #457CFB;
+  color: #fff;
 }

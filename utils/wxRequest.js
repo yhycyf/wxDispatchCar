@@ -26,7 +26,7 @@ export const wxRequest = (params, url, types) => {
   // 合并对象(公共参数加传入参数合并对象)
   let datas = params || {};
   datas.upPhone = wx.getStorageSync('upPhone') || '';
-  datas.userId = 79 || wx.getStorageSync('userId') || '';
+  datas.userId = wx.getStorageSync('userId') || '';
   datas.sessionKey = wx.getStorageSync('sessionKey') || '';
   if (types == 'POST') {
     Object.keys(datas).map((key) => {

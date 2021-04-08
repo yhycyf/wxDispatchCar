@@ -16,7 +16,11 @@
             data-type="vin"
             bind:change="onChange"
           >
-          <van-icon size="40rpx" slot="right-icon" name="photograph" />
+            <van-uploader class="vanUploader" slot="right-icon" max-size="{{1048576 * 3}}" max-count="1" deletable="{{ true }}"
+              disabled="{{false}}"
+              bind:after-read="afterReadA" bind:oversize="oversize">
+              <van-icon size="40rpx" name="photograph" />
+            </van-uploader>
           </van-field>
           <van-field
             value="{{ form1.reportNo }}"
@@ -59,7 +63,11 @@
             data-type="vin"
             bind:change="onChange"
           >
-          <van-icon size="40rpx" slot="right-icon" name="photograph" />
+            <van-uploader class="vanUploader" slot="right-icon" max-size="{{1048576 * 3}}" max-count="1" deletable="{{ true }}"
+              disabled="{{false}}"
+              bind:after-read="afterReadA" bind:oversize="oversize">
+              <van-icon size="40rpx" name="photograph" />
+            </van-uploader>
           </van-field>
           <van-field
             value="{{ form2.reportNo }}"

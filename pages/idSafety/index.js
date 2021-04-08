@@ -1,12 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-10 16:22:35
+ * @LastEditTime: 2021-04-07 17:43:18
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
  */
 // index.js
+import utils from '../../utils/index';
+import api from '../../api/api';
 // 获取应用实例
 const app = getApp()
 
@@ -18,6 +20,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     value: '',
+    verifyIdentity: 0,
+    drivingCertification: 0,
   },
   goNameAuthentication() {
     wx.navigateTo({
@@ -43,6 +47,21 @@ Page({
     wx.navigateTo({
       url: '../logs/logs'
     })
+  },
+  async safetyVerification() {
+    let res = await api.safetyVerification();
+    if(res.flag) {
+      this.setData({
+        drivingCertification: res.data.drivingCertification,
+        verifyIdentity: res.data.verifyIdentity
+      })
+    } else {
+      utils.showToast(res.message, ' ', 2000);
+    }
+    // console.log('安全验证', res)
+  },
+  onShow() {
+    this.safetyVerification()
   },
   onLoad() {
     

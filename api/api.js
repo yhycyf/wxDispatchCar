@@ -116,14 +116,16 @@ const updateUpPhone = (params) => wxRequest(params, wrapUrl('user-personage/upda
 //（修改手机号码）（获取验证码）
 const updateUpPhoneCode = (params) => wxRequest(params, wrapUrl('user-personage/updateUpPhoneCode'), 'PUT');
 
-// // 查询车辆
-// const getPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getPersonageCar'), 'GET');
+//（安全验证）
+const safetyVerification = (params) => wxRequest(params, wrapUrl('user-personage/safetyVerification'), 'GET');
 
-// // 查询车辆
-// const getPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getPersonageCar'), 'GET');
+//（当前用户是否实名制状态）
+const realNameSystemStatus = (params) => wxRequest(params, wrapUrl('user-personage/realNameSystemStatus'), 'GET');
 
-// // 查询车辆
-// const getPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getPersonageCar'), 'GET');
+//（预约代步车）（代步车资格认证）（验证资格）（行驶本扫描）
+const drivingPermitScan = (params) => wxRequest(params, wrapUrl('user-personage/drivingPermitScan'), 'GET');
+
+
 
 
 module.exports = {
@@ -143,6 +145,8 @@ module.exports = {
   getUserPersonageFromCount,
   getUserPersonageFrom,
   updateUpPhone,
-  updateUpPhoneCode
-
+  updateUpPhoneCode,
+  safetyVerification,
+  realNameSystemStatus,
+  drivingPermitScan
 };

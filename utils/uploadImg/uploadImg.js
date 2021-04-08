@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-04-06 04:18:24
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-12 11:52:59
+ * @LastEditTime: 2021-04-08 15:17:37
  */
 const env = require('config.js');
 
@@ -55,7 +55,7 @@ const uploadFile = function(filePath, path, successc, failc) {
         failc(new Error('上传错误:' + JSON.stringify(res)))
         return;
       }
-      successc(aliyunServerURL + aliyunFileKey);
+      successc(aliyunFileKey);
     },
     fail: function(err) {
       err.wxaddinfo = aliyunServerURL;

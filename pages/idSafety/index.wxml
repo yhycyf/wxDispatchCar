@@ -13,7 +13,7 @@
           <text>仅用于核实身份</text>
         </view>
       </view>
-      <view class="flexRow goComplete">去完成</view>
+      <view class="flexRow noComplete {{verifyIdentity > 0 ? 'complete' : ''}}">{{verifyIdentity > 0 ? '已完成' : '待完成'}}</view>
     </view>
     <view class="flexRow nameAuthentication" bindtap="goCarAuthentication">
       <view class="flexRow leftBox">
@@ -23,7 +23,7 @@
           <text>出险信息确认确保保险服务</text>
         </view>
       </view>
-      <view class="flexRow noComplete">待完成</view>
+      <view class="flexRow noComplete {{drivingCertification > 0 ? 'complete' : ''}}">{{drivingCertification > 0 ? '已完成' : '待完成'}}</view>
     </view>
   </view>
   <view class="bottom">
@@ -33,7 +33,7 @@
         系统智能加密，实施保障你的信息安全
       </view>
     </view>
-    <view class="flexRow beginOrder" hover-class="beginOrderActive" bindtap="submit">
+    <view class="flexRow beginOrder {{verifyIdentity > 0 && drivingCertification > 0 ? 'complete' : ''}}" hover-class="beginOrderActive" bindtap="submit">
       完成
     </view>
   </view>

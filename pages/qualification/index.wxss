@@ -146,6 +146,9 @@
 .making .heard .activeStyle {
   font-weight: bold;
 }
+.making .heard .vanUploader .van-uploader {
+  line-height: 26rpx;
+}
 .making .caution {
   text-align: center;
   font-size: 24rpx;
