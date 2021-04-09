@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-22 17:07:43
+ * @LastEditTime: 2021-04-09 17:56:05
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -10,6 +10,8 @@
 // 获取应用实例
 import {formatTime} from '../../utils/format';
 import utils from '../../utils/index'
+import { appid } from '../../utils/wxRequest';
+import api from '../../api/api';
 const app = getApp();
 
 Page({
@@ -53,19 +55,11 @@ Page({
       url: '../logs/logs'
     })
   },
-  // 送车地点 
-  sfOutCarSite(event) {
-    console.log('event', event)
-    this.setData({
-      'form.sfOutCarSite': event.detail.name
-    })
-  },
-  //送车时间
-  currentDate(event) {
-    let currentTimes = formatTime(new Date(event.detail));
-    this.setData({
-      'form.sfOutCarTime': currentTimes
-    })
+  async submit(e) {
+    console.log('回调数据', e)
+    let form = e.detail;
+    let res = await api.scooterOrder(form);
+    console.log('预约', res)
   },
   onLoad() {
    let qqmapsdk = utils.qqmapsdk();

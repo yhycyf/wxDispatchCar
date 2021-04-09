@@ -4,10 +4,10 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-22 16:14:32
+ * @LastEditTime: 2021-04-09 17:55:06
  */
 import wxRequest from '../../utils/wxRequest'
-import {showTime} from '../../utils/format'
+import {showTime, formatTime} from '../../utils/format'
 import utils from '../../utils/index'
 import api from '../../api/api'
 const app = getApp();
@@ -36,10 +36,17 @@ Component({
     showTipsBox: true,
     getCarTime: '',
     checked: false,
-    phone: '',
     countDown: 0,
     isShowcountDown: false,
-    times: null
+    times: null,
+    sfOutCarTime: "",
+    sendDataForm: {
+      code: "",
+      name: "",
+      phone: "",
+      sfOutCarSite: "",
+      sfOutCarTime: ""
+    }
   }, // 私有数据，可用于模板渲染
 
   lifetimes: {
@@ -47,6 +54,7 @@ Component({
     attached: function() {
       console.log('attached');
       // this.getLocation();
+      this.getScooterOrder();
     },
     moved: function() { },
     created: function() {
@@ -69,16 +77,49 @@ Component({
   },
 
   methods: {
+    async getScooterOrder() {
+      let res = await api.getScooterOrder();
+      if(res.flag) {
+        this.setData({
+          'sendDataForm.phone': res.data.upPhone,
+          'sendDataForm.name': res.data.name,
+        })
+      }
+      console.log('用户信息', res)
+    },
     submit(e) {
-      let type = e.currentTarget.dataset.type;
+      let type = this.data.type;
       if(type == 'send') {
-        this.triggerEvent('showPopup')
+        let form = this.data.sendDataForm;
+        console.log('表单数据', this.data.sendDataForm)
+        if(!form.sfOutCarSite) {
+          utils.showToast('请选择送车地点');
+          return;
+        } else if(!form.sfOutCarTime) {
+          utils.showToast('请选择送车时间');
+          return;
+        } else if(!form.phone) {
+          utils.showToast('请选输入您的手机号');
+          return;
+        } else if(!form.code) {
+          utils.showToast('请选输入验证码');
+          return;
+        } else if(!form.name) {
+          utils.showToast('请选输入姓名');
+          return;
+        } else if(!this.data.checked) {
+          utils.showToast('请同意代步车使用协议');
+          return;
+        }
+
+        this.triggerEvent('submit',this.data.sendDataForm)
+        // this.triggerEvent('showPopup')
       } else {
         this.triggerEvent('goDelayedCarPage')
       }
     },
-    showPopup(e) {
-      let type = e.currentTarget.dataset.type;
+    showPopup() {
+      let type = this.data.type;
       if(type == 'get') {
         this.triggerEvent('showPopup', {type: type})
       } else {
@@ -94,6 +135,7 @@ Component({
     },
     async selectLocation() {
       let that = this;
+      let type = this.data.type;
       let setting = await wxRequest.getSetting('scope.userLocation');
       if(setting) {
         wx.chooseLocation({
@@ -104,7 +146,13 @@ Component({
               getCarLocation: e.name,
               showTipsBox: false
             })
-            that.triggerEvent('sfOutCarSite', e)
+
+            if(type == 'send') {
+              that.setData({
+                'sendDataForm.sfOutCarSite': e.name
+              })
+            }
+            
           },
         })
       }
@@ -120,7 +168,6 @@ Component({
       this.setData({
         getCarLocation: this.data.getCarLocation
       })
-      this.triggerEvent('sfOutCarSite', this.data.historyAddress)
       this.closeTipsBox();
     },
     closeTipsBox(e) {
@@ -129,17 +176,25 @@ Component({
       })
     },
     currentDate(event) {
+      console.log('event.detail', event.detail)
       let currentDate = showTime(new Date(event.detail));
       this.setData({
-        getCarTime: currentDate
+        sfOutCarTime: currentDate,
+        'sendDataForm.sfOutCarTime': formatTime(new Date(event.detail))
       })
-      this.triggerEvent('currentDate', event.detail)
     },
     // 输入手机号
     onChangePhone(event) {
       console.log('event', event)
       this.setData({
-        phone: event.detail.value
+        'sendDataForm.phone': event.detail.value
+      })
+    },
+    
+    onChangeCode(event) {
+      console.log('event', event)
+      this.setData({
+        'sendDataForm.code': event.detail.value
       })
     },
     // 发送验证码

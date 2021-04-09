@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-07 17:43:18
+ * @LastEditTime: 2021-04-09 11:00:06
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -29,6 +29,10 @@ Page({
     })
   },
   goCarAuthentication() {
+    if(this.data.verifyIdentity == 0) {
+      utils.showToast('请先完成第一步身份认证!');
+      return;
+    }
     wx.navigateTo({
       url: '/pages/carAuthentication/index'
     })
@@ -56,7 +60,7 @@ Page({
         verifyIdentity: res.data.verifyIdentity
       })
     } else {
-      utils.showToast(res.message, ' ', 2000);
+      utils.showToast(res.message, 'none', 2000);
     }
     // console.log('安全验证', res)
   },

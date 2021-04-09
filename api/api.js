@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-19 15:48:32
+ * @LastEditTime: 2021-04-09 17:29:02
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';
@@ -86,9 +86,6 @@ const addIdentity = (params) => wxRequest(params, wrapUrl('user-personage/addIde
 // 车辆信息认证(下一步)
 const addDrivingLicence = (params) => wxRequest(params, wrapUrl('user-personage/addDrivingLicence'), 'POST');
 
-// (出险代步车）（预约）
-const scooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrder'), 'GET');
-
 // (发送验证码）
 const scooterOrderCode = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCode'), 'GET');
 
@@ -125,6 +122,12 @@ const realNameSystemStatus = (params) => wxRequest(params, wrapUrl('user-persona
 //（预约代步车）（代步车资格认证）（验证资格）（行驶本扫描）
 const drivingPermitScan = (params) => wxRequest(params, wrapUrl('user-personage/drivingPermitScan'), 'GET');
 
+// (四维代步车）（代步车）（出险代步车）
+const getScooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/getScooterOrder'), 'GET');
+
+//（四维代步车）（代步车）（出险代步车）（预约）
+const scooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrder'), 'PUT');
+
 
 
 
@@ -136,7 +139,6 @@ module.exports = {
   getQualificationVerification,
   addIdentity,
   addDrivingLicence,
-  scooterOrder,
   scooterOrderCode,
   viewRunningOrders,
   orderProgress,
@@ -148,5 +150,7 @@ module.exports = {
   updateUpPhoneCode,
   safetyVerification,
   realNameSystemStatus,
-  drivingPermitScan
+  drivingPermitScan,
+  getScooterOrder,
+  scooterOrder
 };

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-07 18:03:44
+ * @LastEditTime: 2021-04-09 11:31:15
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -32,7 +32,7 @@ Page({
   async navigateBack() {
     let form = this.data.form;
     console.log('form', form)
-    if(!form.imgDrivingLicenceA && !form.imgDrivingLicenceB) {
+    if(!form.imgDrivingLicenceA || !form.imgDrivingLicenceB) {
       return;
     }
     utils.showLoading();
@@ -44,7 +44,7 @@ Page({
       utils.sleep(1000);
       wx.navigateBack();
     } else {
-      utils.showToast(res.message, ' ', 2000);
+      utils.showToast(res.message, 'none', 1000);
       this.setData({
         fileListA: [],
         fileListB: [],

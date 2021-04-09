@@ -69,7 +69,7 @@ Page({
           })
         }
       } else {
-        utils.showToast(res.message, ' ', 1500)
+        utils.showToast(res.message, 'none', 1500)
       }
     }
     // console.log('用户登录', res)
@@ -82,7 +82,7 @@ Page({
       })
       utils.showToast('登录成功', 'success', 1500)
     } else {
-      utils.showToast(e.detail.message, ' ', 1500)
+      utils.showToast(e.detail.message, 'none', 1500)
     }
   },
   onLoad() {

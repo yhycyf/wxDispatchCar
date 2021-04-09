@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-12 18:33:02
+ * @LastEditTime: 2021-04-09 11:29:18
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -31,7 +31,7 @@ Page({
   },
   async navigateBack() {
     let form = this.data.form;
-    if(!form.imgIdentityA && !form.imgIdentityB) {
+    if(!form.imgIdentityA || !form.imgIdentityB) {
       return;
     }
     utils.showLoading();

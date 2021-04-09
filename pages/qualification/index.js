@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-08 16:47:10
+ * @LastEditTime: 2021-04-09 10:42:16
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -117,29 +117,29 @@ Page({
       utils.showToast('验证成功','success');
       await utils.sleep(1000);
 
-      // if(!this.data.realNameSystem) {  //未实名
-      //   wx.redirectTo({
-      //     url: '/pages/idSafety/index',
-      //     success: function() {
-      //       that.setData({
-      //         form1: {},
-      //         form2: {},
-      //         radio: 'none'
-      //       })
-      //     }
-      //   })
-      // } else {   //已实名
-      //   wx.redirectTo({
-      //     url: '/pages/making/index',
-      //     success: function() {
-      //       that.setData({
-      //         form1: {},
-      //         form2: {},
-      //         radio: 'none'
-      //       })
-      //     }
-      //   })
-      // }
+      if(!this.data.realNameSystem) {  //未实名
+        wx.redirectTo({
+          url: '/pages/idSafety/index',
+          success: function() {
+            that.setData({
+              form1: {},
+              form2: {},
+              radio: 'none'
+            })
+          }
+        })
+      } else {   //已实名
+        wx.redirectTo({
+          url: '/pages/making/index',
+          success: function() {
+            that.setData({
+              form1: {},
+              form2: {},
+              radio: 'none'
+            })
+          }
+        })
+      }
     } else {
       utils.showToast(res.message);
     }
