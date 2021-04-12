@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-09 10:42:16
+ * @LastEditTime: 2021-04-12 09:43:28
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -23,14 +23,14 @@ Page({
     radio: 'none',
     value: '',
     form1: {
-      vin: "",
-      reportNo: "",
-      gift: ""
+      vin: '',
+      reportNo: '',
+      gift: ''
     },
     form2: {
-      vin: "",
-      reportNo: "",
-      gift: ""
+      vin: '',
+      reportNo: '',
+      gift: ''
     },
     myCarList: [],
     realNameSystem: false,  //是否实名制
@@ -63,7 +63,7 @@ Page({
           })
         }
       } else {
-        utils.showToast(res1.message, 'error')
+        utils.showToast(res1.message)
       }
       // console.log('识别成功', res1)
 

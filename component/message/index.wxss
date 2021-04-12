@@ -146,7 +146,6 @@
 }
 .goGetCar .content .childBox .child {
   width: 50%;
-  justify-content: flex-start;
   line-height: 40rpx;
 }
 .goGetCar .content .childBox .child .sendCode {

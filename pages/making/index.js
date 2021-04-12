@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-09 17:56:05
+ * @LastEditTime: 2021-04-10 10:41:11
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -62,19 +62,7 @@ Page({
     console.log('预约', res)
   },
   onLoad() {
-   let qqmapsdk = utils.qqmapsdk();
+  
 
-    qqmapsdk.search({
-      keyword: '酒店',
-      success: function (res) {
-          console.log('1111',res);
-      },
-      fail: function (res) {
-          console.log('2222',res);
-      },
-      complete: function (res) {
-          console.log('3333',res);
-      }
-    });
   },
 })

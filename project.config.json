@@ -227,6 +227,13 @@
 					"id": -1,
 					"name": "添加车辆成功",
 					"pathName": "pages/index/shopDetails/orderPackUp/addCarSuccess/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "更换手机号成功",
+					"pathName": "pages/personalCenter/changePhone/success/index",
 					"scene": null
 				}
 			]

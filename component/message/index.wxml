@@ -29,8 +29,8 @@
 					/>
 				</view>
 				<view class="flexRow child" bindtap="sendCode">
-					<view wx:if="{{!sendDataForm.countDown}}" class="sendCode {{sendDataForm.phone ? 'codeSelect' : ''}}">发送验证码</view>
-					<view wx:else class="sendCode">{{sendDataForm.countDown}}s</view>
+					<view wx:if="{{!countDown}}" class="sendCode {{sendDataForm.phone ? 'codeSelect' : ''}}">发送验证码</view>
+					<view wx:else class="sendCode">{{countDown}}s</view>
 				</view>
 			</view>
 			<view class="line"></view>

@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-04-09 17:55:06
+ * @LastEditTime: 2021-04-10 10:06:57
  */
 import wxRequest from '../../utils/wxRequest'
 import {showTime, formatTime} from '../../utils/format'
@@ -39,13 +39,13 @@ Component({
     countDown: 0,
     isShowcountDown: false,
     times: null,
-    sfOutCarTime: "",
+    sfOutCarTime: '',
     sendDataForm: {
-      code: "",
-      name: "",
-      phone: "",
-      sfOutCarSite: "",
-      sfOutCarTime: ""
+      code: '',
+      name: '',
+      phone: '',
+      sfOutCarSite: '',
+      sfOutCarTime: ''
     }
   }, // 私有数据，可用于模板渲染
 
@@ -84,6 +84,9 @@ Component({
           'sendDataForm.phone': res.data.upPhone,
           'sendDataForm.name': res.data.name,
         })
+        if(!wx.getStorageSync('userPhone')) {
+          wx.setStorageSync('userPhone',res.data.upPhone)
+        }
       }
       console.log('用户信息', res)
     },
@@ -202,9 +205,10 @@ Component({
       if(this.data.countDown > 0) {
         return;
       }
-      let phone = this.data.phone;
+      let phone = this.data.sendDataForm.phone;
       if(!phone) return;
       let flag = utils.isPhone(phone);
+      console.log('phone', phone)
       if(flag) {
         let res = await api.scooterOrderCode({
           upPhone: phone

@@ -22,7 +22,8 @@ Page({
     value: '',
     radio: 0,
     carCount: 0, //车辆管理数量
-    fromCount: 0 //我的订单数量
+    fromCount: 0, //我的订单数量
+    phone: '',
   },
   // 我的订单
   myOrder() {
@@ -83,9 +84,16 @@ Page({
     }
     console.log('我的订单', res)
   },
+  getUserPhone() {
+    let phone = wx.getStorageSync('userPhone');
+    this.setData({
+      phone: phone
+    })
+  },
   onShow() {
     this.getUserPersonageCarCount();
     this.getUserPersonageFromCount();
+    this.getUserPhone();
   },
   onLoad() {
   },

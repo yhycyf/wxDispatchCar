@@ -12,5 +12,9 @@
   color: #777777;
 }
 .setting .van-cell {
+  padding: 20rpx 32rpx 20rpx 68rpx;
+  box-sizing: border-box;
+}
+.setting van-cell:nth-of-type(2) .van-cell {
   margin-top: 12rpx;
 }

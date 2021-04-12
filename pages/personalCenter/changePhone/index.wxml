@@ -11,7 +11,10 @@
         border="{{ false }}"
         bind:change="onChangePhone"
       >
-        <view slot="button" class="sendCode">获取验证码</view>
+        <view slot="button" class="flexRow child" bindtap="sendCode">
+					<view wx:if="{{!countDown}}" class="sendCode">发送验证码</view>
+					<view wx:else class="sendCode">{{countDown}}s</view>
+				</view>
       </van-field>
       <van-field custom-style="margin-top: 20rpx;"
         label="验证码"

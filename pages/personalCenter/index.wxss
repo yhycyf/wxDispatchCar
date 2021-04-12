@@ -73,10 +73,13 @@
   font-size: 24rpx;
 }
 .personalCenter .cell {
-  padding: 0 30rpx;
   box-sizing: border-box;
   margin-top: 10rpx;
   font-size: 24rpx;
+}
+.personalCenter .cell .van-cell {
+  padding: 20rpx 66rpx;
+  box-sizing: border-box;
 }
 .personalCenter .cell .left {
   justify-content: flex-start;
