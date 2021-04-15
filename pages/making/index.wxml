@@ -10,7 +10,7 @@
     <view class="flexCol box">
       <view class="flexCol top">
         <image class="image" src="{{status == 1 ? '../../image/upDriving1.png' : '../../image/upDriving1.png'}}"></image>
-        <view class="text">申请成功</view>
+        <view class="text">{{status == 1 ? '申请成功' : '申请失败'}}</view>
         <view class="contentText">
           您的申请已提交，系统将在审批通过后发送给您短信提醒您预约成功
         </view>

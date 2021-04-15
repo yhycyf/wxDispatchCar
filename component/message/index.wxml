@@ -104,13 +104,15 @@
 					<view class="flexRow iconBox">
 						<image class="iconIphone" src="../../image/phone_image.png"></image>
 					</view>
-					<view class="iphoneText">159*****123</view>
+					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText"
+					type="number" placeholder="请输入手机号" maxlength="11"
+					value="{{ sendDataForm.phone }}" bindinput="onChangePhone"/>
 				</view>
 				<view class="flexRow child">
 					<view class="flexRow iconBox">
 						<image class="iconPerson" src="../../image/person_small.png"></image>
 					</view>
-					<view class="nameText">张三</view>
+					<input value="{{ sendDataForm.name }}" bindinput="onChangeName" placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="nameText" type="text" placeholder="请输用户名"/>
 				</view>
 			</view>
 			<view class="line"></view>

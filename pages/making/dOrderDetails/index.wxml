@@ -5,10 +5,10 @@
       <van-cell value="ID：{{detailInfo.id}}" border="{{false}}" value-class="valueClass">
         <view slot="title" class="flexRow title">
           <view class="van-cell-text">{{detailInfo.orderName}}</view>
-          <van-tag size="medium" color="#00CB8B">免费三天</van-tag>
+          <van-tag wx:if="{{detailInfo.orderType}}" size="medium" color="#00CB8B">{{detailInfo.orderType}}</van-tag>
         </view>
       </van-cell>
-      <van-cell title="车架号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.orderType}}" border="{{ false }}" />
+      <van-cell title="车架号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.userVin}}" border="{{ false }}" />
       <view class="flexRow list">
         <van-cell title="手机号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.userPhone}}" border="{{ false }}" class="leftChild" />
         <van-cell title="车主" title-class="titleClass" label-class="labelClass" label="{{detailInfo.username}}" border="{{ false }}" class="rightChild" />

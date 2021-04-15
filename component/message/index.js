@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-04-10 10:06:57
+ * @LastEditTime: 2021-04-14 16:46:57
  */
 import wxRequest from '../../utils/wxRequest'
 import {showTime, formatTime} from '../../utils/format'
@@ -44,9 +44,10 @@ Component({
       code: '',
       name: '',
       phone: '',
-      sfOutCarSite: '',
-      sfOutCarTime: ''
-    }
+      sfOutCarTime: '',
+      outCarSiteLongitude: '',  //经度
+      outCarSiteLatitude: '',   //维度
+    },
   }, // 私有数据，可用于模板渲染
 
   lifetimes: {
@@ -95,7 +96,7 @@ Component({
       if(type == 'send') {
         let form = this.data.sendDataForm;
         console.log('表单数据', this.data.sendDataForm)
-        if(!form.sfOutCarSite) {
+        if(!this.data.getCarLocation) {
           utils.showToast('请选择送车地点');
           return;
         } else if(!form.sfOutCarTime) {
@@ -146,16 +147,11 @@ Component({
             //允许打开定位
             console.log("开启了定位",e);
             that.setData({
-              getCarLocation: e.name,
+              getCarLocation: e.address,
+              'sendDataForm.outCarSiteLongitude': e.longitude,
+              'sendDataForm.outCarSiteLatitude': e.latitude,
               showTipsBox: false
-            })
-
-            if(type == 'send') {
-              that.setData({
-                'sendDataForm.sfOutCarSite': e.name
-              })
-            }
-            
+            })  
           },
         })
       }

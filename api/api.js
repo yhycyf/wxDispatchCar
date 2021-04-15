@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-04-09 17:29:02
+ * @LastEditTime: 2021-04-12 09:51:04
  */
 import { wxRequest, wrapUrl, appid} from '../utils/wxRequest';
 import regeneratorRuntime  from '../utils/runtime';
@@ -128,6 +128,12 @@ const getScooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/ge
 //（四维代步车）（代步车）（出险代步车）（预约）
 const scooterOrder = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrder'), 'PUT');
 
+//（四维代步车）（选择车辆）
+const getUserPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageCar'), 'GET');
+
+//（四维代步车）（预约代步车跳转 用户类型）
+const ifUserType = (params) => wxRequest(params, wrapUrl('user-personage/ifUserType'), 'GET');
+
 
 
 
@@ -152,5 +158,7 @@ module.exports = {
   realNameSystemStatus,
   drivingPermitScan,
   getScooterOrder,
-  scooterOrder
+  scooterOrder,
+  getUserPersonageCar,
+  ifUserType
 };

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-10 10:41:11
+ * @LastEditTime: 2021-04-14 16:08:35
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -32,7 +32,8 @@ Page({
       sfOutCarSite: '',
       sfOutCarTime: '',
       upPhone: ''
-    }
+    },
+    userCategory: '',  //用户类型
   },
   onChange(event) {
     // event.detail 为当前输入的值
@@ -45,9 +46,7 @@ Page({
     this.setData({ show: false });
   },
   goOrderDetail() {
-    wx.navigateTo({
-      url: '/pages/making/dOrderDetails/index'
-    })
+    
   },
   // 事件处理函数
   bindViewTap() {
@@ -56,13 +55,35 @@ Page({
     })
   },
   async submit(e) {
-    console.log('回调数据', e)
     let form = e.detail;
+    utils.showLoading();
     let res = await api.scooterOrder(form);
+    utils.hideLoading();
+    if(res.flag) {
+      let userCategory = this.data.userCategory;
+      if(userCategory == 0 || userCategory == 1) { //保险公司带礼品码或者不带礼品码的用户
+        wx.redirectTo({
+          url: '/pages/making/dOrderDetails/index'
+        })
+      } else if(userCategory == 2) {  //普通用户
+        wx.redirectTo({
+          url: '/pages/dDelayedCar/index'
+        })
+      }
+    } else {
+      utils.showToast(res.message);
+    }
     console.log('预约', res)
   },
-  onLoad() {
-  
+  async ifUserType() {
+    let res = await api.ifUserType();
+    this.setData({
+      userCategory: res.data.userCategory
+    })
+    console.log('用户类型', res)
 
+  },
+  onLoad() {
+    this.ifUserType();
   },
 })

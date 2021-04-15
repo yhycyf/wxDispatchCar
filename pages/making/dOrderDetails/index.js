@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-19 15:46:11
+ * @LastEditTime: 2021-04-14 16:58:49
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -10,6 +10,7 @@
 // 获取应用实例
 import api from '../../../api/api';
 import utils from '../../../utils/index';
+import { showTime } from '../../../utils/format'
 const app = getApp();
 
 Page({
@@ -48,8 +49,15 @@ Page({
   async viewRunningOrders() {
     let res = await api.viewRunningOrders();
     if(res.flag) {
+      let detailInfo = res.data;
+      let lat = {
+        latitude: detailInfo.outCarSiteLatitude,
+        longitude: detailInfo.outCarSiteLongitude
+      }
+      detailInfo.carDeliveryTime = showTime(new Date(detailInfo.carDeliveryTime));
+      detailInfo.carDeliverylocation = (await utils.getAddress(lat)).address;
       this.setData({
-        detailInfo: res.data
+        detailInfo: detailInfo
       })
       console.log('订单详情', res)
     } else {
