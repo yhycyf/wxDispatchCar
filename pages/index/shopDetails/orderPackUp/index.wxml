@@ -21,7 +21,7 @@
   </navigator>
   <view class="packUpContentBox">
     <view class="flexRow titleTop">
-      <image class="icon" src="{{'../../../../image/calendar.png'}}"></image>
+      <image class="icon" src="{{'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/calendar.png'}}"></image>
       <view class="text">预约接送车</view>
     </view>
     <view class="packUpBox">

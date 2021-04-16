@@ -29,15 +29,15 @@
   <view class="detailsStatus">
     <van-cell border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="../../../image/time_status.png"></image>
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/time_status.png"></image>
         <view class="van-cell-text">订单进展</view>
       </view>
-      <van-icon slot="right-icon" size="32rpx" color="#777777" name="replay" />
+      <van-icon class="{{rotate ? 'rotate' : ''}}" bindtap="reLoad" slot="right-icon" size="32rpx" color="#777777" name="replay" />
     </van-cell>
 
     <van-cell wx:if="{{orderProgress.orderStatus == 14 || (unFlod2 && orderProgress.orderStatus > 14)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus == 14 ? 'complete': ''}}" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="{{orderProgress.orderStatus > 14 ? '../../../image/circle_defaulet.png' : '../../../image/circle_active.png'}}"></image>
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 14 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
         <view class="listTitle">{{'完成取车'}}</view>
       </view>
       <view slot="label" class="label">
@@ -47,7 +47,7 @@
     </van-cell>
     <van-cell wx:if="{{orderProgress.orderStatus == 12 || (unFlod2 && orderProgress.orderStatus > 12)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 12 ? 'complete': ''}}" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="{{orderProgress.orderStatus > 12 ? '../../../image/circle_defaulet.png' : '../../../image/circle_active.png'}}"></image>
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 12 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
         <view class="listTitle">{{'上门取车'}}</view>
       </view>
       <view slot="label" class="label">
@@ -62,7 +62,7 @@
     </van-cell>
     <van-cell wx:if="{{orderProgress.orderStatus == 8 || (unFlod2 && orderProgress.orderStatus > 8)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 8 ? 'complete': ''}}" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="{{orderProgress.orderStatus > 8 ? '../../../image/circle_defaulet.png' : '../../../image/circle_active.png'}}"></image>
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 8 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
         <view class="listTitle">{{'到期还车'}}</view>
       </view>
       <view slot="label" class="label">
@@ -77,7 +77,7 @@
     </van-cell>
     <van-cell wx:if="{{orderProgress.orderStatus == 6 || (unFlod2 && orderProgress.orderStatus > 6)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 6 ? 'complete': ''}}" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="{{orderProgress.orderStatus > 6 ? '../../../image/circle_defaulet.png' : '../../../image/circle_active.png'}}"></image>
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 6 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
         <view class="listTitle">{{'送车上门'}}</view>
       </view>
       <block wx:if="{{!unFlod2}}">
@@ -103,7 +103,7 @@
                   <view class="driver">{{orderProgress.auserName}} {{orderProgress.count}}单</view>
                 </view>
                 <view class="right">
-                  <image class="carImg" src="../../../image/upDriving2.png"></image>
+                  <image class="carImg" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png"></image>
                 </view>
               </view>
             <!-- <block>
@@ -133,7 +133,7 @@
     </van-cell>
     <van-cell wx:if="{{orderProgress.orderStatus == 3 || unFlod2}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 3 ? 'complete': ''}}" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="{{orderProgress.orderStatus > 3 ? '../../../image/circle_defaulet.png' : '../../../image/circle_active.png'}}"></image>
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 3 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
         <view class="listTitle">{{'调配车辆&司机'}}</view>
       </view>
       <view slot="label" class="label">

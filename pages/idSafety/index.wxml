@@ -7,7 +7,7 @@
   <view class="idSafetyCenter">
     <view class="flexRow nameAuthentication" bindtap="goNameAuthentication">
       <view class="flexRow leftBox">
-        <image class="idImage" src="../../image/idcart.png"/>
+        <image class="idImage" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/idcart.png"/>
         <view class="text flexCol">
           <h5>身份证照片</h5>
           <text>仅用于核实身份</text>
@@ -17,7 +17,7 @@
     </view>
     <view class="flexRow nameAuthentication" bindtap="goCarAuthentication">
       <view class="flexRow leftBox">
-        <image class="idImage" src="../../image/car.png"/>
+        <image class="idImage" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/car.png"/>
         <view class="text flexCol">
           <h5>车辆信息认证</h5>
           <text>出险信息确认确保保险服务</text>
@@ -28,7 +28,7 @@
   </view>
   <view class="bottom">
     <view class="flexRow whatIsNot">
-      <image class="icon" src="../../image/e.png" />
+      <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/e.png" />
       <view class="text">
         系统智能加密，实施保障你的信息安全
       </view>

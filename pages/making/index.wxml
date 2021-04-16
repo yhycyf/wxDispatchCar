@@ -9,7 +9,7 @@
   <van-popup z-index="1000000" custom-style="border-radius: 12rpx;" show="{{ show }}" position="center" bind:close="onClose">
     <view class="flexCol box">
       <view class="flexCol top">
-        <image class="image" src="{{status == 1 ? '../../image/upDriving1.png' : '../../image/upDriving1.png'}}"></image>
+        <image class="image" src="{{status == 1 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving1.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving1.png'}}"></image>
         <view class="text">{{status == 1 ? '申请成功' : '申请失败'}}</view>
         <view class="contentText">
           您的申请已提交，系统将在审批通过后发送给您短信提醒您预约成功

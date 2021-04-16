@@ -2,7 +2,7 @@
 	<view class="flexCol content">
 		<view class="flexRow list" bindtap="serveTypeShow">
 			<view class="flexRow iconBox">
-				<image class="icon" src="../../image/place.png"></image>
+				<image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/place.png"></image>
 			</view>
 			<view class="textWidth {{serveType ? 'select' : ''}}">{{serveType ? serveType : '请选择服务方式'}}</view>
 			<view class="rightArrow">
@@ -11,22 +11,22 @@
 		</view>
 		<view class="flexRow list" bindtap="selectLocation">
 			<view class="flexRow iconBox">
-				<image class="icon" src="../../image/shop.png"></image>
+				<image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/shop.png"></image>
 			</view>
 			<view class="textWidth {{getCarLocation ? 'select' : ''}}">{{getCarLocation ? getCarLocation : '选择门店'}}</view>
 			<view class="flexRow tipsBox" wx:if="{{showTipsBox}}">
-				<image class="triangle" src="../../image/triangle_top.png"></image>
+				<image class="triangle" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/triangle_top.png"></image>
 				<view class="flexRow locationText">
 					<view class="text" catchtap="getTips">
 						<view class="address">{{historyAddress}}</view>
 					</view>
-					<image class="icon" src="../../image/close.png" catchtap="closeTipsBox"></image>
+					<image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/close.png" catchtap="closeTipsBox"></image>
 				</view>
 			</view>
 		</view>
 		<view class="flexRow list">
 			<view class="flexRow iconBox">
-				<image class="icon" src="../../image/place.png"></image>
+				<image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/place.png"></image>
 			</view>
 			<view class="textWidth select">{{'北京市昌平区TBD云集中心'}}</view>
 		</view>
@@ -34,13 +34,13 @@
 		<view class="flexRow list childBox" bindtap="showPopup" data-type="{{type}}">
 			<view class="flexRow child">
 				<view class="flexRow iconBox">
-					<image class="iconTime" src="../../image/time_image.png"></image>
+					<image class="iconTime" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/time_image.png"></image>
 				</view>
 				<view class="textWidth {{getCarTime ? 'select' : ''}}">{{getCarTime ? getCarTime : '选择时间'}}</view>
 			</view>
 			<view class="flexRow child">
 				<view class="flexRow iconBox">
-					<image class="iconPerson" src="../../image/person_small.png"></image>
+					<image class="iconPerson" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/person_small.png"></image>
 				</view>
 				<view class="nameText">张三</view>
 			</view>
@@ -51,7 +51,7 @@
 			<view class="flexRow list childBox">
 				<view class="flexRow child">
 					<view class="flexRow iconBox">
-						<image class="iconIphone" src="../../image/phone_image.png"></image>
+						<image class="iconIphone" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/phone_image.png"></image>
 					</view>
 					<input placeholder-style="color: #D8D8D8; font-size: 28rpx;" class="iphoneText" type="number" placeholder="请输入手机号"/>
 				</view>
@@ -71,7 +71,7 @@
 			<view class="line"></view>
 			<!-- <view class="flexRow list">
 				<view class="flexRow iconBox">
-					<image class="iconPerson" src="../../image/person_small.png"></image>
+					<image class="iconPerson" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/person_small.png"></image>
 				</view>
 				<view class="nameText">张三</view>
 			</view>

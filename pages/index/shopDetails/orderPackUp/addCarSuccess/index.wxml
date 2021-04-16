@@ -2,7 +2,7 @@
 <view class="addCarSuccess">
   <view class="status">
     <view class="flexCol center">
-      <image class="image" src="../../../../../image/add_car_success.png" />
+      <image class="image" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/add_car_success.png" />
       <view class="statusText">添加成功</view>
       <text class="tips">点击此处查看车辆管理</text>
     </view>

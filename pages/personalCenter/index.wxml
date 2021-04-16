@@ -12,7 +12,7 @@
     </view>
   </view>
   <view class="top flexRow">
-    <image class="backGroundIng" src="../../image/pCtop.png" />
+    <image class="backGroundIng" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/pCtop.png" />
     <view class="left" bindtap="myOrder">
       <view class="title">我的订单</view>
       <view class="leftNub">{{fromCount}}</view>
@@ -34,7 +34,7 @@
       border="{{false}}"
     >
       <view class="flexRow left"> 
-        <image class="icon" slot="icon" src="../../image/idCard.png" />
+        <image class="icon" slot="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/idCard.png" />
         <view class="title" slot="title">身份验证</view>
       </view>
       <view class="flexRow right">
@@ -47,7 +47,7 @@
       border="{{false}}"y
     >
       <view class="flexRow left">
-        <image class="icon" slot="icon" src="../../image/driverIcon.png" />
+        <image class="icon" slot="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/driverIcon.png" />
         <view class="title" slot="title">司机招募</view>
       </view>
     </van-cell>
@@ -58,7 +58,7 @@
       border="{{false}}"
     >
       <view class="flexRow left">
-        <image class="icon" slot="icon" src="../../image/cooperationIcon.png" />
+        <image class="icon" slot="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/cooperationIcon.png" />
         <view class="title" slot="title">企业合作</view>
       </view>
     </van-cell>
@@ -69,7 +69,7 @@
       border="{{false}}"
     >
       <view class="flexRow left">
-        <image class="icon" slot="icon" src="../../image/problemIcon.png" />
+        <image class="icon" slot="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/problemIcon.png" />
         <view class="title" slot="title">常见问题</view>
       </view>
     </van-cell>
@@ -80,7 +80,7 @@
       border="{{false}}"
     >
       <view class="flexRow left">
-        <image class="icon" slot="icon" src="../../image/customerserviceIcon.png" />
+        <image class="icon" slot="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/customerserviceIcon.png" />
         <view class="title" slot="title">在线客服</view>
       </view>
     </van-cell>
@@ -91,7 +91,7 @@
       border="{{false}}"
     >
       <view class="flexRow left">
-        <image class="icon" slot="icon" src="../../image/setupIcon.png" />
+        <image class="icon" slot="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/setupIcon.png" />
         <view class="title" slot="title">设置</view>
       </view>
     </van-cell>

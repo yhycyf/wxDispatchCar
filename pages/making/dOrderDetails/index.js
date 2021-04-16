@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-15 18:38:57
+ * @LastEditTime: 2021-04-16 10:53:06
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -26,6 +26,7 @@ Page({
     }, //订单进展
     unFlod1: false,  //是否显示展开
     unFlod2: false,  //是否显示展开
+    rotate: false
   },
   calling:function(){
     let that = this;
@@ -60,6 +61,17 @@ Page({
         unFlod2: true
       })
     }
+  },
+  async reLoad() {
+    if(this.data.rotate) return;
+    this.setData({
+      rotate: true
+    })
+    await utils.sleep(1000);
+    this.setData({
+      orderProgress: {},
+    })
+    this.orderProgress();
   },
   waitReturnCar() {
     wx.navigateTo({
@@ -107,7 +119,8 @@ Page({
     let res = await api.orderProgress();
     if(res.flag) {
       this.setData({
-        orderProgress: res.data
+        orderProgress: res.data,
+        rotate: false
       })
       console.log('订单进展', res)
     } else {

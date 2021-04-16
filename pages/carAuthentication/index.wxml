@@ -9,14 +9,14 @@
         disabled="{{form.imgDrivingLicenceA}}"
         bind:after-read="afterReadA" bind:delete="deleteFileListA" bind:oversize="oversize">
         <view class="iconBox">
-          <image class="icon" src="../../image/upDriving1.png" />
+          <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving1.png" />
           <view wx:if="{{fileListA[0].url}}" class="imagTop">
             <view class="childBox">
               <view class="flexCol failBox" wx:if="{{fileListA[0].url && !form.imgDrivingLicenceA && upLoadFail}}" >
-                <image class="img fail" src="../../image/fail_img.png" />
+                <image class="img fail" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/fail_img.png" />
                 <view class="flexRow text">上传失败 请重新上传</view>
               </view>
-              <image wx:if="{{fileListA[0].url && form.imgDrivingLicenceA && !upLoadFail}}" class="img success" src="../../image/success_img.png" />
+              <image wx:if="{{fileListA[0].url && form.imgDrivingLicenceA && !upLoadFail}}" class="img success" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/success_img.png" />
             </view>
           </view>
         </view>
@@ -33,14 +33,14 @@
         disabled="{{form.imgDrivingLicenceB}}"
         bind:after-read="afterReadB" bind:delete="deleteFileListB" bind:oversize="oversize">
         <view class="iconBox">
-          <image class="icon" src="../../image/upDriving2.png" />
+          <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png" />
           <view wx:if="{{fileListB[0].url}}" class="imagTop">
             <view class="childBox">
               <view class="flexCol failBox" wx:if="{{fileListB[0].url && !form.imgDrivingLicenceB && upLoadFail}}" >
-                <image class="img fail" src="../../image/fail_img.png" />
+                <image class="img fail" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/fail_img.png" />
                 <view class="flexRow text">上传失败 请重新上传</view>
               </view>
-              <image wx:if="{{fileListB[0].url && form.imgDrivingLicenceB && !upLoadFail}}" class="img success" src="../../image/success_img.png" />
+              <image wx:if="{{fileListB[0].url && form.imgDrivingLicenceB && !upLoadFail}}" class="img success" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/success_img.png" />
             </view>
           </view>
         </view>
@@ -50,7 +50,7 @@
   </view>
   <view class="bottom">
     <view class="flexRow whatIsNot">
-      <image class="icon" src="../../image/e.png" />
+      <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/e.png" />
       <view class="text">
         系统智能加密，实施保障你的信息安全
       </view>

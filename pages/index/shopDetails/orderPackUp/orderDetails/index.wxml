@@ -27,7 +27,7 @@
   <view class="detailsStatus">
     <van-cell border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="../../../../../image/time_status.png"></image>
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/time_status.png"></image>
         <view class="van-cell-text">订单进展</view>
       </view>
       <van-icon slot="right-icon" size="32rpx" color="#777777" name="replay" />
@@ -35,7 +35,7 @@
 
     <van-cell custom-class="listBox paddingBottom {{complete ? 'complete': ''}}" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="{{complete ? '../../../../../image/circle_defaulet.png' : '../../../../../image/circle_active.png'}}"></image>
+        <image class="timeStatus" src="{{complete ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
         <view class="listTitle">{{'完成取车'}}</view>
       </view>
       <view slot="label" class="label">
@@ -45,7 +45,7 @@
     </van-cell>
     <van-cell custom-class="listBox paddingBottom" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="../../../../../image/circle_active.png"></image>
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png"></image>
         <view class="listTitle">{{'上门取车'}}</view>
       </view>
       <view slot="label" class="label">
@@ -60,7 +60,7 @@
     </van-cell>
     <van-cell custom-class="listBox paddingBottom" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="../../../../../image/circle_active.png"></image>
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png"></image>
         <view class="listTitle">{{'到期还车'}}</view>
       </view>
       <view slot="label" class="label">
@@ -75,7 +75,7 @@
     </van-cell>
     <van-cell custom-class="listBox paddingBottom" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="../../../../../image/circle_active.png"></image>
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png"></image>
         <view class="listTitle">{{'上门接车'}}</view>
       </view>
       <block wx:if="{{true}}">
@@ -101,7 +101,7 @@
                   <view class="driver">李师傅 122单</view>
                 </view>
                 <view class="right">
-                  <image class="carImg" src="../../../../../image/upDriving2.png"></image>
+                  <image class="carImg" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png"></image>
                 </view>
               </view>
             <block>
@@ -128,7 +128,7 @@
     </van-cell>
     <van-cell custom-class="listBox paddingBottom" use-label-slot border="{{false}}">
       <view slot="title" class="flexRow title">
-        <image class="timeStatus" src="../../../../../image/circle_active.png"></image>
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png"></image>
         <view class="listTitle">{{'调配车辆&司机'}}</view>
       </view>
       <view slot="label" class="label">

@@ -9,7 +9,7 @@
   />
   <view class="upIdentity">
     <view class="flexRow flexCol center">
-      <image class="icon" src="../../../../../image/upDriving2.png" />
+      <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png" />
       <text>扫描行驶证 自动填写信息</text>
     </view>
   </view>
@@ -48,7 +48,7 @@
     </van-cell-group>
   </view>
   <view class="flexRow whatIsNot">
-    <image class="icon" src="../../../../../image/e.png" />
+    <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/e.png" />
     <view class="text">
       当地交管局查询必须信息，四维将对您的信息加密，请放心填写
     </view>

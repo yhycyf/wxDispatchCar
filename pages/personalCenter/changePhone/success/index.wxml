@@ -2,7 +2,7 @@
 <view class="addCarSuccess">
   <view class="status">
     <view class="flexCol center">
-      <image class="image" src="../../../../image/phone_change_success.png" />
+      <image class="image" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/phone_change_success.png" />
       <view class="statusText">更换成功！</view>
       <text class="tips">新手机号码为{{phone}}</text>
     </view>

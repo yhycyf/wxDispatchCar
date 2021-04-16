@@ -22,7 +22,7 @@
         <map-custom height="{{88}}" id="map">
           <view slot="location">
             <cover-view class="flexRow location" bindtap="moveToLocation">
-              <cover-image class="coverImage" src="../../image/tap_location.png" />
+              <cover-image class="coverImage" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/tap_location.png" />
             </cover-view>
           </view>
           <view slot="beginOrder">
@@ -32,12 +32,12 @@
           </view>
           <view slot="service">
             <cover-view class="flexRow service" bindtap="service">
-              <cover-image class="serviceImage" src="../../image/service.png" bindtap="calling"/>
+              <cover-image class="serviceImage" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/service.png" bindtap="calling"/>
             </cover-view>
           </view>
         </map-custom>
         <view class="fixedIndexImage">
-          <image wx:if="{{true}}" class="image" src="../../image/index_top_image_1.png"></image>
+          <image wx:if="{{true}}" class="image" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/index_top_image_1.png"></image>
           <view wx:if="{{false}}" class="flexRow imageList">
             <view class="flexCol left">
               <view class="flexRow title">
@@ -52,7 +52,7 @@
               查看订单
               <van-icon size="20rpx" color="#AAAAAA" name="arrow" />
             </view>
-            <image class="backGroundImg" src="../../image/index_top_image_2.png"></image>
+            <image class="backGroundImg" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/index_top_image_2.png"></image>
           </view>
         </view>
       </van-tab>
@@ -81,7 +81,7 @@
                   <view class="flexRow imgBox">
                     <image
                       style="width: 78rpx; height: 72rpx;"
-                      src="../../image/send_type_1.png"
+                      src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/send_type_1.png"
                     />
                   </view>
                   <text>代维修</text>
@@ -90,7 +90,7 @@
                   <view class="flexRow imgBox">
                     <image
                       style="width: 60rpx; height: 72rpx"
-                      src="../../image/send_type_2.png"
+                      src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/send_type_2.png"
                     />
                   </view>
                   <text>代保养</text>
@@ -99,7 +99,7 @@
                   <view class="flexRow imgBox">
                     <image
                       style="width: 78rpx; height: 66rpx"
-                      src="../../image/send_type_3.png"
+                      src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/send_type_3.png"
                     />
                   </view>
                   <text>代年检</text>
@@ -108,7 +108,7 @@
                   <view class="flexRow imgBox">
                     <image
                       style="width: 62rpx; height: 72rpx"
-                      src="../../image/send_type_4.png"
+                      src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/send_type_4.png"
                     />
                   </view>
                   <text>安全检测</text>

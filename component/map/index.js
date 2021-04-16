@@ -36,7 +36,7 @@ Component({
       id: 1,
       latitude: 23.099994,
       longitude: 113.324520,
-      iconPath: '/image/location.png'
+      iconPath: 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/location.png'
     }],
   }, // 私有数据，可用于模板渲染
 
