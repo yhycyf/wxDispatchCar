@@ -67,13 +67,19 @@
   font-weight: 400;
   color: #444444;
 }
+.orderDetail .detailsBox .detailTop .content .bigLabelClass {
+  font-size: 28rpx;
+  font-family: DINAlternate-Bold, DINAlternate;
+  font-weight: bold;
+  color: #151515;
+}
 .orderDetail .detailsBox .detailTop .content .labelClass {
   font-size: 24rpx;
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #333333;
 }
-.orderDetail .detailsBox .detailTop .content::after {
+.orderDetail .detailsBox .detailTop .border::after {
   content: "";
   width: 620rpx;
   height: 2rpx;
@@ -138,13 +144,14 @@
 .orderDetail .detailsStatus .listBox .label .labelStep .list {
   width: 100%;
   justify-content: space-between;
+  align-items: flex-start;
 }
 .orderDetail .detailsStatus .listBox .label .labelStep .list .left {
-  align-items: flex-start;
   font-size: 24rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #777777;
+  align-items: flex-start;
 }
 .orderDetail .detailsStatus .listBox .label .labelStep .list .left text {
   color: #EC0000;
@@ -159,6 +166,8 @@
   font-family: PingFangSC-Medium, PingFang SC;
   font-weight: 500;
   color: #151515;
+  word-break: break-all;
+  white-space: nowrap;
 }
 .orderDetail .detailsStatus .listBox .label .labelStep .list .left .carName .name {
   font-size: 22rpx;
@@ -166,13 +175,29 @@
   font-weight: 400;
   color: #333333;
   margin-left: 8rpx;
+  word-break: break-all;
+  white-space: nowrap;
+}
+.orderDetail .detailsStatus .listBox .label .labelStep .list .left .lengthBox {
+  align-items: flex-start;
+}
+.orderDetail .detailsStatus .listBox .label .labelStep .list .left .lengthBox .name {
+  margin-left: 0;
+  margin-top: 12rpx;
 }
 .orderDetail .detailsStatus .listBox .label .labelStep .list .left .driver {
   font-size: 22rpx;
   font-family: PingFangSC-Regular, PingFang SC;
   font-weight: 400;
   color: #777777;
-  margin-top: 20rpx;
+  margin-top: 12rpx;
+}
+.orderDetail .detailsStatus .listBox .label .labelStep .list .noWrap {
+  width: 600rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  align-items: flex-start;
+  white-space: nowrap;
 }
 .orderDetail .detailsStatus .listBox .label .labelStep .list .right .phone {
   width: 152rpx;

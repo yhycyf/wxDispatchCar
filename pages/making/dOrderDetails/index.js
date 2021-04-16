@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-14 16:58:49
+ * @LastEditTime: 2021-04-15 18:38:57
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -15,14 +15,51 @@ const app = getApp();
 
 Page({
   data: {
-    complete: true,
     motto: 'Helelo World',
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     active: 1,
     value: '',
     detailInfo: {}, //订单详情
-    orderProgress: {}, //订单进展
+    orderProgress: {
+      orderStatus: 6
+    }, //订单进展
+    unFlod1: false,  //是否显示展开
+    unFlod2: false,  //是否显示展开
+  },
+  calling:function(){
+    let that = this;
+    wx.makePhoneCall({
+      phoneNumber: that.orderProgress.auserPhone, //此号码并非真实电话号码，仅用于测试
+      success:function(){
+        console.log("拨打电话成功！")
+      },
+      fail:function(){
+        console.log("拨打电话失败！")
+      }
+    })
+  },
+  unFlod1() {
+    if(this.data.unFlod1) {
+      this.setData({
+        unFlod1: false
+      })
+    } else {
+      this.setData({
+        unFlod1: true
+      })
+    }
+  },
+  unFlod2() {
+    if(this.data.unFlod2) {
+      this.setData({
+        unFlod2: false
+      })
+    } else {
+      this.setData({
+        unFlod2: true
+      })
+    }
   },
   waitReturnCar() {
     wx.navigateTo({
