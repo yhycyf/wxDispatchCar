@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-25 15:11:19
+ * @LastEditTime: 2021-04-16 14:54:27
  */
 
 // import utils, { cdnUrl } from '@/utils/index';
@@ -84,10 +84,10 @@ Component({
       if(e.type == 'end' && e.causedBy == 'drag') {
         let result = await utils.getAddress(str);
         that.setData({
-          [lat]: result.data.result.location.lat,
-          [log]: result.data.result.location.lng,
+          [lat]: result.location.lat,
+          [log]: result.location.lng,
         })
-        that.triggerEvent('locationEvent', {result: result.data.result})
+        that.triggerEvent('locationEvent', {result: result})
       }
     },
     getLocation () {
@@ -129,10 +129,10 @@ Component({
                   let result = await utils.getAddress(str);
                   // console.log('地点111', result)
                   that.setData({
-                    [lat]: result.data.result.location.lat,
-                    [log]: result.data.result.location.lng,
+                    [lat]: result.location.lat,
+                    [log]: result.location.lng,
                   })
-                  that.triggerEvent('locationEvent', {result: result.data.result})
+                  that.triggerEvent('locationEvent', {result: result})
                 }
               })
 
