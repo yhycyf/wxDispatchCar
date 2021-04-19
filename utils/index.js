@@ -182,6 +182,32 @@ const countDownMinutes = (value) => {
   }
 };
 
+// 倒计时分
+const countDownString = (value) => {
+    let times;
+    let expire = new Date(value).getTime();
+    let nowTime = new Date().getTime();
+    let timestamp = expire - nowTime;
+    let day = parseInt(timestamp / 1000 / 60 / 60 / 24);
+    let hours = parseInt(timestamp / 1000 / 60 / 60 % 24);
+    let minutes = parseInt(timestamp / 1000 / 60 % 60);
+    let seconds = parseInt(timestamp / 1000 % 60);
+    if (day < 10) {
+      day = '0' + day;
+    }
+    if (hours < 10) {
+      hours = '0' + hours;
+    }
+    if (minutes < 10) {
+      minutes = '0' + minutes;
+    }
+    if (seconds < 10) {
+      seconds = '0' + seconds;
+    }
+    times = day > 0 ? day + '天' : '' + hours + '小时' + minutes + '分钟';
+    return times;
+};
+
 
 const sliceStr = (index, str) =>
   str.slice(0, index)
@@ -336,6 +362,7 @@ export default {
   countDownDays,
   nowTime,
   countDownSeconds,
+  countDownString,
   commonShare,
   countDownMinutes,
   showTabBarRedDot,

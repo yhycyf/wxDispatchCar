@@ -95,9 +95,6 @@ const viewRunningOrders = (params) => wxRequest(params, wrapUrl('user-personage/
 //（四维代步车）（开始预约）（订单进展）
 const orderProgress = (params) => wxRequest(params, wrapUrl('user-personage/orderProgress'), 'GET');
 
-//（订单详情）（出险代步车）（取消订单）
-const scooterOrderCancel = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCancel'), 'PUT');
-
 //（个人中心）（车辆管理）
 const getUserPersonageCarCount = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageCarCount'), 'GET');
 
@@ -134,6 +131,8 @@ const getUserPersonageCar = (params) => wxRequest(params, wrapUrl('user-personag
 //（四维代步车）（预约代步车跳转 用户类型）
 const ifUserType = (params) => wxRequest(params, wrapUrl('user-personage/ifUserType'), 'GET');
 
+//（订单详情）（出险代步车）（取消订单）
+const scooterOrderCancel = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCancel'), 'PUT');
 
 
 

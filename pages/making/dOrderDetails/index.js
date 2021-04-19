@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-16 10:53:06
+ * @LastEditTime: 2021-04-19 11:42:15
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -26,7 +26,8 @@ Page({
     }, //订单进展
     unFlod1: false,  //是否显示展开
     unFlod2: false,  //是否显示展开
-    rotate: false
+    rotate: false,
+    timer: null,
   },
   calling:function(){
     let that = this;
@@ -116,12 +117,27 @@ Page({
 
   // 订单进展
   async orderProgress() {
+    let that = this;
+    let date;
     let res = await api.orderProgress();
     if(res.flag) {
-      this.setData({
+      that.setData({
         orderProgress: res.data,
         rotate: false
       })
+      if(res.data.endTime) {
+        date = utils.countDownString(res.data.endTime);
+        that.setData({
+          'orderProgress.countDown': date
+        })
+        clearInterval(that.data.timer);
+        that.data.timer = setInterval(() => {
+          date = utils.countDownString(res.data.endTime);
+          that.setData({
+            'orderProgress.countDown': date
+          })
+        }, 1000);
+      }
       console.log('订单进展', res)
     } else {
       utils.showToast(res.message)
@@ -130,10 +146,16 @@ Page({
   
   // 取消订单
   async cancelDetail() {
+    let id = this.data.detailInfo.id;
     let res = await api.scooterOrderCancel({
       scooterFormId: id
     });
     if(res.flag) {
+      utils.showToast(res.message, 'success', 1500);
+      await utils.sleep(1500);
+      wx.redirectTo({
+        url: '/pages/making/dOrderDetails/index'
+      })
       console.log('取消订单成功', res)
     } else {
       utils.showToast(res.message)

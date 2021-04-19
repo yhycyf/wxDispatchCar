@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-19 14:50:24
+ * @LastEditTime: 2021-04-19 10:13:06
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -9,6 +9,7 @@
 // index.js
 // 获取应用实例
 import api from '../../api/api'
+import utils from '../../utils/index'
 const app = getApp()
 
 Page({
@@ -67,6 +68,8 @@ Page({
           this.setData({
             loginBtn: true
           })
+        } else {
+          wx.setStorageSync('userPhone',res.data.phone);
         }
       } else {
         utils.showToast(res.message, 'none', 1500)
@@ -76,14 +79,10 @@ Page({
   },
   // 授权手机号回调
   getPhoneNumber(e) {
-    if(e.detail.flag) {
-      this.setData({
-        loginBtn: false
-      })
-      utils.showToast('登录成功', 'success', 1500)
-    } else {
-      utils.showToast(e.detail.message, 'none', 1500)
-    }
+    this.setData({
+      loginBtn: false
+    })
+    utils.showToast('登录成功', 'success', 1500)
   },
   onLoad() {
     this.wxLogin();

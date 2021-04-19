@@ -4,10 +4,11 @@
  * @Author: sueRimn
  * @Date: 2020-12-19 14:14:55
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-19 14:49:41
+ * @LastEditTime: 2021-04-19 10:12:32
  */
 
 import api from '../../api/api'
+import utils from '../../utils/index';
 const app = getApp();
 Component({
   options: {
@@ -74,7 +75,19 @@ Component({
         encryptedData: detail.encryptedData,
         vi: detail.iv
       });
-      this.triggerEvent('getPhoneNumber', res)
+      if(res.flag) {
+        let getPhone = await api.getScooterOrder();
+        if(getPhone.flag) {
+          if(!wx.getStorageSync('userPhone')) {
+            wx.setStorageSync('userPhone',getPhone.data.upPhone);
+          }
+          this.triggerEvent('getPhoneNumber');
+        } else {
+          utils.showToast(getPhone.message);
+        }
+      } else {
+        utils.showToast(getPhone.message);
+      }
       console.log('手机信息解密', res)
     }
   }
