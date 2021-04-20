@@ -4,7 +4,7 @@
  * @Author: sueRimn
  * @Date: 2021-02-08 11:46:21
  * @LastEditors: sueRimn
- * @LastEditTime: 2021-03-15 15:23:41
+ * @LastEditTime: 2021-04-20 09:41:28
  */
 const formatTime = date => {
   const year = date.getFullYear()
@@ -29,6 +29,8 @@ const showTime = date => {
   const day = date.getDate() + '日'
   const hour = date.getHours() + '点'
   const minute = date.getMinutes() + '分'
+
+  console.log('year', year)
  
   return `${[year, month, day, hour, minute].map(formatNumber).join('')}`
 }

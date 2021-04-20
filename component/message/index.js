@@ -206,14 +206,14 @@ Component({
       let flag = utils.isPhone(phone);
       console.log('phone', phone)
       if(flag) {
+        this.setData({
+          countDown: 60
+        })
         let res = await api.scooterOrderCode({
           upPhone: phone
         });
         if(res.flag) {
           utils.showToast(res.message);
-          this.setData({
-            countDown: 60
-          })
           clearInterval(this.data.times);
           this.data.times = setInterval(() => {
             if(this.data.countDown > 0) {
@@ -229,6 +229,9 @@ Component({
             }
           }, 1000);
         } else {
+          this.setData({
+            countDown: 0
+          })
           utils.showToast(res.message);
         }
         console.log('手机号验证', res)

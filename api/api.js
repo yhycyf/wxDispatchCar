@@ -90,7 +90,7 @@ const addDrivingLicence = (params) => wxRequest(params, wrapUrl('user-personage/
 const scooterOrderCode = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCode'), 'GET');
 
 // (四维代步车）（开始预约）（查看订单）
-const viewRunningOrders = (params) => wxRequest(params, wrapUrl('user-personage/viewRunningOrders'), 'GET');
+const dangerousScooter = (params) => wxRequest(params, wrapUrl('user-personage/dangerousScooter'), 'GET');
 
 //（四维代步车）（开始预约）（订单进展）
 const orderProgress = (params) => wxRequest(params, wrapUrl('user-personage/orderProgress'), 'GET');
@@ -145,7 +145,7 @@ module.exports = {
   addIdentity,
   addDrivingLicence,
   scooterOrderCode,
-  viewRunningOrders,
+  dangerousScooter,
   orderProgress,
   scooterOrderCancel,
   getUserPersonageCarCount,

@@ -184,7 +184,7 @@ const countDownMinutes = (value) => {
 
 // 倒计时分
 const countDownString = (value) => {
-    let times;
+    let data;
     let expire = new Date(value).getTime();
     let nowTime = new Date().getTime();
     let timestamp = expire - nowTime;
@@ -204,8 +204,9 @@ const countDownString = (value) => {
     if (seconds < 10) {
       seconds = '0' + seconds;
     }
-    times = day > 0 ? day + '天' : '' + hours + '小时' + minutes + '分钟';
-    return times;
+    data.timestamp = timestamp;
+    data.times = day > 0 ? day + '天' : '' + hours + '小时' + minutes + '分钟';
+    return data;
 };
 
 

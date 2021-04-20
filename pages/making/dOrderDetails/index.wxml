@@ -1,168 +1,163 @@
 <!--index.wxml-->
 <view class="orderDetail">
-  <block wx:if="{{detailInfo.id && orderProgress.orderStatus}}">
-    <view class="detailsBox">
-      <van-cell-group custom-class="detailTop" border="{{false}}">
-        <van-cell value="ID：{{detailInfo.id}}" border="{{false}}" value-class="valueClass">
-          <view slot="title" class="flexRow title">
-            <view class="van-cell-text">{{detailInfo.orderName}}</view>
-            <van-tag wx:if="{{detailInfo.orderType}}" size="medium" color="#00CB8B">{{detailInfo.orderType}}</van-tag>
-          </view>
-        </van-cell>
-        <block wx:if="{{unFlod1}}">
-          <van-cell title="车架号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.userVin}}" border="{{ false }}" />
-          <view class="flexRow list">
-            <van-cell title="手机号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.userPhone}}" border="{{ false }}" class="leftChild" />
-            <van-cell title="车主" title-class="titleClass" label-class="labelClass" label="{{detailInfo.username}}" border="{{ false }}" class="rightChild" />
-          </view>
-        </block>
-        <view class="content {{unFlod1 ? 'border' : ''}}">
-          <van-cell title="送车时间" title-class="titleClass" label-class="bigLabelClass {{unFlod1 ? 'labelClass' : ''}}" label="{{detailInfo.carDeliveryTime}}" border="{{ false }}" />
-          <van-cell title="送车地址" title-class="titleClass" label-class="bigLabelClass {{unFlod1 ? 'labelClass' : ''}}" label="{{detailInfo.carDeliverylocation}}" border="{{ false }}" />
-        </view>
-        <view class="flexRow unfold" bindtap="unFlod1">
-          <view class="text">{{unFlod1 ? '收起' : '展开'}}</view>
-          <van-icon wx:if="{{!unFlod1}}" class="icon" size="16rpx" color="#000000" name="arrow-down" />
-          <van-icon wx:else class="icon" size="16rpx" color="#000000" name="arrow-up" />
-        </view>
-      </van-cell-group>
-    </view>
-    <view class="detailsStatus">
-      <van-cell border="{{false}}">
+  <view class="detailsBox">
+    <van-cell-group custom-class="detailTop" border="{{false}}">
+      <van-cell value="ID：{{detailInfo.orderId}}" border="{{false}}" value-class="valueClass">
         <view slot="title" class="flexRow title">
-          <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/time_status.png"></image>
-          <view class="van-cell-text">订单进展</view>
-        </view>
-        <van-icon class="{{rotate ? 'rotate' : ''}}" bindtap="reLoad" slot="right-icon" size="32rpx" color="#777777" name="replay" />
-      </van-cell>
-
-      <van-cell wx:if="{{orderProgress.orderStatus == 14 || (unFlod2 && orderProgress.orderStatus > 14)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus == 14 ? 'complete': ''}}" use-label-slot border="{{false}}">
-        <view slot="title" class="flexRow title">
-          <image class="timeStatus" src="{{orderProgress.orderStatus > 14 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
-          <view class="listTitle">{{'完成取车'}}</view>
-        </view>
-        <view slot="label" class="label">
-          <view class="flexCol labelStep">
-          </view>
+          <view class="van-cell-text">{{detailInfo.orderName}}</view>
+          <van-tag wx:if="{{detailInfo.orderType}}" size="medium" color="#00CB8B">{{detailInfo.orderType}}</van-tag>
         </view>
       </van-cell>
-      <van-cell wx:if="{{orderProgress.orderStatus == 12 || (unFlod2 && orderProgress.orderStatus > 12)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 12 ? 'complete': ''}}" use-label-slot border="{{false}}">
-        <view slot="title" class="flexRow title">
-          <image class="timeStatus" src="{{orderProgress.orderStatus > 12 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
-          <view class="listTitle">{{'上门取车'}}</view>
+      <block wx:if="{{unFlod1}}">
+        <van-cell title="车架号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.frameNumber}}" border="{{ false }}" />
+        <view class="flexRow list">
+          <van-cell title="手机号" title-class="titleClass" label-class="labelClass" label="{{detailInfo.phoneNumber}}" border="{{ false }}" class="leftChild" />
+          <van-cell title="车主" title-class="titleClass" label-class="labelClass" label="{{detailInfo.ownersName}}" border="{{ false }}" class="rightChild" />
         </view>
-        <view slot="label" class="label">
-          <view class="flexCol labelStep">
-            <view class="flexRow list">
-              <view class="left">
-                司机已到达指定位置
-              </view>
-            </view>
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:if="{{orderProgress.orderStatus == 8 || (unFlod2 && orderProgress.orderStatus > 8)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 8 ? 'complete': ''}}" use-label-slot border="{{false}}">
-        <view slot="title" class="flexRow title">
-          <image class="timeStatus" src="{{orderProgress.orderStatus > 8 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
-          <view class="listTitle">{{'到期还车'}}</view>
-        </view>
-        <view slot="label" class="label">
-          <view class="flexCol labelStep">
-            <view class="flexRow list">
-              <view class="left">
-                剩余时间：<text>{{orderProgress.countDown}}</text>
-              </view>
-            </view>
-          </view>
-        </view>
-      </van-cell>
-      <van-cell wx:if="{{orderProgress.orderStatus == 6 || (unFlod2 && orderProgress.orderStatus > 6)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 6 ? 'complete': ''}}" use-label-slot border="{{false}}">
-        <view slot="title" class="flexRow title">
-          <image class="timeStatus" src="{{orderProgress.orderStatus > 6 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
-          <view class="listTitle">{{'送车上门'}}</view>
-        </view>
-        <block wx:if="{{!unFlod2}}">
-          <view slot="label" class="label">
-            <view class="flexCol labelStep noPadding">
-                <view class="flexRow list">
-                  <view class="left">
-                    剩余{{orderProgress.remainingDistance}} 预计<text>{{orderProgress.estimatedArrivalTime}}分钟</text>到达
-                  </view>
-                  <view class="right">
-                    <view class="flexRow phone" bindtap="calling">
-                      <van-icon size="24rpx" color="#343434" name="phone" />
-                      <text>打电话</text>
-                    </view>
-                  </view>
-                </view>
-                <view class="flexRow list">
-                  <view class="flexCol left">
-                    <view class="flexRow carName {{orderProgress.userModel.length > 5 ? 'flexCol lengthBox' : ''}}">
-                      <view class="plateNumber">{{orderProgress.carNumberPlate}}</view>
-                      <view class="name">{{orderProgress.userModel}}</view>
-                    </view>
-                    <view class="driver">{{orderProgress.auserName}} {{orderProgress.count}}单</view>
-                  </view>
-                  <view class="right">
-                    <image class="carImg" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png"></image>
-                  </view>
-                </view>
-              <!-- <block>
-                <view class="flexRow list">
-                  <view class="left">
-                    {{'李师傅已完成订单 京AD72389'}}
-                  </view>
-                </view>
-              </block> -->
-            </view>
-          </view>
-        </block>
-        <block wx:else>
-          <view slot="label" class="label">
-            <view class="flexCol labelStep">
-              <view class="flexRow list">
-                <view wx:if="{{orderProgress.orderStatus == 6 }}" class="left">
-                  剩余{{orderProgress.remainingDistance}} 预计<text>{{orderProgress.estimatedArrivalTime}}分钟</text>到达
-                </view>
-                <view wx:if="{{orderProgress.orderStatus > 6 }}" class="left">
-                  李师傅已完成订单{{orderProgress.auserName}}
-                </view>
-              </view>
-            </view>
-          </view>
-        </block>
-      </van-cell>
-      <van-cell wx:if="{{orderProgress.orderStatus == 3 || unFlod2}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 3 ? 'complete': ''}}" use-label-slot border="{{false}}">
-        <view slot="title" class="flexRow title">
-          <image class="timeStatus" src="{{orderProgress.orderStatus > 3 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
-          <view class="listTitle">{{'调配车辆&司机'}}</view>
-        </view>
-        <view slot="label" class="label">
-          <view class="flexCol labelStep noBorder">
-            <view class="flexRow list">
-              <view class="left noWrap" wx:if="{{orderProgress.carNumberPlate || orderProgress.userModel}}">
-                {{orderProgress.carNumberPlate}} {{orderProgress.userModel}} {{orderProgress.auserName}}
-              </view>
-              <view wx:else class="left noWrap">正在为您调配车辆和司机…</view>
-            </view>
-          </view>
-        </view>
-      </van-cell>
-      <view wx:if="{{orderProgress.orderStatus > 3 || unFlod2}}" bindtap="unFlod2" class="flexRow unfold">
-        <view class="text">{{unFlod2 ? '收起' : '展开'}}</view>
-        <van-icon wx:if="{{!unFlod2}}" class="icon" size="16rpx" color="#000000" name="arrow-down" />
+      </block>
+      <view class="content {{unFlod1 ? 'border' : ''}}">
+        <van-cell title="送车时间" title-class="titleClass" label-class="bigLabelClass {{unFlod1 ? 'labelClass' : ''}}" label="{{detailInfo.carDeliveryTime}}" border="{{ false }}" />
+        <van-cell title="送车地址" title-class="titleClass" label-class="bigLabelClass {{unFlod1 ? 'labelClass' : ''}}" label="{{detailInfo.carDeliverylocation}}" border="{{ false }}" />
+      </view>
+      <view class="flexRow unfold" bindtap="unFlod1">
+        <view class="text">{{unFlod1 ? '收起' : '展开'}}</view>
+        <van-icon wx:if="{{!unFlod1}}" class="icon" size="16rpx" color="#000000" name="arrow-down" />
         <van-icon wx:else class="icon" size="16rpx" color="#000000" name="arrow-up" />
       </view>
+    </van-cell-group>
+  </view>
+  <view class="detailsStatus">
+    <van-cell border="{{false}}">
+      <view slot="title" class="flexRow title">
+        <image class="timeStatus" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/time_status.png"></image>
+        <view class="van-cell-text">订单进展</view>
+      </view>
+      <van-icon class="{{rotate ? 'rotate' : ''}}" bindtap="reLoad" slot="right-icon" size="32rpx" color="#777777" name="replay" />
+    </van-cell>
+
+    <van-cell wx:if="{{orderProgress.orderStatus == 14 || (unFlod2 && orderProgress.orderStatus > 14)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus == 14 ? 'complete': ''}}" use-label-slot border="{{false}}">
+      <view slot="title" class="flexRow title">
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 14 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
+        <view class="listTitle">{{'完成取车'}}</view>
+      </view>
+      <view slot="label" class="label">
+        <view class="flexCol labelStep">
+        </view>
+      </view>
+    </van-cell>
+    <van-cell wx:if="{{orderProgress.orderStatus == 12 || (unFlod2 && orderProgress.orderStatus > 12)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 12 ? 'complete': ''}}" use-label-slot border="{{false}}">
+      <view slot="title" class="flexRow title">
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 12 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
+        <view class="listTitle">{{'上门取车'}}</view>
+      </view>
+      <view slot="label" class="label">
+        <view class="flexCol labelStep">
+          <view class="flexRow list">
+            <view class="left">
+              司机已到达指定位置
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-cell>
+    <van-cell wx:if="{{orderProgress.orderStatus == 8 || (unFlod2 && orderProgress.orderStatus > 8)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 8 ? 'complete': ''}}" use-label-slot border="{{false}}">
+      <view slot="title" class="flexRow title">
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 8 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
+        <view class="listTitle">{{'到期还车'}}</view>
+      </view>
+      <view slot="label" class="label">
+        <view class="flexCol labelStep">
+          <view class="flexRow list">
+            <view class="left">
+              剩余时间：<text>{{orderProgress.countDown}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </van-cell>
+    <van-cell wx:if="{{orderProgress.orderStatus == 6 || (unFlod2 && orderProgress.orderStatus > 6)}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 6 ? 'complete': ''}}" use-label-slot border="{{false}}">
+      <view slot="title" class="flexRow title">
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 6 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
+        <view class="listTitle">{{'送车上门'}}</view>
+      </view>
+      <block wx:if="{{!unFlod2}}">
+        <view slot="label" class="label">
+          <view class="flexCol labelStep noPadding">
+              <view class="flexRow list">
+                <view class="left">
+                  剩余{{orderProgress.remainingDistance}} 预计<text>{{orderProgress.estimatedArrivalTime}}分钟</text>到达
+                </view>
+                <view class="right">
+                  <view class="flexRow phone" bindtap="calling">
+                    <van-icon size="24rpx" color="#343434" name="phone" />
+                    <text>打电话</text>
+                  </view>
+                </view>
+              </view>
+              <view class="flexRow list">
+                <view class="flexCol left">
+                  <view class="flexRow carName {{orderProgress.userModel.length > 5 ? 'flexCol lengthBox' : ''}}">
+                    <view class="plateNumber">{{orderProgress.carNumberPlate}}</view>
+                    <view class="name">{{orderProgress.userModel}}</view>
+                  </view>
+                  <view class="driver">{{orderProgress.auserName}} {{orderProgress.count}}单</view>
+                </view>
+                <view class="right">
+                  <image class="carImg" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png"></image>
+                </view>
+              </view>
+            <!-- <block>
+              <view class="flexRow list">
+                <view class="left">
+                  {{'李师傅已完成订单 京AD72389'}}
+                </view>
+              </view>
+            </block> -->
+          </view>
+        </view>
+      </block>
+      <block wx:else>
+        <view slot="label" class="label">
+          <view class="flexCol labelStep">
+            <view class="flexRow list">
+              <view wx:if="{{orderProgress.orderStatus == 6 }}" class="left">
+                剩余{{orderProgress.remainingDistance}} 预计<text>{{orderProgress.estimatedArrivalTime}}分钟</text>到达
+              </view>
+              <view wx:if="{{orderProgress.orderStatus > 6 }}" class="left">
+                李师傅已完成订单{{orderProgress.auserName}}
+              </view>
+            </view>
+          </view>
+        </view>
+      </block>
+    </van-cell>
+    <van-cell wx:if="{{orderProgress.orderStatus == 3 || unFlod2}}" custom-class="listBox paddingBottom {{orderProgress.orderStatus > 3 ? 'complete': ''}}" use-label-slot border="{{false}}">
+      <view slot="title" class="flexRow title">
+        <image class="timeStatus" src="{{orderProgress.orderStatus > 3 ? 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_defaulet.png' : 'https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/circle_active.png'}}"></image>
+        <view class="listTitle">{{'调配车辆&司机'}}</view>
+      </view>
+      <view slot="label" class="label">
+        <view class="flexCol labelStep noBorder">
+          <view class="flexRow list">
+            <view class="left noWrap" wx:if="{{orderProgress.carNumberPlate || orderProgress.userModel}}">
+              {{orderProgress.carNumberPlate}} {{orderProgress.userModel}} {{orderProgress.auserName}}
+            </view>
+            <view wx:else class="left noWrap">正在为您调配车辆和司机…</view>
+          </view>
+        </view>
+      </view>
+    </van-cell>
+    <view wx:if="{{orderProgress.orderStatus > 3 || unFlod2}}" bindtap="unFlod2" class="flexRow unfold">
+      <view class="text">{{unFlod2 ? '收起' : '展开'}}</view>
+      <van-icon wx:if="{{!unFlod2}}" class="icon" size="16rpx" color="#000000" name="arrow-down" />
+      <van-icon wx:else class="icon" size="16rpx" color="#000000" name="arrow-up" />
     </view>
-    <view class="flexRow bottom">
-      <view class="flexRow btn">联系客服</view>
-      <!-- <view class="flexRow btn" bindtap="goReturnCarPage">立即还车</view>
-      <view class="flexRow btn" bindtap="waitReturnCar">延时还车</view> -->
-      <view class="flexRow btn" bindtap="cancelDetail">取消订单</view>
-    </view>
-  </block>
-  <block wx:else>
-    <van-empty description="暂无订单" />
-  </block>
+  </view>
+  <view class="flexRow bottom">
+    <view class="flexRow btn">联系客服</view>
+    <!-- <view class="flexRow btn" bindtap="goReturnCarPage">立即还车</view>
+    <view class="flexRow btn" bindtap="waitReturnCar">延时还车</view> -->
+    <view class="flexRow btn" bindtap="cancelDetail">取消订单</view>
+  </view>
 </view>
 

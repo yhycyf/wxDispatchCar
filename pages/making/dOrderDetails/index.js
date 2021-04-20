@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-19 11:42:15
+ * @LastEditTime: 2021-04-20 14:55:16
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -22,12 +22,13 @@ Page({
     value: '',
     detailInfo: {}, //订单详情
     orderProgress: {
-      orderStatus: 6
+      // orderStatus: 13
     }, //订单进展
     unFlod1: false,  //是否显示展开
     unFlod2: false,  //是否显示展开
     rotate: false,
     timer: null,
+    localizedMessage: '',
   },
   calling:function(){
     let that = this;
@@ -96,15 +97,16 @@ Page({
     })
   },
   // 查看订单
-  async viewRunningOrders() {
-    let res = await api.viewRunningOrders();
+  async dangerousScooter() {
+    let res = await api.dangerousScooter();
     if(res.flag) {
       let detailInfo = res.data;
       let lat = {
-        latitude: detailInfo.outCarSiteLatitude,
-        longitude: detailInfo.outCarSiteLongitude
+        latitude: detailInfo.deliveryAddressLatitude,
+        longitude: detailInfo.deliveryAddressLongitude
       }
-      detailInfo.carDeliveryTime = showTime(new Date(detailInfo.carDeliveryTime));
+      detailInfo.carDeliveryTime = showTime(new Date(detailInfo.deliveryTime));
+      console.log('carDeliveryTime', detailInfo.carDeliveryTime)
       detailInfo.carDeliverylocation = (await utils.getAddress(lat)).address;
       this.setData({
         detailInfo: detailInfo
@@ -118,11 +120,12 @@ Page({
   // 订单进展
   async orderProgress() {
     let that = this;
-    let date;
+    let timeObj;
     let res = await api.orderProgress();
     if(res.flag) {
       that.setData({
         orderProgress: res.data,
+        localizedMessage: res.localizedMessage,
         rotate: false
       })
       if(res.data.endTime) {
@@ -132,9 +135,13 @@ Page({
         })
         clearInterval(that.data.timer);
         that.data.timer = setInterval(() => {
-          date = utils.countDownString(res.data.endTime);
+          if(timeObj.timestamp <= 0) {
+            clearInterval(that.data.timer);
+          } else {
+            timeObj = utils.countDownString(res.data.endTime);
+          }
           that.setData({
-            'orderProgress.countDown': date
+            'orderProgress.countDown': timeObj.times
           })
         }, 1000);
       }
@@ -146,7 +153,7 @@ Page({
   
   // 取消订单
   async cancelDetail() {
-    let id = this.data.detailInfo.id;
+    let id = this.data.detailInfo.orderId;
     let res = await api.scooterOrderCancel({
       scooterFormId: id
     });
@@ -163,7 +170,7 @@ Page({
     console.log('取消订单', res)
   },
   onShow() {
-    this.viewRunningOrders();
+    this.dangerousScooter();
     this.orderProgress();
   },
   onLoad() {
