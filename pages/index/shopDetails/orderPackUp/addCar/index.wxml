@@ -7,11 +7,15 @@
     scrollable="{{ false }}"
     text="添加车辆信息，以便您更方便的使用车主服务"
   />
-  <view class="upIdentity">
-    <view class="flexRow flexCol center">
-      <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png" />
-      <text>扫描行驶证 自动填写信息</text>
-    </view>
+  <view class="flexRow upIdentity">
+      <van-uploader class="vanUploader" slot="right-icon" max-size="{{1048576 * 3}}" max-count="1" deletable="{{ true }}"
+        disabled="{{false}}"
+        bind:after-read="afterReadA" bind:oversize="oversize">
+        <view class="flexCol center">
+          <image class="icon" src="https://daibuche.oss-cn-beijing.aliyuncs.com/location/image/upDriving2.png" />
+          <text>扫描行驶证 自动填写信息</text>
+        </view>
+      </van-uploader>
   </view>
   <view class="flexCol heard">
     <van-cell-group>

@@ -98,3 +98,6 @@
 .myOrder .listBox .list .moneyBox .red {
   color: #E82121;
 }
+.myOrder .listBox .list:not(:nth-of-type(1)) {
+  margin-top: 32rpx;
+}

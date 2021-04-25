@@ -14,6 +14,17 @@
 .beginOrderActive {
   opacity: 0.85;
 }
+.rotate {
+  animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .addCar {
   width: 100%;
   box-sizing: border-box;
@@ -44,6 +55,10 @@
 .addCar .upIdentity .center text {
   color: #777777;
   font-size: 22rpx;
+}
+.addCar .upIdentity .vanUploader {
+  justify-content: center;
+  align-items: center;
 }
 .addCar .heard {
   width: 100%;

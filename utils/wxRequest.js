@@ -25,7 +25,7 @@ export const wxRequest = (params, url, types) => {
   // 公共参数（一般写接口的时候都会有些公共参数，你可以事先把这些参数都封装起来，就不用每次调用方法的时候再去写，）
   // 合并对象(公共参数加传入参数合并对象)
   let datas = params || {};
-  datas.userId = wx.getStorageSync('userId') || '';
+  datas.userId = 77 || wx.getStorageSync('userId') || '';
   datas.sessionKey = wx.getStorageSync('sessionKey') || '';
   if (types == 'POST') {
     Object.keys(datas).map((key) => {

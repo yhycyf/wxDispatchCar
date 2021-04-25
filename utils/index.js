@@ -332,16 +332,19 @@ const isPhone = (value) => {
 
 
 
-const getAddress = (str) => new Promise((resolve,reject) => {
-  var getAddressUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + str.latitude + "," + str.longitude + "&key=" + mapKey + "&get_poi=1";
-  wx.request({
-    url: getAddressUrl,
-    success: function (res) {
-      console.log('result', res)
-      resolve(res.data.result);
-    }
+const getAddress = (str) => {
+  return new Promise((resolve,reject) => {
+    var getAddressUrl = "https://apis.map.qq.com/ws/geocoder/v1/?location=" + str.latitude + "," + str.longitude + "&key=" + mapKey + "&get_poi=1";
+    wx.request({
+      url: getAddressUrl,
+      success: function (res) {
+        console.log('result', res)
+        resolve(res.data.result);
+      }
+    })
   })
-})
+
+} 
 
 const qqmapsdk = () => {
   let qqmapsdk = new QQMapWX({

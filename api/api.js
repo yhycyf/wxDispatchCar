@@ -98,11 +98,8 @@ const orderProgress = (params) => wxRequest(params, wrapUrl('user-personage/orde
 //（个人中心）（车辆管理）
 const getUserPersonageCarCount = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageCarCount'), 'GET');
 
-//（个人中心）（我的订单）
+//（个人中心）（我的订单）(数量)
 const getUserPersonageFromCount = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageFromCount'), 'GET');
-
-//（个人中心）（我的订单）（全部）
-const getUserPersonageFrom = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageFrom'), 'GET');
 
 //（修改手机号码）（确认）
 const updateUpPhone = (params) => wxRequest(params, wrapUrl('user-personage/updateUpPhone'), 'PUT');
@@ -134,7 +131,20 @@ const ifUserType = (params) => wxRequest(params, wrapUrl('user-personage/ifUserT
 //（订单详情）（出险代步车）（取消订单）
 const scooterOrderCancel = (params) => wxRequest(params, wrapUrl('user-personage/scooterOrderCancel'), 'PUT');
 
+//（个人中心）（我的订单）（全部）
+const getUserPersonageFrom = (params) => wxRequest(params, wrapUrl('user-personage/getUserPersonageFrom'), 'GET');
 
+//（个人中心）（我的订单）(待待款)
+const getPendingPayment = (params) => wxRequest(params, wrapUrl('user-personage/getPendingPayment'), 'GET');
+
+//（个人中心）（我的订单）(进行中)
+const getProcessing = (params) => wxRequest(params, wrapUrl('user-personage/getProcessing'), 'GET');
+
+//（个人中心）（我的订单）(已完成)
+const getCompleted = (params) => wxRequest(params, wrapUrl('user-personage/getCompleted'), 'GET');
+
+//（选择车辆）（删除车辆）
+const deletePersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/deletePersonageCar'), 'DELETE');
 
 module.exports = {
   login,
@@ -151,6 +161,9 @@ module.exports = {
   getUserPersonageCarCount,
   getUserPersonageFromCount,
   getUserPersonageFrom,
+  getPendingPayment,
+  getProcessing,
+  getCompleted,
   updateUpPhone,
   updateUpPhoneCode,
   safetyVerification,
@@ -159,5 +172,6 @@ module.exports = {
   getScooterOrder,
   scooterOrder,
   getUserPersonageCar,
-  ifUserType
+  ifUserType,
+  deletePersonageCar
 };

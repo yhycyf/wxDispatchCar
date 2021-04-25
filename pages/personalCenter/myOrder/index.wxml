@@ -3,20 +3,23 @@
   <van-tabs swipeable line-width="56rpx" line-height="4rpx" active="{{ active }}" bind:change="onChange">
     <van-tab title="全部">
       <view class="listBox">
-        <view class="flexCol list" wx:for="{{formList}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="flexCol list" wx:for="{{formList1}}" wx:for-index="index" wx:for-item="item" wx:key="index">
           <view class="flexRow title">
             <view class="text">{{item.sfName}}</view>
-            <van-tag custom-class="titleTag" color="#00CB8B" text-color="#FFFFFF" type="primary">接送车</van-tag>
-            <van-tag custom-class="titleTag" color="#457CFB" text-color="#457CFB" type="primary" plain>上门接车</van-tag>
+            <van-tag custom-class="titleTag" color="#00CB8B" text-color="#FFFFFF" type="primary">{{item.sfType}}</van-tag>
+            <van-tag wx:if="{{item.sfName == '接送车'}}" custom-class="titleTag" color="#457CFB" text-color="#457CFB" type="primary" plain>上门接车</van-tag>
           </view>
           <view class="flexCol info">
-            <view class="row">时间：2020年10月29日 17:43</view>
+            <view class="row">时间：{{item.sfOutCarTime}}</view>
             <view class="row">地址：{{item.sfOutCarSite}}</view>
-            <view class="row">门店：北京中进百旺4S店</view>
+            <view wx:if="{{item.sfName == '接送车'}}" class="row">门店：北京中进百旺4S店</view>
           </view>
-          <view class="flexRow btnBox">
+          <view wx:if="{{!item.sfPayMoney}}" bindtap="cancelOrder" data-id="{{item.id}}" class="flexRow btnBox">
             <view class="btn">取消</view>
             <view class="btn blue">立即支付</view>
+          </view> 
+          <view wx:else class="flexRow btnBox">
+            <view class="btn">再次预定</view>
           </view>
           <view class="flexCol moneyBox">
             <view class="flexRow top">
@@ -29,13 +32,94 @@
       </view>
     </van-tab>
     <van-tab title="待付款">
-      <view class="listBox"></view>
+      <view class="listBox">
+        <view class="flexCol list" wx:for="{{formList2}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="flexRow title">
+            <view class="text">{{item.sfName}}</view>
+            <van-tag custom-class="titleTag" color="#00CB8B" text-color="#FFFFFF" type="primary">{{item.sfType}}</van-tag>
+            <van-tag wx:if="{{item.sfName == '接送车'}}" custom-class="titleTag" color="#457CFB" text-color="#457CFB" type="primary" plain>上门接车</van-tag>
+          </view>
+          <view class="flexCol info">
+            <view class="row">时间：{{item.sfOutCarTime}}</view>
+            <view class="row">地址：{{item.sfOutCarSite}}</view>
+            <view wx:if="{{item.sfName == '接送车'}}" class="row">门店：北京中进百旺4S店</view>
+          </view>
+          <view wx:if="{{!item.sfPayMoney}}" bindtap="cancelOrder" data-id="{{item.id}}" class="flexRow btnBox">
+            <view class="btn">取消</view>
+            <view class="btn blue">立即支付</view>
+          </view> 
+          <view wx:else class="flexRow btnBox">
+            <view class="btn">再次预定</view>
+          </view>
+          <view class="flexCol moneyBox">
+            <view class="flexRow top">
+              <view class="num red">￥</view>
+              <view class="text red">299</view>
+            </view>
+            <view class="status">待支付</view>
+          </view>
+        </view>
+      </view>
     </van-tab>
     <van-tab title="进行中">
-      <view class="listBox"></view>
+      <view class="listBox">
+        <view class="flexCol list" wx:for="{{formList3}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="flexRow title">
+            <view class="text">{{item.sfName}}</view>
+            <van-tag custom-class="titleTag" color="#00CB8B" text-color="#FFFFFF" type="primary">{{item.sfType}}</van-tag>
+            <van-tag wx:if="{{item.sfName == '接送车'}}" custom-class="titleTag" color="#457CFB" text-color="#457CFB" type="primary" plain>上门接车</van-tag>
+          </view>
+          <view class="flexCol info">
+            <view class="row">时间：{{item.sfOutCarTime}}</view>
+            <view class="row">地址：{{item.sfOutCarSite}}</view>
+            <view wx:if="{{item.sfName == '接送车'}}" class="row">门店：北京中进百旺4S店</view>
+          </view>
+          <view wx:if="{{!item.sfPayMoney}}" bindtap="cancelOrder" data-id="{{item.id}}" class="flexRow btnBox">
+            <view class="btn">取消</view>
+            <view class="btn blue">立即支付</view>
+          </view> 
+          <view wx:else class="flexRow btnBox">
+            <view class="btn">再次预定</view>
+          </view>
+          <view class="flexCol moneyBox">
+            <view class="flexRow top">
+              <view class="num red">￥</view>
+              <view class="text red">299</view>
+            </view>
+            <view class="status">待支付</view>
+          </view>
+        </view>
+      </view>
     </van-tab>
     <van-tab title="已完成">
-      <view class="listBox"></view>
+      <view class="listBox">
+        <view class="flexCol list" wx:for="{{formList4}}" wx:for-index="index" wx:for-item="item" wx:key="index">
+          <view class="flexRow title">
+            <view class="text">{{item.sfName}}</view>
+            <van-tag custom-class="titleTag" color="#00CB8B" text-color="#FFFFFF" type="primary">{{item.sfType}}</van-tag>
+            <van-tag wx:if="{{item.sfName == '接送车'}}" custom-class="titleTag" color="#457CFB" text-color="#457CFB" type="primary" plain>上门接车</van-tag>
+          </view>
+          <view class="flexCol info">
+            <view class="row">时间：{{item.sfOutCarTime}}</view>
+            <view class="row">地址：{{item.sfOutCarSite}}</view>
+            <view wx:if="{{item.sfName == '接送车'}}" class="row">门店：北京中进百旺4S店</view>
+          </view>
+          <view wx:if="{{!item.sfPayMoney}}" bindtap="cancelOrder" data-id="{{item.id}}" class="flexRow btnBox">
+            <view class="btn">取消</view>
+            <view class="btn blue">立即支付</view>
+          </view> 
+          <view wx:else class="flexRow btnBox">
+            <view class="btn">再次预定</view>
+          </view>
+          <view class="flexCol moneyBox">
+            <view class="flexRow top">
+              <view class="num red">￥</view>
+              <view class="text red">299</view>
+            </view>
+            <view class="status">待支付</view>
+          </view>
+        </view>
+      </view>
     </van-tab>
   </van-tabs>
 </view>

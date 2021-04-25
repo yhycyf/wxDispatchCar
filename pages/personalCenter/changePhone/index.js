@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-19 14:23:04
+ * @LastEditTime: 2021-04-25 17:32:10
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -20,10 +20,35 @@ Page({
     countDown: 0,
     times: null
   },
-  submit() {
-    wx.redirectTo({
-      url: `/pages/personalCenter/changePhone/success/index`
-    })
+  async submit() {
+    let phone = this.data.phoneValue;
+    let nameValue = this.data.nameValue;
+    if(!phone) {
+      utils.showToast('请输入手机号!');
+      return;
+    } else if(!nameValue) {
+      utils.showToast('请输入验证码!');
+      return;
+    } else {
+      utils.showLoading();
+      let res = await api.updateUpPhone({
+        code: nameValue,
+        phone: phone
+      });
+      if(res.flag) {
+        utils.showToast(res.message, 'success',1500);
+        utils.sleep(1500);
+        wx.redirectTo({
+          url: `/pages/personalCenter/changePhone/success/index`
+        })
+      } else {
+        utils.showToast(res.message);
+        this.setData({
+          nameValue: ''
+        })
+      }
+      utils.hideLoading();
+    }
   },
   onChangePhone(event) {
     // event.detail 为当前输入的值
@@ -34,14 +59,20 @@ Page({
   },
   onChangeName(event) {
     // event.detail 为当前输入的值
+    this.setData({
+      nameValue: event.detail
+    })
     console.log(event.detail);
   },
   // 发送验证码
   async sendCode() {
+    let phone = this.data.phoneValue;
     if(this.data.countDown > 0) {
       return;
+    } else if(!phone) {
+      utils.showToast('请输入手机号!');
+      return;
     }
-    let phone = this.data.phoneValue;
     if(!phone) return;
     let flag = utils.isPhone(phone);
     console.log('phone', phone)

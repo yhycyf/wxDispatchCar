@@ -2,14 +2,15 @@
 <view class="selectCar">
   <van-radio-group value="{{ radio }}" bind:change="onChange">
     <van-cell-group class="radioGroup">
-      <van-swipe-cell right-width="{{ 65 }}" disabled="{{disabled}}" async-close>
+      <van-swipe-cell wx:for="{{carList}}" wx:for-index="index" wx:for-item="item" wx:key="index"  data-item="{{item}}" bind:close="removeCar"
+        right-width="{{ 65 }}" disabled="{{!disabled}}" async-close>
         <van-cell-group>
           <van-cell class="flexRow carShowBox {{radio == '1' ? 'border' : ''}}" border="{{false}}" data-name="1" bind:click="onClick">
             <view class="flexRow left">
               <image mode="scaleToFill" slot="icon" src="https://img.yzcdn.cn/vant/cat.jpeg" />
               <view class="flexCol textLeft">
-                <view class="title" slot="title">京A87***32</view>
-                <view class="tips" slot="label">纯电动BMWiX3 矿石白</view>
+                <view class="title" slot="title">{{item.plateNo}}</view>
+                <view class="tips" slot="label">{{item.model}}</view>
               </view>
             </view>
             <van-radio wx:if="{{!disabled}}" checked-color="#00CB8B" class="flexCol" slot="right-icon" name="1" />
@@ -17,7 +18,7 @@
         </van-cell-group>
         <view class="flexCol remove" slot="right">删除</view>
       </van-swipe-cell>
-      <van-swipe-cell right-width="{{ 65 }}" disabled="{{disabled}}" async-close>
+      <!-- <van-swipe-cell right-width="{{ 65 }}" disabled="{{!disabled}}" async-close>
         <van-cell-group>
           <van-cell class="flexRow carShowBox {{radio == '2' ? 'border' : ''}}" border="{{false}}" data-name="2" bind:click="onClick">
             <view class="flexRow left">
@@ -31,7 +32,7 @@
           </van-cell>
         </van-cell-group>
         <view class="flexCol remove" slot="right">删除</view>
-      </van-swipe-cell>
+      </van-swipe-cell> -->
     </van-cell-group>
   </van-radio-group>
   <view class="flexRow bottomCarbox" bindtap="goAddCar" hover-class="beginOrderActive">
