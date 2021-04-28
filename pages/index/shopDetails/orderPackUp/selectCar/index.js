@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-04-25 16:59:15
+ * @LastEditTime: 2021-04-28 17:07:54
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -73,6 +73,7 @@ Page({
   },
 
   onClick(event) {
+    console.log(event)
     if(this.data.disabled) {
       return;
     }

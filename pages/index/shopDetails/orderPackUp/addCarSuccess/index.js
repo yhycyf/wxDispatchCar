@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-02-07 09:12:55
- * @LastEditTime: 2021-03-02 14:42:47
+ * @LastEditTime: 2021-04-28 17:03:34
  * @LastEditors: sueRimn
  * @Description: In User Settings Edit
  * @FilePath: \Scooter\pages\index\index.js
@@ -16,9 +16,9 @@ Page({
     payStatus: true
   },
   // 查看订单
-  godOrderDetails() {
-    wx.navigateTo({
-      url: '/pages/making/dOrderDetails/index'
+  goSelectCar() {
+    wx.redirectTo({
+      url: `/pages/index/shopDetails/orderPackUp/selectCar/index?disabled=${true}`
     })
   },
   onChange(event) {

@@ -20,33 +20,36 @@
   <view class="flexCol heard">
     <van-cell-group>
       <van-field
-        value="{{ value }}"
+        value="{{ form.icPlateNo }}"
         placeholder="请输入车牌号"
         label="车牌号码"
         custom-style="font-weight: 500"
         title-width="124rpx"
         label-class="labelClass"
         border
+        data-type="icPlateNo"
         bind:change="onChange"
       >
       </van-field>
       <van-field
-        value="{{ value }}"
+        value="{{ form.icVin }}"
         placeholder="请输入车架号"
         label="车架号码"
         custom-style="font-weight: 500"
         title-width="124rpx"
         label-class="labelClass"
         border
+        data-type="icVin"
         bind:change="onChange"
       />
       <van-field
-        value="{{ value }}"
-        placeholder="请输入车牌号"
+        value="{{ form.icModel }}"
+        placeholder="请输入品牌车系"
         label="品牌车系"
         custom-style="font-weight: 500"
         title-width="124rpx"
         border
+        data-type="icModel"
         bind:change="onChange"
       />
     </van-cell-group>
@@ -57,7 +60,7 @@
       当地交管局查询必须信息，四维将对您的信息加密，请放心填写
     </view>
   </view>
-  <view class="flexRow qualification" hover-class="beginOrderActive" bindtap="pay">
+  <view class="flexRow qualification" hover-class="beginOrderActive" bindtap="submitAdd">
     <view>确认</view>
   </view>
 </view>

@@ -146,6 +146,12 @@ const getCompleted = (params) => wxRequest(params, wrapUrl('user-personage/getCo
 //（选择车辆）（删除车辆）
 const deletePersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/deletePersonageCar'), 'DELETE');
 
+//（添加车辆）
+const scanDrivingPermit = (params) => wxRequest(params, wrapUrl('user-personage/scanDrivingPermit'), 'GET');
+
+//（添加车辆）（确认）
+const addPersonageCar = (params) => wxRequest(params, wrapUrl('user-personage/addPersonageCar'), 'POST');
+
 module.exports = {
   login,
   getCode,
@@ -173,5 +179,7 @@ module.exports = {
   scooterOrder,
   getUserPersonageCar,
   ifUserType,
-  deletePersonageCar
+  deletePersonageCar,
+  scanDrivingPermit,
+  addPersonageCar
 };

@@ -5,7 +5,7 @@
       <van-swipe-cell wx:for="{{carList}}" wx:for-index="index" wx:for-item="item" wx:key="index"  data-item="{{item}}" bind:close="removeCar"
         right-width="{{ 65 }}" disabled="{{!disabled}}" async-close>
         <van-cell-group>
-          <van-cell class="flexRow carShowBox {{radio == '1' ? 'border' : ''}}" border="{{false}}" data-name="1" bind:click="onClick">
+          <van-cell class="flexRow carShowBox {{radio == index + 1 ? 'border' : ''}}" border="{{false}}" data-name="{{index + 1}}" bind:click="onClick">
             <view class="flexRow left">
               <image mode="scaleToFill" slot="icon" src="https://img.yzcdn.cn/vant/cat.jpeg" />
               <view class="flexCol textLeft">
@@ -13,7 +13,7 @@
                 <view class="tips" slot="label">{{item.model}}</view>
               </view>
             </view>
-            <van-radio wx:if="{{!disabled}}" checked-color="#00CB8B" class="flexCol" slot="right-icon" name="1" />
+            <van-radio wx:if="{{!disabled}}" checked-color="#00CB8B" class="flexCol" slot="right-icon" name="{{index + 1}}" />
           </van-cell>
         </van-cell-group>
         <view class="flexCol remove" slot="right">删除</view>
